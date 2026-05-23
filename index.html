@@ -13,82 +13,123 @@
   ═══════════════════════════════════════════════════════════ -->
   <section id="prologue" class="chat-section">
     <div class="chat-bg-grid"></div>
-    <div class="chat-window">
-      <div class="chat-header">
-        <div class="chat-dots"><span></span><span></span><span></span></div>
-        <div class="chat-title">the boys 🦕</div>
-        <div class="chat-count">4 online</div>
+
+    <!-- iOS iMessage style phone shell -->
+    <div class="imessage-phone">
+
+      <!-- iOS status bar -->
+      <div class="ios-status-bar">
+        <span class="ios-time">9:41</span>
+        <div class="ios-status-icons">
+          <span>●●●</span>
+          <span>WiFi</span>
+          <span>🔋</span>
+        </div>
       </div>
-      <div class="chat-body">
 
-        <div class="chat-msg msg-michael" data-chat="0">
-          <div class="avatar av-michael">M</div>
-          <div class="bubble-wrap">
-            <span class="sender-name michael-name">moochaol</span>
-            <div class="bubble">I was a child prodigy art caption</div>
+      <!-- iMessage header -->
+      <div class="imessage-header">
+        <button class="ios-back">&#8249;</button>
+        <div class="imessage-group-info">
+          <!--
+            GROUP PROFILE PICTURE
+            Drop an image at assets/group-avatar.png to replace this circle.
+            Placeholder shown if file is missing.
+          -->
+          <div class="group-avatar">
+            <img src="assets/group-avatar.png" alt="Jotos"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="group-avatar-fallback">💦</div>
+          </div>
+          <div class="imessage-group-name">Jotos 💦</div>
+        </div>
+        <button class="ios-video">&#9654;</button>
+      </div>
+
+      <!-- Messages -->
+      <div class="imessage-body" id="imessageBody">
+
+        <div class="imsg imsg-right" data-chat="0">
+          <div class="imsg-col">
+            <div class="imsg-bubble bubble-blue bubble-image">
+              <img src="assets/michael-dino.png" alt="moochaol's drawing" class="imsg-img">
+            </div>
           </div>
         </div>
 
-        <div class="chat-msg msg-bob" data-chat="1">
-          <div class="avatar av-bob">B</div>
-          <div class="bubble-wrap">
-            <span class="sender-name bob-name">bobsnaps</span>
-            <div class="bubble">Dinosaurs aren't real michael</div>
+        <div class="imsg imsg-right" data-chat="1">
+          <div class="imsg-col">
+            <div class="imsg-bubble bubble-blue">I was a child prodigy</div>
           </div>
         </div>
 
-        <div class="chat-msg msg-michael" data-chat="2">
-          <div class="avatar av-michael">M</div>
-          <div class="bubble-wrap">
-            <span class="sender-name michael-name">moochaol</span>
-            <div class="bubble">I guess but I feel like my picture is pretty captivating</div>
+        <div class="imsg imsg-left" data-chat="2">
+          <div class="imsg-avatar av-n8">N</div>
+          <div class="imsg-col">
+            <span class="imsg-name n8-name">n8</span>
+            <div class="imsg-bubble bubble-gray">can I use this for ai art?</div>
           </div>
         </div>
 
-        <div class="chat-msg msg-michael" data-chat="3">
-          <div class="avatar av-michael">M</div>
-          <div class="bubble-wrap">
-            <span class="sender-name michael-name">moochaol</span>
-            <div class="bubble">Yes they were and there was over 100 different kinds</div>
+        <div class="imsg imsg-left" data-chat="3">
+          <div class="imsg-avatar av-bob">B</div>
+          <div class="imsg-col">
+            <span class="imsg-name bob-name">bobsnaps</span>
+            <div class="imsg-bubble bubble-gray">Dinosaurs aren't real michael</div>
           </div>
         </div>
 
-        <div class="chat-msg msg-cooal" data-chat="4">
-          <div class="avatar av-cooal">K</div>
-          <div class="bubble-wrap">
-            <span class="sender-name cooal-name">cooal</span>
-            <div class="bubble">he's so yaaasified</div>
+        <div class="imsg imsg-right" data-chat="4">
+          <div class="imsg-col">
+            <div class="imsg-bubble bubble-blue">I guess but I feel like my picture is pretty captivating</div>
           </div>
         </div>
 
-        <div class="chat-msg msg-cooal" data-chat="5">
-          <div class="avatar av-cooal">K</div>
-          <div class="bubble-wrap">
-            <span class="sender-name cooal-name">cooal</span>
-            <div class="bubble">I can see the vision it's like a flying t. rex with velociraptor talons</div>
+        <div class="imsg imsg-right" data-chat="5">
+          <div class="imsg-col">
+            <div class="imsg-bubble bubble-blue">Yes they were and there was over 100 different kinds</div>
           </div>
         </div>
 
-        <div class="chat-msg msg-bob" data-chat="6">
-          <div class="avatar av-bob">B</div>
-          <div class="bubble-wrap">
-            <span class="sender-name bob-name">bobsnaps</span>
-            <div class="bubble">Oh yeah name top 3</div>
+        <div class="imsg imsg-left" data-chat="6">
+          <div class="imsg-avatar av-cooal">K</div>
+          <div class="imsg-col">
+            <span class="imsg-name cooal-name">cooal</span>
+            <div class="imsg-bubble bubble-gray">he's so yaaasified</div>
           </div>
         </div>
 
-        <div class="chat-msg msg-michael final-msg" data-chat="7">
-          <div class="avatar av-michael">M</div>
-          <div class="bubble-wrap">
-            <span class="sender-name michael-name">moochaol</span>
-            <div class="bubble">Mondi, Binko, and Ziron<br><span class="sub-text">(there's a prequel but I'm waiting to release it)</span></div>
+        <div class="imsg imsg-left" data-chat="7">
+          <div class="imsg-avatar av-cooal-blank"></div>
+          <div class="imsg-col">
+            <div class="imsg-bubble bubble-gray">I can see the vision it's like a flying t. rex with velociraptor talons</div>
+          </div>
+        </div>
+
+        <div class="imsg imsg-left" data-chat="8">
+          <div class="imsg-avatar av-bob">B</div>
+          <div class="imsg-col">
+            <span class="imsg-name bob-name">bobsnaps</span>
+            <div class="imsg-bubble bubble-gray">Oh yeah name top 3</div>
+          </div>
+        </div>
+
+        <div class="imsg imsg-right final-msg" data-chat="9">
+          <div class="imsg-col">
+            <div class="imsg-bubble bubble-blue">Mondi, Binko, and Ziron<br><span class="imsg-sub">(there's a prequel but I'm waiting to release it)</span></div>
           </div>
         </div>
 
       </div>
-    </div>
 
-    <!-- Portal smash transition overlay -->
+      <!-- iOS input bar -->
+      <div class="ios-input-bar">
+        <div class="ios-input-field">iMessage</div>
+        <button class="ios-send-btn">&#8593;</button>
+      </div>
+
+    </div><!-- end .imessage-phone -->
+
     <div class="portal-overlay" id="portalOverlay"></div>
     <div class="scroll-hint">scroll to enter the story ↓</div>
   </section>
@@ -555,6 +596,21 @@
       </div>
     </div>
 
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       STORY CLIPART — scroll through the original page
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="story-page" class="scene">
+    <div class="story-page-bg"></div>
+    <div class="story-page-inner" id="storyPageInner">
+      <img
+        src="assets/story-clipart.png"
+        alt="DINASAUR times — original story page by moochaol"
+        class="story-page-img"
+        id="storyPageImg"
+      />
+    </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════

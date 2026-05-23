@@ -11,31 +11,41 @@ const qa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
 /* ── PHASE 0: CHAT BUBBLE ENTRANCE ─────────────────── */
 function initChat() {
-  const msgs = qa('.chat-msg');
+  const msgs = qa('.imsg');
 
-  // All messages start hidden
-  gsap.set(msgs, { opacity: 0, y: 22, scale: 0.94 });
+  // Set initial hidden state via GSAP only — no CSS involved
+  gsap.set(msgs, { opacity: 0, y: 20, scale: 0.95 });
 
-  // Single timeline fires when the chat window enters the viewport.
-  // Each message pops in one-at-a-time with a generous gap so the
-  // "arriving message" feel reads clearly before the next one lands.
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '#prologue',
-      start: 'top 70%',
-      toggleActions: 'play none none none',
-    },
-  });
+  // IntersectionObserver fires once when the phone enters view,
+  // then disconnects. setTimeout chain sequences each bubble.
+  // Zero involvement from ScrollTrigger = zero looping possible.
+  let fired = false;
+  const observer = new IntersectionObserver((entries) => {
+    if (fired) return;
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        fired = true;
+        observer.disconnect();
+        msgs.forEach((msg, i) => {
+          setTimeout(() => {
+            gsap.to(msg, {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 0.42,
+              ease: 'back.out(1.8)',
+            });
+            // scroll the message body so new messages scroll into view naturally
+            const body = q('#imessageBody');
+            if (body) body.scrollTop = body.scrollHeight;
+          }, 350 + i * 580);
+        });
+      }
+    });
+  }, { threshold: 0.4 });
 
-  msgs.forEach((msg, i) => {
-    tl.to(msg, {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      duration: 0.48,
-      ease: 'back.out(2)',
-    }, i === 0 ? '+=0.25' : '+=0.55');
-  });
+  const phone = q('.imessage-phone');
+  if (phone) observer.observe(phone);
 
   // Portal / smash transition when scrolling out of prologue
   gsap.to('#portalOverlay', {
@@ -465,6 +475,32 @@ function moveEye(eye, pupil, pointer) {
 }
 
 /* ── OUTRO: PARACHUTE + CREDITS ─────────────────────── */
+function initStoryPage() {
+  gsap.to('.story-page-img', {
+    opacity: 1,
+    scale: 1,
+    duration: 1.2,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '#story-page',
+      start: 'top 70%',
+      toggleActions: 'play none none none',
+    },
+  });
+
+  // Slow parallax drift while scrolling through
+  gsap.to('.story-page-img', {
+    y: -40,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#story-page',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: 1.5,
+    },
+  });
+}
+
 function initOutro() {
   // Parachute floats down from top as user scrolls in
   gsap.fromTo('#parachuteDino',
@@ -549,6 +585,7 @@ function init() {
   initScene3();
   initScene4();
   initScene5();
+  initStoryPage();
   initOutro();
   initGlobalParallax();
 
