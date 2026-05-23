@@ -4401,3 +4401,237 @@ strong { color: #fff; }
   color: white;
   border-bottom-right-radius: 5px;
 }
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE — ALL SCENES
+   768px: tablet / phone landscape
+   480px: phone portrait
+══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* ── SCENE: NAME REVEAL ─────────────────────────────────── */
+  #scene-name {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    gap: 1.5rem;
+  }
+  .name-reveal-text {
+    max-width: 92vw;
+    text-align: center;
+    order: 2;
+  }
+  .name-facts { justify-content: center; }
+  .namereveal-render-wrap {
+    width: clamp(180px, 58vw, 320px);
+    order: 1;
+  }
+
+  /* ── SCENE: FLIGHT ──────────────────────────────────────── */
+  .flight-text { bottom: 45px; }
+  .sketch-fly-wrap { display: none; }
+
+  /* ── SCENE: FRIENDS ─────────────────────────────────────── */
+  .friend-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .friend-card { width: min(88vw, 300px); }
+  .friends-render-wrap { display: none; }
+
+  /* ── SCENE 8: SMUG ──────────────────────────────────────── */
+  .ssmug-amaza-wrap {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 7%;
+    width: clamp(160px, 46vw, 260px);
+  }
+  .ssmug-text {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2%;
+    max-width: 90vw;
+    text-align: center;
+    border-left: none;
+    border-top: 4px solid rgba(249,224,75,0.7);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+  }
+  .ssmug-scoreboard {
+    right: 2vw;
+    top: 2%;
+    padding: 0.5rem 0.8rem;
+    min-width: auto;
+  }
+  .ssmug-scoreboard-number { font-size: clamp(2rem, 8vw, 3.2rem); }
+
+  /* ── SCENE 9: TARPIT ────────────────────────────────────── */
+  .starpit-text {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 3%;
+    max-width: 90vw;
+    text-align: center;
+  }
+  .starpit-mondi-wrap {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 36%;
+    width: clamp(140px, 42vw, 220px);
+  }
+
+  /* ── SCENE 10: BINKO Q ──────────────────────────────────── */
+  .sbinkoq-text {
+    top: 3%;
+    max-width: min(90vw, 340px);
+  }
+  .sbinkoq-binko-wrap {
+    top: 6%;
+    right: 1vw;
+    width: clamp(120px, 32vw, 200px);
+  }
+  .sbinkoq-questions {
+    top: auto;
+    bottom: 38%;
+    right: 1vw;
+    max-width: 44vw;
+  }
+  .sbinkoq-footer { bottom: 33%; }
+
+  /* ── SCENE 11: ZIRON TARPIT ─────────────────────────────── */
+  .sziron-text {
+    top: 3%;
+    max-width: min(90vw, 340px);
+  }
+  .sziron-narrator-bubble {
+    top: auto;
+    bottom: 44%;
+    right: 1vw;
+    max-width: 42vw;
+  }
+  .sziron-mondi-wrap {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 34%;
+  }
+
+  /* ── SCENE 12: LAP 23 ───────────────────────────────────── */
+  .slap23-text {
+    left: 50%;
+    top: auto;
+    bottom: 3%;
+    transform: translateX(-50%);
+    max-width: min(90vw, 340px);
+    text-align: center;
+    border-left: none;
+    border-top: 3px solid #4a9fd5;
+    border-radius: 8px;
+  }
+  .slap23-lap-badge {
+    right: 6px;
+    top: 8px;
+  }
+
+  /* ── SCENE 13: ALMOST ───────────────────────────────────── */
+  .salmost-thought-bubble { display: none; }
+  .salmost-dino-wrap { top: 8%; }
+  .salmost-dino { width: clamp(160px, 44vw, 280px); }
+
+  /* ── SCENE 15: DESCENT ──────────────────────────────────── */
+  .sdescent-text {
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: min(90vw, 340px);
+    text-align: center;
+    border-left: none;
+    border-top: 4px solid #3a88c8;
+    border-radius: 10px;
+  }
+
+  /* ── SCENE 19: ZIRON VALID ──────────────────────────────── */
+  .ziron-valid-bubble {
+    left: 50%;
+    transform: translateX(-50%) scale(0.3);
+    right: auto;
+    top: auto;
+    bottom: calc(100% + 4px);
+    white-space: normal;
+    text-align: center;
+    min-width: 160px;
+  }
+
+  /* ── SCENE 21: REAL REASON ──────────────────────────────── */
+  .sreason-text-block {
+    padding-left: clamp(46px, 8vw, 80px);
+    padding-right: 1.2rem;
+  }
+  .sreason-spiral { left: 2.5%; width: 22px; }
+
+  /* ── SCENE 23: AFTER THAT ───────────────────────────────── */
+  .safter-thought-bubble {
+    right: -12px;
+    white-space: normal;
+    max-width: 130px;
+    font-size: 0.82rem;
+    padding: 7px 11px;
+  }
+  .amaza-img-after { width: clamp(100px, 28vw, 180px); }
+  .safter-ground {
+    gap: clamp(10px, 2.5vw, 24px);
+    bottom: 20%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* ── SCENE: NAME REVEAL ─────────────────────────────────── */
+  .namereveal-render-wrap { width: clamp(140px, 58vw, 240px); }
+  .name-stamp { font-size: clamp(1.9rem, 9vw, 3rem); }
+
+  /* ── SCENE 8: SMUG ──────────────────────────────────────── */
+  .ssmug-amaza-wrap { width: clamp(140px, 52vw, 210px); top: 10%; }
+
+  /* ── SCENE 9: TARPIT ────────────────────────────────────── */
+  .starpit-mondi-wrap { width: clamp(110px, 40vw, 180px); }
+
+  /* ── SCENE 12: LAP 23 ───────────────────────────────────── */
+  .slap23-dino { width: clamp(140px, 52vw, 220px); }
+
+  /* ── SCENE 14: HE STOPPED ───────────────────────────────── */
+  .sstopped-hero-text {
+    font-size: clamp(2.4rem, 13vw, 5rem);
+    margin-top: 10vh;
+  }
+
+  /* ── SCENE 17: CROWD ────────────────────────────────────── */
+  .scrowd-bg-bubbles { display: none; }
+  .scrowd-text { bottom: 1%; }
+
+  /* ── SCENE 19: ZIRON VALID ──────────────────────────────── */
+  .valid-word { font-size: clamp(1.8rem, 8vw, 3rem); }
+
+  /* ── SCENE 21: REAL REASON ──────────────────────────────── */
+  .sreason-text-block {
+    padding-left: clamp(36px, 7vw, 56px);
+    padding-right: 0.8rem;
+  }
+  .sreason-spiral { left: 1.5%; width: 18px; }
+  .sreason-big {
+    font-size: clamp(1.3rem, 5.5vw, 2rem);
+    line-height: 1.35;
+  }
+  .sreason-line { font-size: clamp(0.92rem, 3.5vw, 1.4rem); }
+
+  /* ── SCENE 22: MORAL ────────────────────────────────────── */
+  .smoral-plaque {
+    padding: clamp(18px, 4vw, 28px) clamp(16px, 4vw, 28px);
+  }
+  .plaque-big { font-size: clamp(1.5rem, 5.5vw, 2.4rem); }
+
+  /* ── SCENE 23: AFTER THAT ───────────────────────────────── */
+  .safter-thought-bubble { display: none; }
+}
