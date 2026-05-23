@@ -271,13 +271,12 @@ body {
 .bubble-image {
   padding: 3px;
   overflow: hidden;
-  max-width: 220px;
+  max-width: 260px;
 }
 .imsg-img {
   display: block;
   width: 100%;
   border-radius: 15px;
-  background: #fff;
 }
 
 /* iOS input bar */
