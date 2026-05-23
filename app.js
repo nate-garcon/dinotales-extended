@@ -168,6 +168,101 @@ function initScene1() {
   });
 }
 
+/* ── SCENE NAME: AMAZASAURUS REVEAL ─────────────────── */
+function initSceneName() {
+  // Populate starfield
+  const sf = q('#starfield');
+  if (sf) {
+    for (let i = 0; i < 90; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 3 + 1;
+      s.style.cssText = `
+        width:${size}px; height:${size}px;
+        left:${Math.random()*100}%; top:${Math.random()*100}%;
+        --dur:${2 + Math.random()*4}s;
+        --delay:-${Math.random()*5}s;
+      `;
+      sf.appendChild(s);
+    }
+  }
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#scene-name',
+      start: 'top 65%',
+      toggleActions: 'play none none none',
+    },
+  });
+
+  // Render dino flies in from right
+  tl.to('#namerevealRender', { opacity: 1, x: 0, duration: 1, ease: 'power3.out' });
+
+  // Title stamp explodes in
+  tl.to('.name-stamp', { opacity: 1, scale: 1, duration: 0.8, ease: 'elastic.out(0.7, 0.4)' }, '-=0.3');
+  tl.to('.name-tagline', { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.1');
+  tl.to('.name-facts',   { opacity: 1, duration: 0.5, ease: 'power2.out' }, '+=0.1');
+  tl.to('.namereveal-body', { opacity: 1, y: 0, stagger: 0.2, duration: 0.6, ease: 'power2.out' }, '+=0.1');
+}
+
+/* ── SCENE FLIGHT: MORNING LAPS ──────────────────────── */
+function initSceneFlight() {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#scene-flight',
+      start: 'top 60%',
+      toggleActions: 'play none none none',
+    },
+  });
+
+  // Render dino drops in from above
+  tl.to('#renderMainWrap', { opacity: 1, y: 0, duration: 1, ease: 'elastic.out(0.6, 0.5)' });
+
+  // Sketch dino fades in (background, smaller)
+  tl.to('#sketchFlyWrap', { opacity: 0.65, x: 0, duration: 0.8, ease: 'power2.out' }, '-=0.5');
+
+  // Fact bubble pops in
+  tl.to('#flightFact', { opacity: 1, rotation: -3, duration: 0.5, ease: 'back.out(2)' }, '+=0.2');
+
+  // Text lines stagger in
+  tl.to('.flight-line', {
+    opacity: 1, y: 0, stagger: 0.25, duration: 0.6, ease: 'power2.out',
+  }, '+=0.1');
+  tl.to('.flight-just-laps', {
+    opacity: 1, scale: 1, duration: 0.7, ease: 'elastic.out(0.8, 0.5)',
+  }, '-=0.2');
+}
+
+/* ── SCENE FRIENDS: THE ASSOCIATES ──────────────────── */
+function initSceneFriends() {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#scene-friends',
+      start: 'top 65%',
+      toggleActions: 'play none none none',
+    },
+  });
+
+  // Header
+  tl.to('.friends-header', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' });
+
+  // Render dino floats in
+  tl.to('#friendsRender', { opacity: 1, x: 0, duration: 0.8, ease: 'power2.out' }, '-=0.3');
+
+  // Cards pop in staggered
+  qa('.friend-card').forEach((card, i) => {
+    tl.to(card, {
+      opacity: 1,
+      y: 0,
+      duration: 0.7,
+      ease: 'elastic.out(0.8, 0.5)',
+    }, `-=0.${i === 0 ? 2 : 4}`);
+    setTimeout(() => card.classList.add('revealed'), 1800 + i * 200);
+  });
+
+  tl.to('.friends-footer', { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.2');
+}
+
 /* ── SCENE 2: APEX PREDATOR ─────────────────────────── */
 function initScene2() {
   // Hero dino slams in from above
@@ -582,8 +677,11 @@ function init() {
   initChat();
   initScene1();
   initScene2();
+  initSceneName();
+  initSceneFlight();
   initScene3();
   initScene4();
+  initSceneFriends();
   initScene5();
   initStoryPage();
   initOutro();
