@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DINASAUR TIMES — By moochaol</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PHASE 0: GROUP CHAT PROLOGUE
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="prologue" class="chat-section">
+    <div class="chat-bg-grid"></div>
+    <div class="chat-window">
+      <div class="chat-header">
+        <div class="chat-dots"><span></span><span></span><span></span></div>
+        <div class="chat-title">the boys 🦕</div>
+        <div class="chat-count">4 online</div>
+      </div>
+      <div class="chat-body">
+
+        <div class="chat-msg msg-michael" data-chat="0">
+          <div class="avatar av-michael">M</div>
+          <div class="bubble-wrap">
+            <span class="sender-name michael-name">moochaol</span>
+            <div class="bubble">I was a child prodigy art caption</div>
+          </div>
+        </div>
+
+        <div class="chat-msg msg-bob" data-chat="1">
+          <div class="avatar av-bob">B</div>
+          <div class="bubble-wrap">
+            <span class="sender-name bob-name">bobsnaps</span>
+            <div class="bubble">Dinosaurs aren't real michael</div>
+          </div>
+        </div>
+
+        <div class="chat-msg msg-michael" data-chat="2">
+          <div class="avatar av-michael">M</div>
+          <div class="bubble-wrap">
+            <span class="sender-name michael-name">moochaol</span>
+            <div class="bubble">I guess but I feel like my picture is pretty captivating</div>
+          </div>
+        </div>
+
+        <div class="chat-msg msg-michael" data-chat="3">
+          <div class="avatar av-michael">M</div>
+          <div class="bubble-wrap">
+            <span class="sender-name michael-name">moochaol</span>
+            <div class="bubble">Yes they were and there was over 100 different kinds</div>
+          </div>
+        </div>
+
+        <div class="chat-msg msg-cooal" data-chat="4">
+          <div class="avatar av-cooal">K</div>
+          <div class="bubble-wrap">
+            <span class="sender-name cooal-name">cooal</span>
+            <div class="bubble">he's so yaaasified</div>
+          </div>
+        </div>
+
+        <div class="chat-msg msg-cooal" data-chat="5">
+          <div class="avatar av-cooal">K</div>
+          <div class="bubble-wrap">
+            <span class="sender-name cooal-name">cooal</span>
+            <div class="bubble">I can see the vision it's like a flying t. rex with velociraptor talons</div>
+          </div>
+        </div>
+
+        <div class="chat-msg msg-bob" data-chat="6">
+          <div class="avatar av-bob">B</div>
+          <div class="bubble-wrap">
+            <span class="sender-name bob-name">bobsnaps</span>
+            <div class="bubble">Oh yeah name top 3</div>
+          </div>
+        </div>
+
+        <div class="chat-msg msg-michael final-msg" data-chat="7">
+          <div class="avatar av-michael">M</div>
+          <div class="bubble-wrap">
+            <span class="sender-name michael-name">moochaol</span>
+            <div class="bubble">Mondi, Binko, and Ziron<br><span class="sub-text">(there's a prequel but I'm waiting to release it)</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Portal smash transition overlay -->
+    <div class="portal-overlay" id="portalOverlay"></div>
+    <div class="scroll-hint">scroll to enter the story ↓</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SCENE 1: THE DROP — PREHISTORIC WORLD
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="scene1" class="scene">
+
+    <!-- Sky gradient layers -->
+    <div class="sky-layer" id="skyLayer"></div>
+
+    <!-- Background SVG mountains -->
+    <div class="parallax-layer layer-mountains" data-speed="-0.15">
+      <svg class="mountains-svg" viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="mtGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2d5016"/>
+            <stop offset="100%" stop-color="#1a3009"/>
+          </linearGradient>
+        </defs>
+        <polygon fill="url(#mtGrad)" opacity="0.7" points="0,500 180,180 360,320 540,140 720,260 900,100 1080,220 1260,160 1440,280 1440,500"/>
+        <polygon fill="#1a3009" opacity="0.5" points="0,500 200,240 400,360 600,200 800,300 1000,150 1200,250 1440,200 1440,500"/>
+      </svg>
+    </div>
+
+    <!-- Mid BG jungle canopy -->
+    <div class="parallax-layer layer-trees-back" data-speed="-0.08">
+      <svg viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#1c4a0d" opacity="0.9">
+          <ellipse cx="80" cy="380" rx="90" ry="110"/>
+          <ellipse cx="220" cy="390" rx="70" ry="90"/>
+          <ellipse cx="380" cy="370" rx="110" ry="130"/>
+          <ellipse cx="560" cy="385" rx="80" ry="100"/>
+          <ellipse cx="720" cy="375" rx="100" ry="120"/>
+          <ellipse cx="900" cy="380" rx="90" ry="110"/>
+          <ellipse cx="1060" cy="370" rx="115" ry="135"/>
+          <ellipse cx="1240" cy="385" rx="85" ry="105"/>
+          <ellipse cx="1400" cy="378" rx="95" ry="115"/>
+        </g>
+        <g fill="#255c10" opacity="0.8">
+          <ellipse cx="140" cy="375" rx="60" ry="80"/>
+          <ellipse cx="300" cy="380" rx="75" ry="95"/>
+          <ellipse cx="460" cy="372" rx="65" ry="85"/>
+          <ellipse cx="640" cy="378" rx="70" ry="90"/>
+          <ellipse cx="820" cy="373" rx="80" ry="100"/>
+          <ellipse cx="980" cy="376" rx="65" ry="82"/>
+          <ellipse cx="1140" cy="370" rx="90" ry="112"/>
+          <ellipse cx="1320" cy="374" rx="75" ry="95"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Faint notebook texture echo watermarked in the sky -->
+    <div style="position:absolute;inset:0;z-index:0;pointer-events:none;
+      background:url('assets/notebook-full.png') center 30%/80% auto no-repeat;
+      opacity:0.04;filter:blur(2px) grayscale(1);"></div>
+
+    <!-- Silhouette easter egg dinos in background -->
+    <div class="bg-dino-silhouettes">
+      <div class="sil-dino sil-mondi" title="Mondi">
+        <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" fill="#0d2a05" opacity="0.5">
+          <!-- Mondi: big round body, long neck -->
+          <ellipse cx="60" cy="55" rx="38" ry="22"/>
+          <ellipse cx="30" cy="38" rx="12" ry="8"/>
+          <line x1="42" y1="40" x2="28" y2="36" stroke="#0d2a05" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="22" cy="32" r="7"/>
+          <rect x="40" y="70" width="8" height="14" rx="3"/>
+          <rect x="56" y="72" width="8" height="12" rx="3"/>
+          <rect x="70" y="70" width="8" height="14" rx="3"/>
+          <rect x="86" y="72" width="8" height="12" rx="3"/>
+        </svg>
+        <span class="sil-label">Mondi</span>
+      </div>
+      <div class="sil-dino sil-binko" title="Binko">
+        <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg" fill="#0d2a05" opacity="0.5">
+          <!-- Binko: winged, sleek -->
+          <ellipse cx="50" cy="55" rx="28" ry="18"/>
+          <circle cx="25" cy="45" r="9"/>
+          <line x1="33" y1="47" x2="24" y2="43" stroke="#0d2a05" stroke-width="6" stroke-linecap="round"/>
+          <!-- Wings -->
+          <polygon points="50,45 15,20 35,50"/>
+          <polygon points="50,45 85,20 65,50"/>
+          <rect x="44" y="66" width="6" height="10" rx="2"/>
+          <rect x="54" y="66" width="6" height="10" rx="2"/>
+        </svg>
+        <span class="sil-label">Binko</span>
+      </div>
+      <div class="sil-dino sil-ziron" title="Ziron">
+        <svg viewBox="0 0 130 100" xmlns="http://www.w3.org/2000/svg" fill="#0d2a05" opacity="0.5">
+          <!-- Ziron: T-rex style, big head -->
+          <ellipse cx="70" cy="60" rx="35" ry="25"/>
+          <ellipse cx="38" cy="45" rx="18" ry="14"/>
+          <circle cx="22" cy="40" r="8"/>
+          <!-- Tiny arms -->
+          <line x1="52" y1="50" x2="45" y2="58" stroke="#0d2a05" stroke-width="5" stroke-linecap="round"/>
+          <!-- Tail -->
+          <path d="M 105 62 Q 130 55 140 45" stroke="#0d2a05" stroke-width="10" fill="none" stroke-linecap="round"/>
+          <rect x="55" y="78" width="10" height="18" rx="4"/>
+          <rect x="75" y="78" width="10" height="18" rx="4"/>
+        </svg>
+        <span class="sil-label">Ziron</span>
+      </div>
+    </div>
+
+    <!-- Scene 1 text -->
+    <div class="scene-text scene1-text">
+      <div class="stamp-title">DINASAUR TIMES.</div>
+      <div class="stamp-sub">By moochaol.</div>
+      <p class="story-body">There was over 100 kinds of Dinosaurs.</p>
+    </div>
+
+    <!-- Foreground leaves -->
+    <div class="parallax-layer layer-leaves-front" data-speed="0.12">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#1f5c0a">
+          <!-- Left cluster -->
+          <ellipse cx="-20" cy="180" rx="120" ry="60" transform="rotate(-20, -20, 180)"/>
+          <ellipse cx="60" cy="195" rx="100" ry="50" transform="rotate(15, 60, 195)"/>
+          <ellipse cx="150" cy="185" rx="90" ry="45" transform="rotate(-10, 150, 185)"/>
+          <!-- Right cluster -->
+          <ellipse cx="1460" cy="180" rx="120" ry="60" transform="rotate(20, 1460, 180)"/>
+          <ellipse cx="1380" cy="195" rx="100" ry="50" transform="rotate(-15, 1380, 195)"/>
+          <ellipse cx="1290" cy="185" rx="90" ry="45" transform="rotate(10, 1290, 185)"/>
+          <!-- Center bottom -->
+          <ellipse cx="720" cy="200" rx="150" ry="55"/>
+        </g>
+      </svg>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SCENE 2: THE APEX PREDATOR ARRIVES
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="scene2" class="scene scene-dark">
+
+    <div class="scene2-bg"></div>
+
+    <div class="scene-text scene2-text">
+      <p class="story-body">There was only <em>1 kind</em> of Dinosaur that could do evry single thing that the others couldent do.</p>
+      <p class="story-body-large">It was amazing...</p>
+    </div>
+
+    <!--
+    ════════════════════════════════════════════════════════
+    HERO DINO ASSET — michael-dino.png
+    ════════════════════════════════════════════════════════
+    Place the raw michael-dino.png file in assets/michael-dino.png.
+
+    Background removal is handled via CSS:
+      mix-blend-mode: multiply   → knocks out white backgrounds
+      (swap to "screen" if the image has a dark background)
+
+    The image also has a drop-shadow filter applied so it
+    pops off the scene background without needing alpha.
+    ════════════════════════════════════════════════════════
+    -->
+    <div class="hero-dino-wrap" id="heroDinoWrap">
+      <div class="hero-dino-glow"></div>
+      <img
+        class="hero-dino"
+        id="heroDino"
+        src="assets/michael-dino.png"
+        alt="Michael's Yaaasified Flying T-Rex with Velociraptor Talons — original notebook drawing"
+      />
+      <!-- Fallback placeholder when PNG isn't present yet -->
+      <div class="dino-placeholder" id="dinoPlaceholder">
+        <svg viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="dinoBodyGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#f9e04b"/>
+              <stop offset="100%" stop-color="#d4a800"/>
+            </radialGradient>
+          </defs>
+          <!-- Body -->
+          <ellipse cx="155" cy="160" rx="85" ry="65" fill="url(#dinoBodyGrad)"/>
+          <!-- Neck -->
+          <ellipse cx="100" cy="115" rx="28" ry="40" fill="#f9e04b" transform="rotate(-20,100,115)"/>
+          <!-- Head (big T-rex style) -->
+          <ellipse cx="72" cy="85" rx="45" ry="32" fill="#f9e04b"/>
+          <!-- Jaw -->
+          <ellipse cx="72" cy="100" rx="38" ry="18" fill="#e8c800"/>
+          <!-- Eye -->
+          <circle cx="58" cy="76" r="8" fill="#fff"/>
+          <circle cx="60" cy="77" r="5" fill="#222"/>
+          <circle cx="61" cy="75" r="2" fill="#fff"/>
+          <!-- Teeth -->
+          <polygon points="50,106 55,118 60,106" fill="#fff"/>
+          <polygon points="63,107 68,120 73,107" fill="#fff"/>
+          <polygon points="76,106 81,117 86,106" fill="#fff"/>
+          <!-- Wings -->
+          <path d="M 170 120 Q 250 60 290 30 Q 270 100 220 140 Z" fill="#f0c900" opacity="0.9"/>
+          <path d="M 160 125 Q 80 55 20 15 Q 60 95 130 135 Z" fill="#f0c900" opacity="0.9"/>
+          <!-- Wing details -->
+          <path d="M 170 120 Q 250 60 290 30" stroke="#d4a800" stroke-width="2" fill="none"/>
+          <path d="M 160 125 Q 80 55 20 15" stroke="#d4a800" stroke-width="2" fill="none"/>
+          <!-- Tiny T-rex arms -->
+          <line x1="115" y1="155" x2="98" y2="175" stroke="#d4a800" stroke-width="6" stroke-linecap="round"/>
+          <line x1="98" y1="175" x2="90" y2="178" stroke="#d4a800" stroke-width="4" stroke-linecap="round"/>
+          <!-- Velociraptor talons / legs -->
+          <line x1="125" y1="218" x2="110" y2="250" stroke="#d4a800" stroke-width="8" stroke-linecap="round"/>
+          <line x1="110" y1="250" x2="88" y2="265" stroke="#d4a800" stroke-width="6" stroke-linecap="round"/>
+          <line x1="110" y1="250" x2="100" y2="272" stroke="#d4a800" stroke-width="5" stroke-linecap="round"/>
+          <line x1="110" y1="250" x2="118" y2="270" stroke="#d4a800" stroke-width="5" stroke-linecap="round"/>
+          <line x1="175" y1="220" x2="188" y2="252" stroke="#d4a800" stroke-width="8" stroke-linecap="round"/>
+          <line x1="188" y1="252" x2="170" y2="268" stroke="#d4a800" stroke-width="6" stroke-linecap="round"/>
+          <line x1="188" y1="252" x2="180" y2="275" stroke="#d4a800" stroke-width="5" stroke-linecap="round"/>
+          <line x1="188" y1="252" x2="198" y2="270" stroke="#d4a800" stroke-width="5" stroke-linecap="round"/>
+          <!-- Tail -->
+          <path d="M 235 175 Q 275 185 300 170 Q 290 195 260 200 Q 240 195 235 175 Z" fill="#f9e04b"/>
+          <!-- Yaasify sparkles -->
+          <text x="10" y="40" font-size="20" opacity="0.8">✨</text>
+          <text x="260" y="50" font-size="16" opacity="0.7">✨</text>
+          <text x="240" y="240" font-size="14" opacity="0.6">✨</text>
+        </svg>
+        <p class="placeholder-label">michael-dino.png<br><small>drop into assets/ folder</small></p>
+      </div>
+      <div class="dino-label-bubble">he's so yaaasified ✨</div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SCENE 3: ABSOLUTE IMMUNITY
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="scene3" class="scene scene-split">
+
+    <div class="split-left">
+      <!-- Meat side -->
+      <div class="split-content">
+        <div class="split-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="55" rx="35" ry="28" fill="#c0392b"/>
+            <ellipse cx="50" cy="52" rx="32" ry="22" fill="#e74c3c"/>
+            <!-- Bone handle -->
+            <rect x="44" y="20" width="12" height="38" rx="6" fill="#f5e6c8"/>
+            <circle cx="50" cy="16" r="9" fill="#f5e6c8"/>
+            <circle cx="50" cy="58" r="4" fill="#c0392b"/>
+            <!-- Glint -->
+            <ellipse cx="38" cy="44" rx="6" ry="4" fill="#f1948a" opacity="0.6" transform="rotate(-30,38,44)"/>
+          </svg>
+        </div>
+        <p class="split-text">could <strong>meet</strong></p>
+      </div>
+      <div class="split-content">
+        <div class="split-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="60" rx="30" ry="22" fill="#27ae60"/>
+            <path d="M 50 20 Q 38 38 50 58 Q 62 38 50 20 Z" fill="#2ecc71"/>
+            <path d="M 30 38 Q 48 45 50 58 Q 40 38 30 38 Z" fill="#27ae60" opacity="0.7"/>
+            <path d="M 70 38 Q 52 45 50 58 Q 60 38 70 38 Z" fill="#27ae60" opacity="0.7"/>
+          </svg>
+        </div>
+        <p class="split-text">eats <strong>plants</strong></p>
+      </div>
+    </div>
+
+    <div class="split-dino-center">
+      <div class="mini-dino-icon">🦕</div>
+    </div>
+
+    <div class="split-right">
+      <!-- Poison water -->
+      <div class="split-content poison-water-side">
+        <div class="poison-water-container">
+          <div class="poison-pond">
+            <svg class="water-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="pondGrad" cx="50%" cy="50%" r="60%">
+                  <stop offset="0%" stop-color="#39ff14" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#0a5c00" stop-opacity="0.8"/>
+                </radialGradient>
+                <filter id="glow-filter">
+                  <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                  <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <ellipse cx="100" cy="75" rx="90" ry="42" fill="url(#pondGrad)" filter="url(#glow-filter)"/>
+              <ellipse cx="100" cy="68" rx="82" ry="30" fill="#39ff14" opacity="0.3"/>
+              <!-- Bubbles -->
+              <circle class="bubble b1" cx="70" cy="65" r="5" fill="#7fff00" opacity="0.7"/>
+              <circle class="bubble b2" cx="100" cy="60" r="7" fill="#39ff14" opacity="0.6"/>
+              <circle class="bubble b3" cx="130" cy="63" r="4" fill="#7fff00" opacity="0.8"/>
+              <circle class="bubble b4" cx="85" cy="58" r="3" fill="#adff2f" opacity="0.6"/>
+              <circle class="bubble b5" cx="118" cy="55" r="6" fill="#39ff14" opacity="0.5"/>
+              <!-- Warning skull -->
+              <text x="88" y="90" font-size="22" fill="#fff" opacity="0.9">☠️</text>
+            </svg>
+            <div class="water-glow-ring"></div>
+          </div>
+          <p class="poison-label">"posend water"</p>
+        </div>
+        <p class="split-text immune-text"><strong>zero</strong> consequences ✅</p>
+      </div>
+    </div>
+
+    <div class="scene-text scene3-text">
+      <p class="story-body">...and could meet, plants, and can drink <span class="highlight-green">posend, water</span> and can stay alive,</p>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SCENE 4: THE GUN PARADOX
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="scene4" class="scene scene-dark scene-gun">
+
+    <div class="scene4-bg"></div>
+
+    <div class="scene-text scene4-text-top">
+      <p class="story-body">The only thing that can kill it is a bollot from a gun...</p>
+    </div>
+
+    <!-- The Gun / Crosshair -->
+    <div class="gun-container" id="gunContainer">
+      <div class="crosshair" id="crosshair">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="80" stroke="#ff2222" stroke-width="3" fill="none" opacity="0.9"/>
+          <circle cx="100" cy="100" r="55" stroke="#ff2222" stroke-width="1.5" fill="none" opacity="0.6"/>
+          <circle cx="100" cy="100" r="8" fill="#ff2222"/>
+          <line x1="100" y1="10" x2="100" y2="40" stroke="#ff2222" stroke-width="3"/>
+          <line x1="100" y1="160" x2="100" y2="190" stroke="#ff2222" stroke-width="3"/>
+          <line x1="10" y1="100" x2="40" y2="100" stroke="#ff2222" stroke-width="3"/>
+          <line x1="160" y1="100" x2="190" y2="100" stroke="#ff2222" stroke-width="3"/>
+          <!-- Tick marks -->
+          <line x1="100" y1="48" x2="100" y2="58" stroke="#ff2222" stroke-width="1.5" opacity="0.5"/>
+          <line x1="100" y1="142" x2="100" y2="152" stroke="#ff2222" stroke-width="1.5" opacity="0.5"/>
+          <line x1="48" y1="100" x2="58" y2="100" stroke="#ff2222" stroke-width="1.5" opacity="0.5"/>
+          <line x1="142" y1="100" x2="152" y2="100" stroke="#ff2222" stroke-width="1.5" opacity="0.5"/>
+        </svg>
+      </div>
+      <!-- Bullet projectile -->
+      <div class="bullet" id="bullet">
+        <svg viewBox="0 0 60 20" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bulletGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#aaa"/>
+              <stop offset="60%" stop-color="#eee"/>
+              <stop offset="100%" stop-color="#c8a000"/>
+            </linearGradient>
+          </defs>
+          <path d="M 0 4 L 42 4 L 56 10 L 42 16 L 0 16 Z" fill="url(#bulletGrad)"/>
+          <path d="M 42 4 L 56 10 L 42 16 Z" fill="#c8a000"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- The vanish -->
+    <div class="gun-vanish" id="gunVanish">
+      <div class="question-mark">?</div>
+      <div class="vanish-particles" id="vanishParticles"></div>
+    </div>
+
+    <div class="scene-text scene4-text-bottom" id="scene4Twist">
+      <p class="story-body twist-text">...but there was <span class="highlight-red">no guns</span> when Dinosaurs were alive.</p>
+      <p class="story-body" style="font-size:clamp(0.8rem,1.8vw,1rem);color:rgba(255,255,255,0.35);margin-top:0.5rem;">— moochaol</p>
+      <div class="twist-emoji">💀➡️❓➡️🦕✅</div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SCENE 5: OLD AGE & DISTRACTIONS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="scene5" class="scene scene-cozy">
+
+    <div class="scene5-bg"></div>
+
+    <div class="scene-text scene5-text">
+      <p class="story-body">So the other thing that kill it was old age.</p>
+      <p class="story-body-large old-age-text">old age. 👴</p>
+      <!-- original crossed-out line from michael's notebook -->
+      <p class="story-body" style="text-decoration:line-through;color:rgba(255,255,255,0.3);font-size:clamp(0.82rem,1.9vw,1.05rem);margin-top:0.75rem;">but they was a lot of things that can distracke it very esly</p>
+    </div>
+
+    <!-- Dino with reading glasses -->
+    <div class="old-dino-wrap" id="oldDinoWrap">
+      <div class="old-dino-svg">
+        <svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" id="oldDinoSvg">
+          <defs>
+            <radialGradient id="oldBodyGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#f9e04b"/>
+              <stop offset="100%" stop-color="#c8a000"/>
+            </radialGradient>
+          </defs>
+          <!-- Body -->
+          <ellipse cx="165" cy="165" rx="80" ry="60" fill="url(#oldBodyGrad)"/>
+          <!-- Neck -->
+          <ellipse cx="105" cy="118" rx="26" ry="38" fill="#f9e04b" transform="rotate(-20,105,118)"/>
+          <!-- Head -->
+          <ellipse cx="75" cy="90" rx="42" ry="30" fill="#f9e04b"/>
+          <!-- Jaw -->
+          <ellipse cx="75" cy="104" rx="36" ry="16" fill="#e8c800"/>
+          <!-- Tired / content eyes — half closed -->
+          <ellipse cx="60" cy="82" rx="9" ry="6" fill="#fff"/>
+          <ellipse cx="60" cy="85" rx="9" ry="4" fill="#333"/>
+          <!-- Reading glasses -->
+          <circle cx="55" cy="84" r="11" stroke="#8B4513" stroke-width="2.5" fill="none" opacity="0.9"/>
+          <circle cx="75" cy="83" r="11" stroke="#8B4513" stroke-width="2.5" fill="none" opacity="0.9"/>
+          <line x1="66" y1="84" x2="64" y2="83" stroke="#8B4513" stroke-width="2"/>
+          <line x1="44" y1="84" x2="36" y2="82" stroke="#8B4513" stroke-width="2"/>
+          <line x1="86" y1="83" x2="94" y2="82" stroke="#8B4513" stroke-width="2"/>
+          <!-- Gray wizard brows -->
+          <path d="M 48 74 Q 58 70 66 74" stroke="#aaa" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M 68 73 Q 78 69 86 73" stroke="#aaa" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- Smile / content mouth -->
+          <path d="M 58 108 Q 75 116 92 108" stroke="#c8a000" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- Wings (drooped contentedly) -->
+          <path d="M 175 128 Q 240 95 275 80 Q 255 125 210 148 Z" fill="#f0c900" opacity="0.85"/>
+          <path d="M 155 130 Q 85 92 45 78 Q 70 124 130 145 Z" fill="#f0c900" opacity="0.85"/>
+          <!-- Tiny arms -->
+          <line x1="122" y1="158" x2="108" y2="176" stroke="#d4a800" stroke-width="6" stroke-linecap="round"/>
+          <!-- Newspaper prop -->
+          <rect x="90" y="170" width="55" height="42" rx="4" fill="#f5f0e0" opacity="0.95"/>
+          <line x1="95" y1="180" x2="140" y2="180" stroke="#888" stroke-width="1.5"/>
+          <line x1="95" y1="187" x2="140" y2="187" stroke="#888" stroke-width="1.5"/>
+          <line x1="95" y1="194" x2="130" y2="194" stroke="#888" stroke-width="1.5"/>
+          <text x="100" y="178" font-size="7" fill="#555">DINO DAILY</text>
+          <!-- Legs -->
+          <line x1="138" y1="220" x2="124" y2="248" stroke="#d4a800" stroke-width="8" stroke-linecap="round"/>
+          <line x1="182" y1="222" x2="196" y2="250" stroke="#d4a800" stroke-width="8" stroke-linecap="round"/>
+          <!-- Tail -->
+          <path d="M 240 175 Q 280 182 305 168 Q 292 198 262 200 Q 244 195 240 175 Z" fill="#f9e04b"/>
+          <!-- ZZZ sleepy indicator -->
+          <text class="zzz-text" x="88" y="58" font-size="14" fill="#aaa" font-style="italic" opacity="0.7">z</text>
+          <text class="zzz-text" x="96" y="48" font-size="17" fill="#aaa" font-style="italic" opacity="0.5">z</text>
+          <text class="zzz-text" x="106" y="36" font-size="20" fill="#aaa" font-style="italic" opacity="0.3">z</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Shiny distraction object -->
+    <div class="distraction-trigger" id="distractionTrigger" title="Click me!">
+      <div class="shiny-orb">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="orbGrad" cx="35%" cy="30%" r="65%">
+              <stop offset="0%" stop-color="#fff"/>
+              <stop offset="30%" stop-color="#ffe066"/>
+              <stop offset="70%" stop-color="#ffa500"/>
+              <stop offset="100%" stop-color="#ff6600"/>
+            </radialGradient>
+          </defs>
+          <circle cx="40" cy="40" r="36" fill="url(#orbGrad)"/>
+          <ellipse cx="28" cy="25" rx="10" ry="7" fill="#fff" opacity="0.5" transform="rotate(-30,28,25)"/>
+        </svg>
+      </div>
+      <div class="distraction-label">psst...</div>
+    </div>
+
+    <!-- Distraction reveal text -->
+    <div class="distraction-reveal" id="distractionReveal">
+      <p>but they was a lot of things that can <strong>distracke it very esly!</strong> 👀</p>
+    </div>
+
+    <!-- Eyes that follow cursor -->
+    <div class="follow-eyes" id="followEyes">
+      <div class="follow-eye" id="eyeLeft">
+        <div class="eye-pupil" id="pupilLeft"></div>
+      </div>
+      <div class="follow-eye" id="eyeRight">
+        <div class="eye-pupil" id="pupilRight"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       OUTRO: THE LEGEND — PARACHUTE DINO
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="outro" class="scene scene-outro">
+
+    <div class="outro-sky"></div>
+
+    <!-- Floating parachute dino -->
+    <div class="parachute-container" id="parachuteDino">
+      <svg class="parachute-svg" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+        <!-- Parachute canopy -->
+        <defs>
+          <linearGradient id="chuteGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ff6b6b"/>
+            <stop offset="33%" stop-color="#ffd93d"/>
+            <stop offset="66%" stop-color="#6bcb77"/>
+            <stop offset="100%" stop-color="#4d96ff"/>
+          </linearGradient>
+        </defs>
+        <path d="M 30 90 Q 100 20 170 90" fill="url(#chuteGrad)" opacity="0.95"/>
+        <path d="M 30 90 Q 100 20 170 90 Q 145 105 100 100 Q 55 105 30 90 Z" fill="url(#chuteGrad)"/>
+        <!-- Panels lines -->
+        <line x1="100" y1="20" x2="100" y2="100" stroke="#fff" stroke-width="1" opacity="0.5"/>
+        <line x1="65" y1="28" x2="78" y2="100" stroke="#fff" stroke-width="1" opacity="0.5"/>
+        <line x1="135" y1="28" x2="122" y2="100" stroke="#fff" stroke-width="1" opacity="0.5"/>
+        <!-- Strings -->
+        <line x1="68" y1="100" x2="90" y2="155" stroke="#ddd" stroke-width="1.5"/>
+        <line x1="100" y1="100" x2="100" y2="155" stroke="#ddd" stroke-width="1.5"/>
+        <line x1="132" y1="100" x2="110" y2="155" stroke="#ddd" stroke-width="1.5"/>
+
+        <!-- Dino body (UPSIDE DOWN as per the story!) -->
+        <g transform="translate(100, 165) rotate(180)">
+          <!-- Upside-down dino body -->
+          <ellipse cx="0" cy="0" rx="40" ry="30" fill="#f9e04b"/>
+          <!-- Head (now pointing down) -->
+          <ellipse cx="-35" cy="10" rx="28" ry="20" fill="#f9e04b"/>
+          <ellipse cx="-35" cy="22" rx="24" ry="12" fill="#e8c800"/>
+          <!-- Eye -->
+          <circle cx="-44" cy="4" r="5" fill="#fff"/>
+          <circle cx="-43" cy="5" r="3" fill="#222"/>
+          <!-- Wings up (which appear to be down since flipped) -->
+          <path d="M 10 -15 Q 55 -50 75 -60 Q 62 -20 30 -5 Z" fill="#f0c900"/>
+          <path d="M -10 -15 Q -55 -50 -75 -60 Q -62 -20 -30 -5 Z" fill="#f0c900"/>
+          <!-- Arms -->
+          <line x1="-15" y1="10" x2="-8" y2="28" stroke="#d4a800" stroke-width="5" stroke-linecap="round"/>
+          <!-- Legs (pointing up = below parachute in real orientation) -->
+          <line x1="-10" y1="-25" x2="-12" y2="-45" stroke="#d4a800" stroke-width="7" stroke-linecap="round"/>
+          <line x1="10" y1="-25" x2="12" y2="-45" stroke="#d4a800" stroke-width="7" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Credit roll -->
+    <div class="credit-roll" id="creditRoll">
+      <div class="credit-line big-credit">DINASAUR TIMES</div>
+      <div class="credit-line">Written &amp; Illustrated by <strong>moochaol</strong></div>
+      <div class="credit-line muted">age unknown, genius confirmed</div>
+      <div class="credit-divider">— — —</div>
+      <div class="credit-line">Special Thanks to:</div>
+      <div class="credit-line"><strong>bobsnaps</strong> · <strong>cooal</strong></div>
+      <div class="credit-line muted">for not believing and then kind of believing</div>
+      <div class="credit-divider">— — —</div>
+      <div class="credit-line muted">Starring:</div>
+      <div class="credit-line dino-names"><strong>Mondi</strong> &nbsp;·&nbsp; <strong>Binko</strong> &nbsp;·&nbsp; <strong>Ziron</strong></div>
+      <div class="credit-line muted tiny">(prequel coming soon)</div>
+      <div class="credit-divider">— — —</div>
+      <div class="credit-line muted tiny">no dinosaurs were harmed in the making of this story</div>
+      <div class="credit-line muted tiny">guns remain banned from the cretaceous period</div>
+      <div class="finale-emoji">🦕✨🦖</div>
+    </div>
+
+  </section>
+
+  <!-- GSAP via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
