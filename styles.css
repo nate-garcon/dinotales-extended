@@ -1576,3 +1576,2828 @@ strong { color: #fff; }
 #fc-mondi.revealed { animation-delay: 0s; }
 #fc-binko.revealed { animation-delay: 0.4s; }
 #fc-ziron.revealed { animation-delay: 0.8s; }
+/* ============================================================
+   DINOSAUR TIMES — Extended Cut  |  Scenes 8–11
+   dino_a.css
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   SHARED UTILITIES
+   ---------------------------------------------------------- */
+.story-lead {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: #f9f4e8;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+.story-stamp {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #f9e04b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.6rem;
+  text-shadow: 0 2px 12px rgba(249,224,75,0.4);
+}
+.story-dramatic {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 900;
+  color: #fff;
+  margin: 0.2rem 0 0.6rem;
+  letter-spacing: 0.04em;
+}
+.story-body {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #e8e0d0;
+  margin: 0.35rem 0;
+  line-height: 1.65;
+}
+.story-muted {
+  opacity: 0.62;
+  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+}
+
+/* ----------------------------------------------------------
+   SCENE 8: scene-smug
+   ---------------------------------------------------------- */
+#scene-smug {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ssmug-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 80%, #f4a340 0%, #e07820 25%, #b84a10 45%, #6030a0 68%, #1a4a8a 100%);
+  z-index: 0;
+}
+
+/* Soft dawn cloud bands */
+.ssmug-cloud {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,220,160,0.13);
+  filter: blur(28px);
+  z-index: 1;
+  pointer-events: none;
+}
+.ssmug-cloud-1 {
+  width: 60vw; height: 18vh;
+  top: 18%; left: -10%;
+  background: rgba(255,200,120,0.15);
+}
+.ssmug-cloud-2 {
+  width: 45vw; height: 14vh;
+  top: 35%; right: 0;
+  background: rgba(255,180,80,0.1);
+}
+.ssmug-cloud-3 {
+  width: 70vw; height: 10vh;
+  top: 55%; left: 5%;
+  background: rgba(200,100,40,0.1);
+}
+
+/* Ground line */
+.ssmug-ground {
+  position: absolute;
+  bottom: 10.5%;
+  left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, rgba(180,90,20,0.7) 30%, rgba(220,130,40,0.5) 70%, transparent 100%);
+  z-index: 2;
+}
+
+/* Crowd of dino watchers */
+.ssmug-crowd {
+  position: absolute;
+  bottom: 3%;
+  left: 0; right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 0 4vw;
+  z-index: 3;
+}
+.ssmug-crowd-dino {
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  display: inline-block;
+  filter: brightness(0) opacity(0.55);
+  animation: smug-crowd-bob 2.5s ease-in-out infinite;
+  animation-delay: var(--d, 0s);
+  transform-origin: bottom center;
+}
+@keyframes smug-crowd-bob {
+  0%, 100% { transform: scaleY(1) translateY(0); }
+  50% { transform: scaleY(0.97) translateY(-3px); }
+}
+
+/* Amazasaurus flying wrapper */
+.ssmug-amaza-wrap {
+  position: absolute;
+  left: 4vw;
+  top: 20%;
+  width: clamp(220px, 28vw, 420px);
+  z-index: 5;
+  animation: smug-hover 2.5s cubic-bezier(0.45,0.05,0.55,0.95) infinite alternate;
+}
+.ssmug-amaza-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 8px 24px rgba(249,224,75,0.45)) drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+}
+@keyframes smug-hover {
+  from { transform: translateY(0px) rotate(-2deg); }
+  to   { transform: translateY(-20px) rotate(2deg); }
+}
+
+/* Sparkles around Amazasaurus */
+.ssmug-sparkle {
+  position: absolute;
+  left: var(--sx, 50%);
+  top: var(--sy, 50%);
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
+  animation: smug-sparkle-pulse 1.8s ease-in-out infinite alternate;
+  animation-delay: var(--sd, 0s);
+  pointer-events: none;
+  z-index: 6;
+}
+@keyframes smug-sparkle-pulse {
+  from { transform: scale(0.5) rotate(-15deg); opacity: 0.3; }
+  to   { transform: scale(1.3) rotate(15deg); opacity: 1; }
+}
+
+/* LAP COUNTER SCOREBOARD */
+.ssmug-scoreboard {
+  position: absolute;
+  top: 5%;
+  right: 4vw;
+  background: #0a0800;
+  border: 3px solid #f9e04b;
+  border-radius: 8px;
+  padding: 1rem 1.8rem;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(249,224,75,0.5), 0 0 80px rgba(249,224,75,0.2), inset 0 0 20px rgba(249,224,75,0.08);
+  z-index: 6;
+  min-width: clamp(140px, 18vw, 240px);
+}
+.ssmug-scoreboard-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: clamp(0.55rem, 1vw, 0.8rem);
+  color: rgba(249,224,75,0.7);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+.ssmug-scoreboard-number {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 900;
+  color: #f9e04b;
+  line-height: 1;
+  text-shadow: 0 0 30px rgba(249,224,75,0.9), 0 0 60px rgba(249,224,75,0.4);
+  letter-spacing: 0.05em;
+}
+.ssmug-scoreboard-sub {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: clamp(0.45rem, 0.8vw, 0.65rem);
+  color: rgba(249,224,75,0.45);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+}
+
+/* Scene text card */
+.ssmug-text {
+  position: absolute;
+  bottom: 14%;
+  left: 4vw;
+  max-width: clamp(260px, 38vw, 520px);
+  background: rgba(5,10,0,0.72);
+  border-left: 4px solid rgba(249,224,75,0.7);
+  border-radius: 0 12px 12px 0;
+  padding: 1.2rem 1.6rem;
+  backdrop-filter: blur(8px);
+  z-index: 7;
+}
+
+/* ----------------------------------------------------------
+   SCENE 9: scene-tarpit
+   ---------------------------------------------------------- */
+#scene-tarpit {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.starpit-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #1a0f05 0%, #110a03 45%, #0a0805 100%);
+  z-index: 0;
+}
+.starpit-haze {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 85%, rgba(60,30,5,0.5) 0%, transparent 65%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Tar pit at lower 40% */
+.starpit-pit-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  height: 42vh;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.starpit-pit-oval {
+  position: relative;
+  width: 80%;
+  height: 70%;
+  background: radial-gradient(ellipse at 50% 40%, #3a1a05 0%, #1a0a02 50%, #0a0500 100%);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 -8px 40px rgba(0,0,0,0.8), inset 0 10px 30px rgba(0,0,0,0.6);
+}
+.starpit-tar-sheen {
+  position: absolute;
+  top: 5%; left: 10%;
+  width: 40%; height: 25%;
+  background: radial-gradient(ellipse, rgba(80,40,10,0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+/* Tar bubbles */
+.starpit-bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(80,40,10,0.9), #1a0a02);
+  border: 1px solid rgba(100,55,15,0.6);
+  animation: tarpit-bubble-rise 3.5s ease-in infinite;
+}
+.starpit-bubble-1 { width: 18px; height: 18px; left: 25%; bottom: 0; animation-delay: 0s;   animation-duration: 3.2s; }
+.starpit-bubble-2 { width: 12px; height: 12px; left: 55%; bottom: 0; animation-delay: 1.3s; animation-duration: 4.0s; }
+.starpit-bubble-3 { width: 22px; height: 22px; left: 40%; bottom: 0; animation-delay: 2.1s; animation-duration: 3.6s; }
+@keyframes tarpit-bubble-rise {
+  0%   { transform: translateY(0) scale(0.6); opacity: 0; }
+  15%  { opacity: 0.8; }
+  70%  { transform: translateY(-100px) scale(1); opacity: 0.6; }
+  90%  { transform: translateY(-130px) scale(1.2); opacity: 0.3; }
+  100% { transform: translateY(-145px) scale(0.2); opacity: 0; }
+}
+
+/* Mondi SVG wrapper */
+.starpit-mondi-wrap {
+  position: absolute;
+  bottom: 28%;
+  right: 8vw;
+  width: clamp(180px, 22vw, 340px);
+  z-index: 5;
+  animation: tarpit-mondi-sway 5s ease-in-out infinite alternate;
+}
+@keyframes tarpit-mondi-sway {
+  from { transform: rotate(-1.2deg); }
+  to   { transform: rotate(1.2deg); }
+}
+.starpit-mondi-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.8));
+}
+
+/* Mondi thought bubble */
+.starpit-mondi-bubble {
+  position: absolute;
+  top: -18%;
+  left: 5%;
+  background: rgba(240,235,220,0.95);
+  border-radius: 18px;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.5);
+  color: #333;
+}
+.starpit-mondi-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 25%;
+  width: 0; height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 14px solid rgba(240,235,220,0.95);
+}
+.starpit-bubble-dots {
+  display: inline-flex;
+  gap: 3px;
+}
+.starpit-dot {
+  display: inline-block;
+  animation: tarpit-dot-fade 1.5s ease-in-out infinite;
+  animation-delay: calc(var(--di) * 0.35s);
+}
+@keyframes tarpit-dot-fade {
+  0%, 100% { opacity: 0.2; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-4px); }
+}
+
+/* Caption */
+.starpit-caption {
+  position: absolute;
+  bottom: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-chat, system-ui, sans-serif);
+  font-size: clamp(0.65rem, 1.2vw, 0.9rem);
+  color: rgba(180,130,70,0.65);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* Story text top */
+.starpit-text {
+  position: absolute;
+  top: 6%;
+  left: 5vw;
+  max-width: clamp(260px, 45vw, 580px);
+  z-index: 6;
+}
+
+/* ----------------------------------------------------------
+   SCENE 10: scene-binko-q
+   ---------------------------------------------------------- */
+#scene-binko-q {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sbinkoq-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #1e1508 0%, #141008 50%, #0d0a08 100%);
+  z-index: 0;
+}
+.sbinkoq-haze {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 65% 30%, rgba(58,117,204,0.08) 0%, transparent 55%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Mondi lower / more submerged */
+.sbinkoq-mondi-wrap {
+  position: absolute;
+  bottom: 28%;
+  left: 6vw;
+  width: clamp(140px, 18vw, 270px);
+  z-index: 4;
+}
+.sbinkoq-mondi-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.9));
+}
+
+/* Sink indicator */
+.sbinkoq-sink-indicator {
+  position: absolute;
+  bottom: -14%;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  opacity: 0.7;
+}
+.sbinkoq-sink-arrow {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: #cc8833;
+  animation: binkoq-sink-pulse 1.6s ease-in-out infinite;
+}
+.sbinkoq-sink-label {
+  font-family: var(--font-chat, system-ui, sans-serif);
+  font-size: clamp(0.55rem, 1vw, 0.75rem);
+  color: rgba(200,140,60,0.7);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+@keyframes binkoq-sink-pulse {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(4px); opacity: 1; }
+}
+
+/* Binko SVG wrapper */
+.sbinkoq-binko-wrap {
+  position: absolute;
+  top: 12%;
+  right: 5vw;
+  width: clamp(180px, 26vw, 360px);
+  z-index: 5;
+  animation: binkoq-binko-hover 2.2s ease-in-out infinite alternate;
+}
+@keyframes binkoq-binko-hover {
+  from { transform: translateY(0px) rotate(-1.5deg); }
+  to   { transform: translateY(-15px) rotate(1.5deg); }
+}
+.sbinkoq-binko-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 20px rgba(58,117,204,0.5)) drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+}
+
+/* Question bubbles */
+.sbinkoq-questions {
+  position: absolute;
+  top: 30%;
+  right: 4vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  z-index: 6;
+  max-width: clamp(180px, 30vw, 320px);
+}
+.sbinkoq-question {
+  background: rgba(240,236,228,0.96);
+  color: #1a1208;
+  font-family: var(--font-chat, system-ui, sans-serif);
+  font-size: clamp(0.75rem, 1.3vw, 1rem);
+  padding: 0.5rem 0.85rem;
+  border-radius: 14px 14px 4px 14px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.5);
+  position: relative;
+  opacity: 0;
+  transform: translateX(20px);
+}
+.sbinkoq-question::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 12px;
+  width: 0; height: 0;
+  border-left: 9px solid transparent;
+  border-right: 0 solid transparent;
+  border-top: 8px solid rgba(240,236,228,0.96);
+}
+/* Each question gets a rotation for liveliness */
+.sbinkoq-q1 { transform: translateX(20px) rotate(-0.8deg); }
+.sbinkoq-q2 { transform: translateX(20px) rotate(0.5deg); }
+.sbinkoq-q3 { transform: translateX(20px) rotate(-1.2deg); }
+.sbinkoq-q4 { transform: translateX(20px) rotate(0.7deg); }
+.sbinkoq-q5 { transform: translateX(20px) rotate(-0.4deg); }
+
+/* Tar pit */
+.sbinkoq-pit-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 36vh;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.sbinkoq-pit-oval {
+  position: relative;
+  width: 85%;
+  height: 65%;
+  background: radial-gradient(ellipse at 50% 35%, #2e1505 0%, #130803 50%, #080402 100%);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 -6px 30px rgba(0,0,0,0.85), inset 0 8px 22px rgba(0,0,0,0.7);
+}
+.sbinkoq-tar-sheen {
+  position: absolute;
+  top: 8%; left: 15%;
+  width: 35%; height: 22%;
+  background: radial-gradient(ellipse, rgba(70,35,8,0.35) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.sbinkoq-bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(70,35,8,0.9), #100602);
+  border: 1px solid rgba(90,45,12,0.5);
+  animation: tarpit-bubble-rise 3.5s ease-in infinite;
+}
+.sbinkoq-bubble-1 { width: 15px; height: 15px; left: 30%; bottom: 0; animation-delay: 0.5s; animation-duration: 3.8s; }
+.sbinkoq-bubble-2 { width: 20px; height: 20px; left: 62%; bottom: 0; animation-delay: 1.8s; animation-duration: 4.2s; }
+
+/* Story text top */
+.sbinkoq-text {
+  position: absolute;
+  top: 5%;
+  left: 5vw;
+  max-width: clamp(200px, 35vw, 440px);
+  z-index: 7;
+}
+
+/* Footer muted text */
+.sbinkoq-footer {
+  position: absolute;
+  bottom: 36%;
+  left: 5vw;
+  z-index: 7;
+}
+.sbinkoq-sink-text,
+.sbinkoq-well-text {
+  opacity: 0;
+}
+
+/* ----------------------------------------------------------
+   SCENE 11: scene-ziron-tarpit
+   ---------------------------------------------------------- */
+#scene-ziron-tarpit {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sziron-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #120a04 0%, #1c0e06 40%, #140c05 70%, #0e0804 100%);
+  z-index: 0;
+}
+/* Ziron's warm side glow */
+.sziron-warm-glow {
+  position: absolute;
+  top: 20%; right: 0;
+  width: 55%;
+  height: 70%;
+  background: radial-gradient(ellipse at 80% 50%, rgba(139,58,26,0.18) 0%, transparent 65%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Story text left */
+.sziron-text {
+  position: absolute;
+  top: 6%;
+  left: 4vw;
+  max-width: clamp(240px, 38vw, 500px);
+  z-index: 7;
+}
+.sziron-quote-box {
+  margin: 0.8rem 0;
+  background: rgba(139,58,26,0.28);
+  border: 2px solid rgba(200,100,50,0.5);
+  border-radius: 8px;
+  padding: 0.7rem 1.1rem;
+}
+.sziron-big-quote {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-weight: 700;
+  color: #f5d0a8;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* Narrator thought bubble */
+.sziron-narrator-bubble {
+  position: absolute;
+  top: 8%;
+  right: 4vw;
+  max-width: clamp(160px, 22vw, 280px);
+  background: rgba(30,20,10,0.8);
+  border: 1.5px dashed rgba(180,140,90,0.5);
+  border-radius: 16px;
+  padding: 0.7rem 1rem;
+  font-family: var(--font-body, Georgia, serif);
+  font-size: clamp(0.75rem, 1.3vw, 1rem);
+  color: rgba(210,185,145,0.8);
+  font-style: italic;
+  z-index: 8;
+  opacity: 0;
+}
+
+/* Mondi barely above tar */
+.sziron-mondi-wrap {
+  position: absolute;
+  bottom: 30%;
+  left: 30%;
+  width: clamp(110px, 14vw, 200px);
+  z-index: 4;
+}
+.sziron-mondi-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.9));
+}
+.sziron-mondi-reply {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(230,225,210,0.9);
+  border-radius: 12px;
+  padding: 0.35rem 0.75rem;
+  font-family: var(--font-body, Georgia, serif);
+  font-size: clamp(0.75rem, 1.3vw, 1rem);
+  color: #2a2010;
+  white-space: nowrap;
+  opacity: 0;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.6);
+}
+.sziron-mondi-reply::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid rgba(230,225,210,0.9);
+}
+
+/* Ziron SVG wrapper */
+.sziron-ziron-wrap {
+  position: absolute;
+  bottom: 14%;
+  right: 6vw;
+  width: clamp(160px, 20vw, 280px);
+  z-index: 5;
+}
+.sziron-ziron-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 24px rgba(139,58,26,0.45)) drop-shadow(0 2px 8px rgba(0,0,0,0.7));
+}
+
+/* Ziron's nod: animate the head group via CSS */
+.sziron-head-group {
+  transform-origin: 100px 160px;
+  animation: ziron-nod 3s ease-in-out infinite;
+}
+@keyframes ziron-nod {
+  0%, 100% { transform: rotate(0deg); }
+  25%       { transform: rotate(-4deg); }
+  50%       { transform: rotate(0deg); }
+  75%       { transform: rotate(3deg); }
+}
+
+/* Ziron speech bubble */
+.sziron-speech-bubble {
+  position: absolute;
+  top: -8%;
+  left: -60%;
+  background: rgba(245,242,232,0.97);
+  border-radius: 18px;
+  padding: 0.75rem 1.1rem;
+  max-width: clamp(180px, 28vw, 320px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.6);
+  z-index: 6;
+  opacity: 0;
+}
+.sziron-speech-text {
+  font-family: var(--font-body, Georgia, serif);
+  font-size: clamp(0.9rem, 1.8vw, 1.3rem);
+  font-weight: 700;
+  color: #1a0e06;
+  line-height: 1.3;
+}
+.sziron-bubble-tail {
+  position: absolute;
+  bottom: -14px;
+  right: 18%;
+  width: 0; height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 14px solid rgba(245,242,232,0.97);
+}
+
+/* Tar pit */
+.sziron-pit-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 38vh;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.sziron-pit-oval {
+  position: relative;
+  width: 88%;
+  height: 68%;
+  background: radial-gradient(ellipse at 50% 38%, #2a1204 0%, #110802 50%, #070402 100%);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 -8px 36px rgba(0,0,0,0.9), inset 0 8px 24px rgba(0,0,0,0.65);
+}
+.sziron-tar-sheen {
+  position: absolute;
+  top: 6%; left: 12%;
+  width: 38%; height: 22%;
+  background: radial-gradient(ellipse, rgba(60,30,8,0.35) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.sziron-bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(65,32,8,0.9), #0d0502);
+  border: 1px solid rgba(85,42,10,0.55);
+  animation: tarpit-bubble-rise 3.5s ease-in infinite;
+}
+.sziron-bubble-1 { width: 16px; height: 16px; left: 20%; bottom: 0; animation-delay: 0.3s;  animation-duration: 3.4s; }
+.sziron-bubble-2 { width: 11px; height: 11px; left: 48%; bottom: 0; animation-delay: 1.7s;  animation-duration: 4.1s; }
+.sziron-bubble-3 { width: 20px; height: 20px; left: 68%; bottom: 0; animation-delay: 0.9s;  animation-duration: 3.8s; }
+/* ============================================================
+   DINOSAUR TIMES — Extended Cut | Scenes 12–16 | dino_b.css
+   ============================================================ */
+
+/* ---- SHARED SCENE UTILITIES ---- */
+.scene {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scene-text {
+  position: relative;
+  z-index: 10;
+}
+
+/* ============================================================
+   SCENE 12: scene-lap23 — HE SAW MONDI
+   ============================================================ */
+#scene-lap23 {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slap23-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    #0d2a5c 0%,
+    #1a5fb4 25%,
+    #4a9fd5 55%,
+    #6ab8e0 62%,
+    #4a2e10 68%,
+    #1a0a02 80%,
+    #0a0805 100%
+  );
+}
+
+/* Subtle horizon glow */
+.slap23-horizon {
+  position: absolute;
+  top: 58%;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(to right, transparent, #8ac4e0 30%, #a8d8ee 50%, #8ac4e0 70%, transparent);
+  opacity: 0.35;
+  z-index: 2;
+}
+
+/* Ground area */
+.slap23-ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 42%;
+  z-index: 2;
+}
+
+.slap23-tar-pool {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 100%;
+  background: radial-gradient(ellipse 70% 60% at 50% 80%, #160a00 0%, #0a0805 55%, #050403 100%);
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+  box-shadow: 0 -4px 30px rgba(0,0,0,0.7);
+}
+
+/* Mondi's head in tar */
+.slap23-mondi-head {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(100px, 18vw, 180px);
+  z-index: 5;
+}
+
+.slap23-mondi-svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.8));
+}
+
+.slap23-tar-drips {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  right: 0;
+  height: 24px;
+}
+
+.tar-drip {
+  position: absolute;
+  bottom: 0;
+  width: 6px;
+  height: 18px;
+  background: #0a0805;
+  border-radius: 0 0 50% 50%;
+  animation: tarDrip 2.2s ease-in-out infinite;
+}
+
+@keyframes tarDrip {
+  0%, 100% { height: 14px; opacity: 0.7; }
+  50%       { height: 22px; opacity: 1; }
+}
+
+/* SVG dotted sight-line */
+.slap23-sightline {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(80px, 12vw, 160px);
+  height: 100%;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.sightline-dash {
+  stroke-dasharray: 12 8;
+  animation: sightlinePulse 1.6s linear infinite;
+}
+
+@keyframes sightlinePulse {
+  from { stroke-dashoffset: 0; }
+  to   { stroke-dashoffset: -40; }
+}
+
+/* Amazasaurus dino wrapper */
+.slap23-dino-wrap {
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 8;
+}
+
+.slap23-dino {
+  width: clamp(180px, 28vw, 360px);
+  height: auto;
+  filter: drop-shadow(0 6px 20px rgba(0,0,0,0.5));
+  animation: dinoHoverLap23 2.8s ease-in-out infinite;
+}
+
+@keyframes dinoHoverLap23 {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-18px); }
+}
+
+/* LAP 23 badge */
+.slap23-lap-badge {
+  position: absolute;
+  top: 10px;
+  right: -100px;
+  background: #f9e04b;
+  color: #1a0a02;
+  border-radius: 8px;
+  padding: 6px 14px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  animation: badgeFloat 3.2s ease-in-out infinite;
+}
+
+.lap-number {
+  display: block;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: clamp(0.9rem, 1.8vw, 1.4rem);
+  letter-spacing: 2px;
+  color: #1a0a02;
+}
+
+.lap-sub {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: clamp(0.55rem, 1vw, 0.75rem);
+  color: #3a2000;
+  opacity: 0.85;
+}
+
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50%      { transform: translateY(-8px) rotate(1deg); }
+}
+
+/* Sticky note thought */
+.slap23-thought-note {
+  position: absolute;
+  top: 70px;
+  left: -160px;
+  width: 145px;
+  background: #fef9c3;
+  border: 1px solid #e8d840;
+  border-radius: 4px 4px 4px 0;
+  padding: 10px 12px;
+  box-shadow: 2px 3px 10px rgba(0,0,0,0.3), -1px -1px 0 #e2d010;
+  font-family: Georgia, serif;
+  animation: noteFloat 3.8s ease-in-out infinite;
+  transform-origin: top right;
+}
+
+.slap23-thought-note::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-width: 10px 10px 0 0;
+  border-style: solid;
+  border-color: #e8d840 transparent transparent transparent;
+}
+
+.thought-title {
+  display: block;
+  font-weight: bold;
+  font-size: 0.65rem;
+  color: #5a4a00;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #e8d840;
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+}
+
+.thought-line {
+  display: block;
+  font-size: 0.62rem;
+  color: #3a3000;
+  line-height: 1.7;
+}
+
+.thought-line.active-plan {
+  color: #1a5fb4;
+  font-weight: bold;
+}
+
+.thought-note-footer {
+  display: block;
+  font-size: 0.58rem;
+  color: #7a6800;
+  margin-top: 5px;
+  font-style: italic;
+  border-top: 1px dashed #e8d840;
+  padding-top: 4px;
+}
+
+@keyframes noteFloat {
+  0%, 100% { transform: rotate(-2deg) translateY(0); }
+  50%      { transform: rotate(1deg) translateY(-5px); }
+}
+
+/* Story text positioning */
+.slap23-text {
+  position: absolute;
+  left: clamp(20px, 4vw, 60px);
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: clamp(160px, 28vw, 300px);
+  z-index: 10;
+  background: rgba(10, 8, 5, 0.55);
+  border-left: 3px solid #4a9fd5;
+  padding: 20px 24px;
+  border-radius: 0 8px 8px 0;
+  backdrop-filter: blur(4px);
+}
+
+.slap23-text .story-body {
+  color: #d0e8f8;
+  font-family: Georgia, serif;
+  font-size: clamp(0.8rem, 1.6vw, 1.1rem);
+  line-height: 1.75;
+  margin: 0.3em 0;
+}
+
+/* ============================================================
+   SCENE 13: scene-almost — THE DRAMATIC PAUSE
+   ============================================================ */
+#scene-almost {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.salmost-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 55% at 50% 42%, rgba(249,224,75,0.06) 0%, rgba(249,224,75,0.02) 25%, #080308 55%, #040204 100%);
+  background-color: #060206;
+}
+
+/* Stage spotlight */
+.salmost-spotlight {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55vw;
+  height: 55vh;
+  background: radial-gradient(ellipse 50% 55% at 50% 30%, rgba(249,224,75,0.07) 0%, rgba(249,224,75,0.03) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Still leaves */
+.salmost-leaves {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Tiny dino emojis at bottom */
+.salmost-dino-emojis {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 3;
+}
+
+.salmost-emoji {
+  position: absolute;
+  bottom: 0;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  opacity: 0.35;
+  filter: brightness(0.4) saturate(0);
+}
+
+/* Amazasaurus frozen with glow */
+.salmost-dino-wrap {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 7;
+  display: flex;
+  justify-content: center;
+}
+
+.salmost-dino {
+  width: clamp(200px, 32vw, 420px);
+  height: auto;
+  filter: drop-shadow(0 0 30px rgba(249,224,75,0.4));
+  animation: dinoGlow 2.4s ease-in-out infinite;
+}
+
+@keyframes dinoGlow {
+  0%, 100% { filter: drop-shadow(0 0 22px rgba(249,224,75,0.3)) brightness(1); }
+  50%      { filter: drop-shadow(0 0 45px rgba(249,224,75,0.6)) brightness(1.08); }
+}
+
+/* Thought bubble */
+.salmost-thought-bubble {
+  position: absolute;
+  top: 5px;
+  right: -175px;
+  z-index: 9;
+}
+
+.bubble-body {
+  background: white;
+  border-radius: 16px;
+  padding: 10px 16px;
+  border: 2px solid #ddd;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.4);
+  min-width: 130px;
+}
+
+.bubble-tail {
+  position: absolute;
+  left: -20px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  /* Three circle dots for classic thought bubble tail */
+  background: white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  box-shadow: -14px 6px 0 6px white, -24px 12px 0 4px white;
+}
+
+.crossed-text {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 0.72rem;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-decoration: line-through;
+  text-decoration-color: #cc0000;
+  text-decoration-thickness: 2px;
+}
+
+.question-mark {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #cc4400;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+/* Story text — word-by-word layout */
+.salmost-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: min(90vw, 700px);
+  z-index: 10;
+}
+
+.salmost-headline {
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: bold;
+  color: #f9e04b;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 30px rgba(249,224,75,0.4), 0 2px 8px rgba(0,0,0,0.8);
+  margin-bottom: 1.5rem;
+  word-spacing: 0.15em;
+}
+
+.salmost-word {
+  display: inline-block;
+}
+
+.salmost-ellipsis {
+  display: inline-block;
+  color: rgba(249,224,75,0.5);
+  font-size: 0.85em;
+  margin: 0 0.1em;
+}
+
+.salmost-sub1,
+.salmost-sub2 {
+  font-family: Georgia, serif;
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  color: rgba(208, 200, 180, 0.9);
+  margin: 0.4em 0;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+}
+
+.salmost-aside {
+  font-family: Georgia, serif;
+  font-size: clamp(0.65rem, 1.2vw, 0.9rem);
+  color: rgba(180,170,150,0.55);
+  font-style: italic;
+  margin-top: 0.6em;
+}
+
+/* ============================================================
+   SCENE 14: scene-he-stopped — THE BIG DEAL
+   ============================================================ */
+#scene-he-stopped {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sstopped-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #0d0008 0%, #180010 30%, #2a1500 65%, #3a1e00 85%, #1a0c00 100%);
+}
+
+/* Ambient warm glow at center */
+.sstopped-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 65% 50% at 50% 35%, rgba(249,200,60,0.06) 0%, transparent 60%);
+}
+
+/* Light rays wrapper */
+.sstopped-rays-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sstopped-rays {
+  width: 100%;
+  height: 100%;
+}
+
+.rays-group {
+  transform-origin: 400px 80px;
+  animation: raysRotate 20s linear infinite;
+}
+
+@keyframes raysRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Amazasaurus: small upper portion */
+.sstopped-dino-wrap {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 8;
+}
+
+.sstopped-dino {
+  width: clamp(140px, 20vw, 260px);
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(249,180,40,0.3));
+}
+
+/* HERO TEXT */
+.sstopped-hero-text {
+  position: relative;
+  z-index: 10;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: clamp(3rem, 10vw, 8rem);
+  color: #f9e04b;
+  text-align: center;
+  line-height: 1;
+  text-shadow:
+    0 0 60px rgba(249,224,75,0.5),
+    0 0 120px rgba(249,224,75,0.2),
+    0 4px 20px rgba(0,0,0,0.9);
+  letter-spacing: -0.01em;
+  margin-top: 18vh;
+}
+
+/* Audience silhouettes */
+.sstopped-audience {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.sstopped-silhouettes {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: block;
+}
+
+.sstopped-caption {
+  font-family: Georgia, serif;
+  font-size: clamp(0.75rem, 1.4vw, 1rem);
+  color: rgba(200,180,140,0.8);
+  margin: 6px 0 2px;
+  text-align: center;
+}
+
+.sstopped-aside {
+  font-family: Georgia, serif;
+  font-size: clamp(0.6rem, 1vw, 0.8rem);
+  color: rgba(160,140,100,0.5);
+  font-style: italic;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+/* ============================================================
+   SCENE 15: scene-descent — HE FLEW DOWN
+   ============================================================ */
+#scene-descent {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sdescent-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    #1a4a80 0%,
+    #3a88c8 20%,
+    #5aa0d8 40%,
+    #3a5020 60%,
+    #1a2008 78%,
+    #1a1005 92%,
+    #0a0805 100%
+  );
+}
+
+/* Speed lines */
+.sdescent-speedlines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.speed-line {
+  transform-origin: left center;
+}
+
+.sl1 { animation: speedZip 0.55s linear infinite; }
+.sl2 { animation: speedZip 0.7s linear infinite 0.1s; }
+.sl3 { animation: speedZip 0.45s linear infinite 0.05s; }
+.sl4 { animation: speedZip 0.65s linear infinite 0.18s; }
+.sl5 { animation: speedZip 0.5s  linear infinite 0.08s; }
+
+@keyframes speedZip {
+  0%   { stroke-dashoffset: 0;    opacity: 0.7; stroke-dasharray: 200 800; }
+  40%  { opacity: 1; }
+  80%  { opacity: 0.4; }
+  100% { stroke-dashoffset: -1000; opacity: 0; stroke-dasharray: 200 800; }
+}
+
+/* Ground / tar at bottom */
+.sdescent-ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28%;
+  z-index: 3;
+}
+
+.sdescent-tar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+.sdescent-tar-svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Big down arrow */
+.sdescent-arrow {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 8;
+  animation: arrowBounce 0.9s ease-in-out infinite;
+}
+
+.sdescent-arrow-svg {
+  width: clamp(50px, 7vw, 100px);
+  height: auto;
+  filter: drop-shadow(0 0 12px rgba(244,168,32,0.5));
+}
+
+@keyframes arrowBounce {
+  0%, 100% { transform: translateY(-50%) translateY(0); }
+  50%      { transform: translateY(-50%) translateY(18px); }
+}
+
+/* Amazasaurus diving */
+.sdescent-dino-wrap {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 7;
+  animation: diveOscillate 2.2s ease-in-out infinite;
+}
+
+.sdescent-dino {
+  width: clamp(200px, 30vw, 380px);
+  height: auto;
+  transform: rotate(25deg);
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+}
+
+@keyframes diveOscillate {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-15px); }
+}
+
+/* Story text upper left */
+.sdescent-text {
+  position: absolute;
+  top: clamp(20px, 5vh, 60px);
+  left: clamp(16px, 4vw, 60px);
+  max-width: clamp(180px, 30vw, 320px);
+  z-index: 10;
+  background: rgba(10, 15, 30, 0.6);
+  border-left: 4px solid #3a88c8;
+  padding: 18px 22px;
+  border-radius: 0 10px 10px 0;
+  backdrop-filter: blur(4px);
+}
+
+.sdescent-text .story-body {
+  font-family: Georgia, serif;
+  font-size: clamp(0.78rem, 1.5vw, 1.05rem);
+  color: #c8dff5;
+  line-height: 1.8;
+  margin: 0.2em 0;
+}
+
+.sdescent-text .story-body-large {
+  font-family: Georgia, serif;
+  font-size: clamp(1.3rem, 3.5vw, 2.2rem);
+  font-weight: bold;
+  color: #f9e04b;
+  text-shadow: 0 0 20px rgba(249,224,75,0.4), 0 2px 8px rgba(0,0,0,0.7);
+  line-height: 1.1;
+  margin: 0.4em 0;
+  display: block;
+}
+
+.sdescent-muted {
+  opacity: 0.62;
+  font-style: italic;
+  font-size: clamp(0.65rem, 1.1vw, 0.88rem) !important;
+}
+
+/* ============================================================
+   SCENE 16: scene-rescue — MONDI WAS FREE
+   ============================================================ */
+#scene-rescue {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.srescue-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    #0a2a6a 0%,
+    #0d3a8a 20%,
+    #1850aa 38%,
+    #4a80c8 55%,
+    #d4a820 72%,
+    #f4e040 88%,
+    #ffe060 100%
+  );
+}
+
+/* Confetti */
+.srescue-confetti {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  opacity: 0;
+}
+
+/* Each piece gets a unique position, color, and animation via specific classes */
+.cp1  { left: 20%; top: 30%; background: #f9e04b; animation: confettiFly1 3.2s ease-out 0.3s infinite; }
+.cp2  { left: 35%; top: 25%; background: #e84040; animation: confettiFly2 2.8s ease-out 0.5s infinite; border-radius: 50%; }
+.cp3  { left: 50%; top: 20%; background: #40c8a0; animation: confettiFly3 3.5s ease-out 0.1s infinite; }
+.cp4  { left: 65%; top: 28%; background: #f080f0; animation: confettiFly4 2.6s ease-out 0.7s infinite; }
+.cp5  { left: 80%; top: 22%; background: #f9e04b; animation: confettiFly1 3.0s ease-out 0.9s infinite; }
+.cp6  { left: 15%; top: 45%; background: #40c8e8; animation: confettiFly2 2.9s ease-out 0.2s infinite; border-radius: 50%; }
+.cp7  { left: 42%; top: 40%; background: #e84080; animation: confettiFly3 3.3s ease-out 0.6s infinite; }
+.cp8  { left: 70%; top: 38%; background: #a0e840; animation: confettiFly4 2.7s ease-out 0.4s infinite; }
+.cp9  { left: 85%; top: 50%; background: #f9e04b; animation: confettiFly1 3.1s ease-out 1.0s infinite; }
+.cp10 { left: 10%; top: 55%; background: #8040f0; animation: confettiFly2 2.5s ease-out 0.8s infinite; }
+.cp11 { left: 30%; top: 60%; background: #e84040; animation: confettiFly3 3.4s ease-out 0.15s infinite; border-radius: 50%; }
+.cp12 { left: 55%; top: 55%; background: #40c8a0; animation: confettiFly4 2.8s ease-out 0.55s infinite; }
+.cp13 { left: 75%; top: 62%; background: #f080f0; animation: confettiFly1 3.0s ease-out 0.35s infinite; }
+.cp14 { left: 22%; top: 35%; background: #40c8e8; animation: confettiFly2 2.7s ease-out 0.75s infinite; }
+.cp15 { left: 48%; top: 32%; background: #a0e840; animation: confettiFly3 3.2s ease-out 0.45s infinite; border-radius: 50%; }
+.cp16 { left: 62%; top: 42%; background: #e84080; animation: confettiFly4 2.9s ease-out 0.25s infinite; }
+.cp17 { left: 88%; top: 35%; background: #f9e04b; animation: confettiFly1 3.3s ease-out 0.85s infinite; }
+.cp18 { left: 5%;  top: 40%; background: #8040f0; animation: confettiFly2 2.6s ease-out 0.95s infinite; }
+.cp19 { left: 38%; top: 70%; background: #e84040; animation: confettiFly3 3.1s ease-out 0.65s infinite; }
+.cp20 { left: 72%; top: 72%; background: #40c8e8; animation: confettiFly4 2.8s ease-out 0.12s infinite; border-radius: 50%; }
+
+@keyframes confettiFly1 {
+  0%   { opacity: 0; transform: translate(0, -20px) rotate(0deg) scale(0.5); }
+  15%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(-60px, 120px) rotate(540deg) scale(1.2); }
+}
+@keyframes confettiFly2 {
+  0%   { opacity: 0; transform: translate(0, -20px) rotate(0deg) scale(0.5); }
+  15%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(80px, 140px) rotate(-360deg) scale(1.1); }
+}
+@keyframes confettiFly3 {
+  0%   { opacity: 0; transform: translate(0, -20px) rotate(0deg) scale(0.5); }
+  15%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(-40px, 100px) rotate(720deg) scale(0.9); }
+}
+@keyframes confettiFly4 {
+  0%   { opacity: 0; transform: translate(0, -20px) rotate(0deg) scale(0.5); }
+  15%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(50px, 130px) rotate(-540deg) scale(1.15); }
+}
+
+/* Sparkles */
+.srescue-sparkles {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  animation: sparklePulse 1.8s ease-in-out infinite;
+  color: #f9e04b;
+  text-shadow: 0 0 10px rgba(249,224,75,0.8);
+}
+
+.sp1  { left: 8%;  top: 15%; animation-delay: 0s;    font-size: 1.4rem; }
+.sp2  { left: 88%; top: 12%; animation-delay: 0.3s;  font-size: 1.8rem; }
+.sp3  { left: 18%; top: 55%; animation-delay: 0.6s;  font-size: 1.1rem; }
+.sp4  { left: 82%; top: 48%; animation-delay: 0.9s;  font-size: 1.5rem; }
+.sp5  { left: 45%; top: 8%;  animation-delay: 0.15s; font-size: 1.3rem; color: #fff; }
+.sp6  { left: 70%; top: 22%; animation-delay: 0.45s; font-size: 1.6rem; }
+.sp7  { left: 5%;  top: 72%; animation-delay: 0.72s; font-size: 1.2rem; }
+.sp8  { left: 93%; top: 68%; animation-delay: 0.18s; font-size: 1.4rem; color: #fff; }
+.sp9  { left: 32%; top: 88%; animation-delay: 0.54s; font-size: 1.1rem; }
+.sp10 { left: 65%; top: 80%; animation-delay: 0.84s; font-size: 1.3rem; }
+
+@keyframes sparklePulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.8) rotate(0deg); }
+  50%      { opacity: 1;   transform: scale(1.3) rotate(15deg); }
+}
+
+/* Amazasaurus: rescue dive pose */
+.srescue-dino-wrap {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-55%);
+  z-index: 8;
+  animation: rescueDinoHover 2.5s ease-in-out infinite;
+}
+
+.srescue-dino {
+  width: clamp(160px, 25vw, 320px);
+  height: auto;
+  transform: rotate(28deg) scaleX(-1);
+  filter: drop-shadow(0 6px 20px rgba(0,0,0,0.5)) drop-shadow(0 0 15px rgba(249,224,75,0.25));
+}
+
+@keyframes rescueDinoHover {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-12px); }
+}
+
+/* Mondi being lifted */
+.srescue-mondi-wrap {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-30%);
+  z-index: 7;
+}
+
+.srescue-mondi-svg {
+  width: clamp(120px, 20vw, 240px);
+  height: auto;
+  filter: drop-shadow(0 8px 25px rgba(0,0,0,0.6));
+}
+
+.srescue-tar-below {
+  position: absolute;
+  bottom: -20px;
+  left: 10%;
+  right: 10%;
+  height: 30px;
+  background: radial-gradient(ellipse 60% 80% at 50% 100%, #0a0805 0%, transparent 100%);
+  border-radius: 50%;
+}
+
+/* HERO TEXT */
+.srescue-hero-text {
+  position: relative;
+  z-index: 10;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: clamp(2.2rem, 8vw, 6rem);
+  color: #f9e04b;
+  text-align: center;
+  line-height: 1;
+  text-shadow:
+    0 0 40px rgba(249,224,75,0.7),
+    0 0 80px rgba(249,224,75,0.3),
+    0 4px 20px rgba(0,0,0,0.6),
+    3px 3px 0 rgba(180,140,0,0.5);
+  letter-spacing: 0.02em;
+  margin-top: 55vh;
+}
+
+/* Captions at bottom */
+.srescue-captions {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+  width: min(90vw, 600px);
+}
+
+.srescue-captions .story-body {
+  font-family: Georgia, serif;
+  font-size: clamp(0.78rem, 1.5vw, 1.05rem);
+  color: rgba(10, 20, 60, 0.85);
+  line-height: 1.7;
+  margin: 0.2em 0;
+}
+
+.srescue-cap1 {
+  font-weight: bold;
+}
+
+.srescue-aside {
+  font-family: Georgia, serif;
+  font-size: clamp(0.62rem, 1.1vw, 0.85rem) !important;
+  color: rgba(10, 20, 60, 0.55) !important;
+  font-style: italic;
+  margin-top: 0.4em !important;
+}
+
+/* ============================================================
+   SHARED: story-body and story-body-large (if not defined elsewhere)
+   ============================================================ */
+.story-body {
+  font-family: Georgia, serif;
+  font-size: clamp(0.85rem, 1.8vw, 1.2rem);
+  line-height: 1.75;
+  margin: 0.3em 0;
+}
+
+.story-body-large {
+  font-family: Georgia, serif;
+  font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0.5em 0;
+}
+/* ============================================================
+   DINOSAUR TIMES — Extended Cut | Scenes 17–23
+   dino_c.css
+   ============================================================ */
+
+/* ── Shared scene utilities ──────────────────────────────── */
+.story-big        { font-size: clamp(1.6rem, 4vw, 2.8rem); font-weight: 700; }
+.story-big-italic { font-size: clamp(1.6rem, 4vw, 2.8rem); font-style: italic; font-weight: 700; }
+.story-muted      { opacity: 0.6; }
+.story-tiny       { font-size: clamp(0.75rem, 1.8vw, 1rem); opacity: 0.65; }
+.story-italic     { font-style: italic; }
+
+/* ── SCENE 17: scene-crowd ───────────────────────────────── */
+#scene-crowd {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.scrowd-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #1a0e05 0%, #2e1500 40%, #3d1f00 70%, #4a2800 100%);
+}
+
+/* Silhouette dinos background */
+.scrowd-silhouettes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.sil-dino {
+  position: absolute;
+  bottom: 0;
+  background: #0e0702;
+  border-radius: 50% 50% 0 0;
+}
+.sil-1 { left: 2%;  width: 40px; height: 55px; border-radius: 40% 40% 0 0; }
+.sil-2 { left: 8%;  width: 28px; height: 38px; border-radius: 40% 40% 0 0; }
+.sil-3 { left: 14%; width: 35px; height: 62px; border-radius: 40% 40% 0 0; }
+.sil-4 { right: 8%; width: 32px; height: 48px; border-radius: 40% 40% 0 0; }
+.sil-5 { right: 14%;width: 44px; height: 58px; border-radius: 40% 40% 0 0; }
+.sil-6 { right: 2%; width: 26px; height: 40px; border-radius: 40% 40% 0 0; }
+
+/* Background speech bubbles */
+.scrowd-bg-bubbles {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  pointer-events: none;
+  z-index: 2;
+}
+.bg-bubble {
+  background: rgba(255, 245, 220, 0.92);
+  color: #2a1500;
+  border-radius: 18px;
+  padding: 10px 18px;
+  font-size: clamp(0.7rem, 1.6vw, 0.95rem);
+  font-family: inherit;
+  position: relative;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  opacity: 0;
+}
+.bg-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(255,245,220,0.92);
+}
+
+/* Stage layout */
+.scrowd-stage {
+  position: absolute;
+  bottom: 28%;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(8px, 2vw, 24px);
+  z-index: 3;
+}
+
+/* Mondi */
+.scrowd-mondi-wrap {
+  flex: 0 0 auto;
+  opacity: 0;
+}
+.mondi-svg-crowd {
+  width: clamp(90px, 14vw, 175px);
+  height: auto;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
+}
+
+/* Amazasaurus + Binko bubble */
+.scrowd-amaza-wrap {
+  flex: 0 0 auto;
+  position: relative;
+  opacity: 0;
+}
+.amaza-img-crowd {
+  width: clamp(120px, 20vw, 260px);
+  height: auto;
+  filter: drop-shadow(0 6px 24px rgba(0,0,0,0.55));
+  animation: crowdHover 2.8s ease-in-out infinite;
+}
+@keyframes crowdHover {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-8px); }
+}
+
+.binko-crowd-bubble {
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  background: rgba(255,245,220,0.95);
+  color: #1a0800;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  font-weight: 700;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+  white-space: nowrap;
+  opacity: 0;
+}
+.binko-crowd-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 24px;
+  border: 7px solid transparent;
+  border-top-color: rgba(255,245,220,0.95);
+}
+.big-q {
+  font-size: 1.8em;
+  color: #c04010;
+  margin-left: 4px;
+}
+
+/* Binko */
+.scrowd-binko-wrap {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-20%);
+  opacity: 0;
+  animation: binkoBob 2.2s ease-in-out infinite;
+  z-index: 5;
+}
+@keyframes binkoBob {
+  0%,100% { transform: translateX(-20%) translateY(0) rotate(-5deg); }
+  50%      { transform: translateX(-20%) translateY(-14px) rotate(5deg); }
+}
+.binko-svg-crowd {
+  width: clamp(60px, 10vw, 120px);
+  height: auto;
+  filter: drop-shadow(0 3px 10px rgba(0,0,0,0.45));
+}
+
+/* Ziron */
+.scrowd-ziron-wrap {
+  flex: 0 0 auto;
+  opacity: 0;
+  animation: zironNod 3.5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+@keyframes zironNod {
+  0%,70%,100% { transform: rotate(0deg); }
+  80%          { transform: rotate(-4deg); }
+  90%          { transform: rotate(0deg); }
+}
+.ziron-svg-crowd {
+  width: clamp(80px, 12vw, 150px);
+  height: auto;
+  filter: drop-shadow(0 4px 14px rgba(0,0,0,0.5));
+}
+
+/* Scene 17 text */
+.scrowd-text {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90vw, 620px);
+  text-align: center;
+  z-index: 10;
+}
+.scrowd-text .story-body,
+.scrowd-text .story-big-italic {
+  opacity: 0;
+  color: #f5e8c8;
+}
+
+/* ── SCENE 18: scene-answer ──────────────────────────────── */
+#scene-answer {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sanswer-bg {
+  position: absolute;
+  inset: 0;
+  background: #030208;
+}
+
+/* Stars */
+.sanswer-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.star-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: starTwinkle var(--tw-dur, 2.8s) ease-in-out var(--tw-delay, 0s) infinite;
+}
+@keyframes starTwinkle {
+  0%,100% { opacity: 0.15; transform: scale(1); }
+  50%      { opacity: 0.85; transform: scale(1.3); }
+}
+
+/* Spotlight */
+.sanswer-spotlight {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 60vh;
+  background: radial-gradient(ellipse at top, rgba(255,210,100,0.18) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Amazasaurus + thought bubble */
+.sanswer-amaza-wrap {
+  position: relative;
+  z-index: 5;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -4vh;
+}
+.amaza-img-answer {
+  width: clamp(140px, 22vw, 280px);
+  height: auto;
+  filter: drop-shadow(0 0 30px rgba(255,180,60,0.28));
+  animation: answerHover 3.5s ease-in-out infinite;
+}
+@keyframes answerHover {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-6px); }
+}
+
+/* Thought bubble */
+.sanswer-thought-bubble {
+  position: absolute;
+  top: -30px;
+  right: -50px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  width: clamp(80px, 14vw, 140px);
+  height: clamp(80px, 14vw, 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  color: #2a1500;
+  font-weight: 600;
+  text-align: center;
+  overflow: hidden;
+}
+.tb-dot-1, .tb-dot-2, .tb-dot-3 {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+}
+.tb-dot-1 { bottom: -14px; right: 10px; width: 18px; height: 18px; }
+.tb-dot-2 { bottom: -24px; right: 2px;  width: 12px; height: 12px; }
+.tb-dot-3 { bottom: -32px; right: -4px; width: 8px;  height: 8px; }
+
+.thought-dots  { opacity: 1; letter-spacing: 4px; }
+.thought-answer {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.55rem, 1.1vw, 0.75rem);
+  padding: 8px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Answer lines (center display) */
+.sanswer-answer-block {
+  z-index: 5;
+  text-align: center;
+  margin-top: 2vh;
+}
+.answer-big {
+  font-size: clamp(1.4rem, 3.2vw, 2.6rem);
+  color: rgba(255,255,255,0.92);
+  margin: 0.3em 0;
+  opacity: 0;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Epilogue text */
+.sanswer-text {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  margin-top: 3vh;
+  width: min(90vw, 500px);
+}
+.sanswer-text .story-body {
+  opacity: 0;
+  color: rgba(255,255,255,0.8);
+}
+
+/* ── SCENE 19: scene-ziron-valid ─────────────────────────── */
+#scene-ziron-valid {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sziron-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #1a1208 0%, #201508 100%);
+}
+
+.sziron-char-wrap {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(80px);
+}
+
+.ziron-svg-valid {
+  width: clamp(130px, 22vw, 240px);
+  height: auto;
+  filter: drop-shadow(0 6px 20px rgba(0,0,0,0.55));
+}
+
+/* Giant Valid bubble */
+.ziron-valid-bubble {
+  position: absolute;
+  top: -30px;
+  left: -60px;
+  background: rgba(255,248,225,0.96);
+  border-radius: 26px;
+  padding: 18px 32px;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.45);
+  opacity: 0;
+  transform: scale(0.3);
+}
+.ziron-valid-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  right: 40px;
+  border: 10px solid transparent;
+  border-top-color: rgba(255,248,225,0.96);
+}
+.valid-word {
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  font-weight: 900;
+  color: #1a0e05;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* Amazasaurus "you're welcome" bubble */
+.amaza-thanks-bubble {
+  background: rgba(200,230,255,0.9);
+  border-radius: 16px;
+  padding: 8px 18px;
+  font-size: clamp(0.8rem, 1.8vw, 1.05rem);
+  color: #0a1828;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  position: relative;
+  opacity: 0;
+  margin: 0.4em 0;
+}
+.amaza-thanks-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 20px;
+  border: 6px solid transparent;
+  border-top-color: rgba(200,230,255,0.9);
+}
+
+/* Scene 19 text */
+.sziron-text {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90vw, 560px);
+  text-align: center;
+  z-index: 10;
+}
+.sziron-text .story-body {
+  opacity: 0;
+  color: rgba(255,240,200,0.9);
+}
+
+/* ── SCENE 20: scene-lesson-buildup ─────────────────────── */
+#scene-lesson-buildup {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.slessonb-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #0e0720 0%, #160930 50%, #1e0a40 100%);
+}
+
+.slessonb-amaza-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+}
+.amaza-img-lessonbg {
+  width: clamp(180px, 30vw, 360px);
+  height: auto;
+  opacity: 0.12;
+  filter: blur(1px) saturate(0.5);
+}
+
+/* Power cards */
+.slessonb-cards-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 2vw, 16px);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  max-width: 80vw;
+}
+.power-card {
+  background: rgba(20, 10, 40, 0.75);
+  border: 2px solid rgba(200, 160, 40, 0.75);
+  border-radius: 16px;
+  padding: clamp(12px, 2.5vw, 22px) clamp(14px, 2.5vw, 24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: clamp(80px, 12vw, 130px);
+  opacity: 0;
+  transform: scale(0.5) translateY(20px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,220,80,0.15);
+}
+.pc-icon {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  line-height: 1;
+}
+.pc-label {
+  font-size: clamp(0.65rem, 1.4vw, 0.9rem);
+  color: #d4a820;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.pc-check {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #50c864;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* Giant "BUT—" */
+.slessonb-but {
+  position: absolute;
+  font-size: clamp(4rem, 14vw, 10rem);
+  font-weight: 900;
+  color: #f0a820;
+  text-shadow: 0 0 60px rgba(240,168,32,0.6), 0 4px 30px rgba(0,0,0,0.8);
+  z-index: 8;
+  opacity: 0;
+  letter-spacing: -0.03em;
+  pointer-events: none;
+}
+
+/* Scene 20 text */
+.slessonb-text {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90vw, 600px);
+  text-align: center;
+  z-index: 10;
+}
+.slessonb-text .story-body {
+  opacity: 0;
+  color: rgba(220, 200, 255, 0.9);
+}
+.slessonb-text .story-big {
+  color: #f0a820;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* ── SCENE 21: scene-real-reason ─────────────────────────── */
+#scene-real-reason {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sreason-bg {
+  position: absolute;
+  inset: 0;
+  background: #f5f0e8;
+  /* Notebook lines */
+  background-image: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 27px,
+    #c8bfa8 27px,
+    #c8bfa8 28px
+  );
+}
+
+/* Spiral binding */
+.sreason-spiral {
+  position: absolute;
+  left: 3.5%;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  z-index: 3;
+  background: #e0d8c8;
+  border-right: 2px solid #c0b8a0;
+}
+.spiral-ring {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 18px;
+  border: 3px solid #8a8070;
+  border-radius: 50%;
+  background: #f5f0e8;
+}
+
+/* Margin doodles */
+.sreason-margin-doodles {
+  position: absolute;
+  left: 5.5%;
+  top: 5%;
+  z-index: 4;
+  pointer-events: none;
+}
+.margin-doodle {
+  width: 44px;
+  height: 200px;
+  opacity: 0.7;
+}
+
+/* Written text block */
+.sreason-text-block {
+  position: relative;
+  z-index: 5;
+  padding: clamp(24px, 5vw, 60px) clamp(20px, 5vw, 60px);
+  padding-left: clamp(80px, 12vw, 130px);
+  max-width: min(86vw, 680px);
+  width: 100%;
+}
+.sreason-line {
+  font-size: clamp(1.1rem, 2.5vw, 1.7rem);
+  color: #2a1a0a;
+  font-family: inherit;
+  line-height: 28px;
+  margin: 0;
+  padding: 2px 0;
+  clip-path: inset(0 100% 0 0);
+}
+.sreason-big {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 800;
+  line-height: 56px;
+  color: #1a0a04;
+}
+.sreason-space {
+  height: 28px;
+  display: block;
+}
+.sreason-l6, .sreason-l7 {
+  font-style: italic;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+}
+
+/* michael-dino doodle */
+.sreason-doodle-wrap {
+  position: absolute;
+  bottom: 8%;
+  right: 6%;
+  z-index: 6;
+  opacity: 0;
+}
+.sreason-doodle {
+  width: clamp(80px, 14vw, 160px);
+  height: auto;
+  filter: sepia(30%) opacity(0.75);
+  transform: rotate(4deg);
+}
+
+/* ── SCENE 22: scene-moral ───────────────────────────────── */
+#scene-moral {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smoral-bg {
+  position: absolute;
+  inset: 0;
+  background: #081518;
+}
+
+/* Fireflies */
+.smoral-fireflies {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.firefly {
+  position: absolute;
+  border-radius: 50%;
+  animation: fireflyFloat var(--ff-dur, 6s) ease-in-out var(--ff-delay, 0s) infinite;
+}
+@keyframes fireflyFloat {
+  0%   { transform: translateY(0) translateX(0) scale(1);  opacity: 0; }
+  15%  { opacity: 1; }
+  80%  { opacity: 0.6; }
+  100% { transform: translateY(-95vh) translateX(var(--ff-drift, 20px)) scale(0.5); opacity: 0; }
+}
+
+/* Plaque */
+.smoral-plaque-wrap {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.smoral-plaque {
+  background: linear-gradient(145deg, #111e20 0%, #0d1a1c 100%);
+  border: 3px solid rgba(200,160,40,0.8);
+  border-radius: 24px;
+  padding: clamp(28px, 5vw, 52px) clamp(32px, 6vw, 72px);
+  box-shadow:
+    0 0 0 6px rgba(200,160,40,0.12),
+    0 8px 40px rgba(0,0,0,0.7),
+    inset 0 1px 0 rgba(255,220,80,0.1);
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.5);
+  max-width: min(90vw, 580px);
+}
+.plaque-title {
+  font-size: clamp(0.7rem, 1.5vw, 0.95rem);
+  color: rgba(200,160,40,0.9);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1em;
+  opacity: 0;
+}
+.plaque-line {
+  font-size: clamp(1rem, 2.3vw, 1.6rem);
+  color: rgba(240, 220, 180, 0.95);
+  line-height: 1.5;
+  opacity: 0;
+}
+.plaque-big {
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  color: #f0a820;
+  margin-top: 0.2em;
+}
+
+/* Footnotes */
+.smoral-footnote {
+  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+  color: rgba(200,180,140,0.85);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-8px);
+}
+.smoral-footnote-tiny {
+  font-size: clamp(0.65rem, 1.3vw, 0.82rem);
+  color: rgba(180,160,120,0.6);
+  text-align: center;
+  opacity: 0;
+}
+
+/* ── SCENE 23: scene-after-that ──────────────────────────── */
+#scene-after-that {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.safter-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #1a3a6a 0%, #234080 22%, #3a5898 40%, #c08030 72%, #f0c060 100%);
+}
+
+/* Spotlight beam */
+.safter-spotlight-beam {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(60px, 12vw, 140px);
+  height: 55vh;
+  background: linear-gradient(180deg, rgba(255,210,80,0.22) 0%, rgba(255,180,30,0.06) 60%, transparent 100%);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+  z-index: 2;
+  opacity: 0;
+}
+
+/* Amazasaurus flying */
+.safter-amaza-wrap {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  opacity: 0;
+}
+.amaza-img-after {
+  width: clamp(120px, 20vw, 260px);
+  height: auto;
+  filter: drop-shadow(0 6px 28px rgba(0,0,0,0.4));
+  animation: afterFly 3s ease-in-out infinite;
+}
+@keyframes afterFly {
+  0%,100% { transform: translateY(0) rotate(-1deg); }
+  50%      { transform: translateY(-12px) rotate(1.5deg); }
+}
+
+/* Thought bubble */
+.safter-thought-bubble {
+  position: absolute;
+  top: 5px;
+  right: -80px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 18px;
+  padding: 10px 18px;
+  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+  color: #1a0e05;
+  font-weight: 600;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.25);
+  white-space: nowrap;
+  opacity: 0;
+}
+.stb-dot1, .stb-dot2, .stb-dot3 {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.92);
+}
+.stb-dot1 { bottom: -10px; left: 12px; width: 14px; height: 14px; }
+.stb-dot2 { bottom: -18px; left: 6px;  width: 9px;  height: 9px; }
+.stb-dot3 { bottom: -24px; left: 2px;  width: 6px;  height: 6px; }
+
+/* Lap counter */
+.safter-lap-counter {
+  position: absolute;
+  top: 4%;
+  right: 6%;
+  background: rgba(0,0,0,0.45);
+  border: 2px solid rgba(255,200,60,0.6);
+  border-radius: 14px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  z-index: 7;
+  opacity: 0;
+}
+.lap-label {
+  font-size: clamp(0.6rem, 1.2vw, 0.8rem);
+  color: rgba(255,200,60,0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+.lap-num {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 900;
+  color: #f0c060;
+}
+.lap-of {
+  font-size: clamp(0.65rem, 1.3vw, 0.85rem);
+  color: rgba(255,200,60,0.7);
+  font-weight: 600;
+}
+
+/* Ground strip */
+.safter-ground {
+  position: absolute;
+  bottom: 24%;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(16px, 4vw, 48px);
+  z-index: 5;
+}
+.safter-mondi-wrap,
+.safter-binko-wrap,
+.safter-ziron-wrap {
+  opacity: 0;
+}
+.mondi-clean-svg {
+  width: clamp(70px, 11vw, 140px);
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+}
+
+/* Mondi wave arm animation */
+.mondi-wave-arm {
+  animation: mondiWave 1.4s ease-in-out infinite;
+  transform-origin: 30px 175px;
+}
+@keyframes mondiWave {
+  0%,100% { transform: rotate(0deg); }
+  30%      { transform: rotate(-30deg); }
+  60%      { transform: rotate(10deg); }
+}
+
+.binko-ground-svg {
+  width: clamp(55px, 8vw, 100px);
+  height: auto;
+  filter: drop-shadow(0 3px 10px rgba(0,0,0,0.4));
+  animation: binkoLoop 2.2s ease-in-out infinite;
+}
+@keyframes binkoLoop {
+  0%,100% { transform: translateY(0) scaleX(1); }
+  25%      { transform: translateY(-18px) scaleX(1); }
+  50%      { transform: translateY(0) scaleX(-1); }
+  75%      { transform: translateY(-12px) scaleX(-1); }
+}
+
+.ziron-small-svg {
+  width: clamp(60px, 9vw, 110px);
+  height: auto;
+  filter: drop-shadow(0 3px 10px rgba(0,0,0,0.4));
+}
+.ziron-minimal-wave {
+  animation: zironMinWave 4s ease-in-out infinite;
+  transform-origin: 25px 165px;
+}
+@keyframes zironMinWave {
+  0%,60%,100% { transform: rotate(0deg); }
+  70%          { transform: rotate(-18deg); }
+  80%          { transform: rotate(0deg); }
+}
+
+/* Scene 23 text */
+.safter-text {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90vw, 640px);
+  text-align: center;
+  z-index: 10;
+}
+.safter-text .story-body {
+  opacity: 0;
+  color: #1a0e04;
+}
+.safter-text .story-big {
+  color: #0a2a5a;
+  font-size: clamp(1.6rem, 3.8vw, 2.8rem);
+}
+.safter-text .story-muted {
+  color: rgba(20,10,0,0.55);
+}
+.safter-text .story-italic {
+  color: rgba(20,10,0,0.7);
+}
+
+
+/* ============================================================
+   CREDITS ADDITION — dino_c.css
+   ============================================================ */
+
+.credit-divider {
+  font-size: clamp(0.8rem, 1.6vw, 1rem);
+  color: rgba(255,255,255,0.35);
+  margin: 1.2em 0 0.8em;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+.credit-line.muted { opacity: 0.5; }
+.credit-line.tiny  { font-size: clamp(0.65rem, 1.3vw, 0.8rem); }
+
+
+/* ── iMessage phone widget ───────────────────────────────── */
+.imsg-phone-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 2.5em auto 3em;
+  padding: 0 16px;
+}
+
+.imsg-phone {
+  width: 320px;
+  background: #1c1c1e;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 20px 60px rgba(0,0,0,0.75),
+    0 4px 16px rgba(0,0,0,0.5);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+}
+
+.imsg-statusbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px 4px;
+  background: #1c1c1e;
+}
+.imsg-time {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: -0.02em;
+}
+.imsg-icons {
+  font-size: 9px;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 2px;
+}
+
+.imsg-header {
+  background: #1c1c1e;
+  padding: 8px 16px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.imsg-avatar-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.imsg-group-icon {
+  font-size: 20px;
+}
+.imsg-group-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+}
+
+.imsg-body {
+  padding: 12px 12px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #000;
+  max-height: 440px;
+  overflow-y: auto;
+}
+
+.imsg-msg {
+  display: flex;
+  flex-direction: column;
+  max-width: 78%;
+}
+.imsg-msg.imsg-recv {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+.imsg-msg.imsg-sent {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.imsg-sender {
+  font-size: 10px;
+  color: rgba(255,255,255,0.38);
+  margin-bottom: 3px;
+  padding: 0 6px;
+  font-weight: 500;
+}
+.imsg-sender-sent {
+  font-size: 10px;
+  color: rgba(255,255,255,0.28);
+  margin-top: 3px;
+  padding: 0 6px;
+  font-weight: 500;
+}
+
+.imsg-bubble {
+  border-radius: 18px;
+  padding: 9px 13px;
+  font-size: 13.5px;
+  line-height: 1.38;
+  word-break: break-word;
+}
+.imsg-bubble-recv {
+  background: #2c2c2e;
+  color: rgba(255,255,255,0.92);
+  border-bottom-left-radius: 5px;
+}
+.imsg-bubble-sent {
+  background: #0a7aff;
+  color: white;
+  border-bottom-right-radius: 5px;
+}
