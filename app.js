@@ -2016,6 +2016,224 @@ function initSceneAfterThat() {
 }
 
 /* ============================================================
+   NEW FEATURE: CHARACTER CARD COLLECTION
+   ============================================================ */
+const characterData = {
+  amazasaurus: {
+    name: 'Amazasaurus',
+    bio: 'The main character. Can do everything — teeth, wings, talons, poison immunity. Flies 23 laps every morning. Kind heart, yaaasified style.',
+    traits: ['🦷 Teeth', '🦅 Wings', '🦶 Talons', '☠️ Poison Immune', '❤️ Kind'],
+    quote: '"Because Mondi needed it. And I could. So I did."'
+  },
+  mondi: {
+    name: 'Mondi',
+    bio: 'The sleepy long-necked dinosaur who accidentally walked into a tar pit while half-asleep. Very polite, very clumsy, needs a lot of help waking up.',
+    traits: ['😴 Sleepy', '🌀 Clumsy', '🦒 Long Neck', '😊 Polite'],
+    quote: '"Just... five more minutes..."'
+  },
+  binko: {
+    name: 'Binko',
+    bio: 'The flying blue dinosaur with a relentless curiosity. Asks "But WHY?" about everything. Has 44 follow-up questions at any given moment.',
+    traits: ['🦅 Flying', '❓ Curious', '🤗 Enthusiastic', '❓❓❓ 44 Questions'],
+    quote: '"But WHY does he do the laps?"'
+  },
+  ziron: {
+    name: 'Ziron',
+    bio: 'The T-Rex who only speaks when something is truly valid. Economical with words. Nods twice as approval. Very majestic.',
+    traits: ['👑 Majestic', '🗣️ Brief', '👍 Approving', '🦷 Teeth'],
+    quote: '"Valid."'
+  },
+  trex: {
+    name: 'T-Rex',
+    bio: 'Just a regular T-Rex with big teeth and tiny arms. Very angry most of the time. Not as special as Amazasaurus, but makes up the numbers.',
+    traits: ['😤 Angry', '🦷 Teeth', '💪 Strong', '🙄 Tiny Arms'],
+    quote: '"RAWR!"'
+  },
+  'plant eater': {
+    name: 'Plant Eater',
+    bio: 'Friendly herbivore who eats plants and agrees with everyone. Cannot handle poison water. Very agreeable.',
+    traits: ['🌿 Herbivore', '☠️ Poison Vulnerable', '🤝 Agreeable', '😊 Calm'],
+    quote: '"I agree with that."'
+  },
+  michael: {
+    name: 'Michael',
+    bio: 'The child prodigy who drew all this. Calls himself a yaaasified flying T-Rex with velociraptor talons. Made everything.',
+    traits: ['🎨 Artist', '✨ Yaaasified', '🧠 Genius', '✏️ Creator'],
+    quote: '"I was a child prodigy."'
+  },
+  cooal: {
+    name: 'Cooal',
+    bio: '"He\'s so yaaasified." Saw the vision — a flying T-Rex with velociraptor talons. AI art enthusiast. Knew Michael\'s creation was special before anyone else.',
+    traits: ['👀 Visionary', '🤩 Excitable', '🎨 AI Art', '✨ Believer'],
+    quote: '"I can see the vision!"'
+  }
+};
+
+// Collection state
+const collectedCharacters = new Set();
+
+// Load from localStorage
+try {
+  const saved = localStorage.getItem('dinotales-collection');
+  if (saved) {
+    JSON.parse(saved).forEach(c => collectedCharacters.add(c));
+  }
+} catch(e) {}
+
+function saveCollection() {
+  try {
+    localStorage.setItem('dinotales-collection', JSON.stringify([...collectedCharacters]));
+  } catch(e) {}
+}
+
+function updateCollectionUI() {
+  const total = 8;
+  const collected = collectedCharacters.size;
+  
+  // Update progress
+  const progressFill = document.getElementById('collectionProgressFill');
+  const progressText = document.getElementById('collectionProgressText');
+  if (progressFill) progressFill.style.width = `${(collected/total)*100}%`;
+  if (progressText) progressText.textContent = `${collected}/${total} Collected`;
+  
+  // Update checkboxes and cards
+  collectedCharacters.forEach(char => {
+    const checkbox = document.getElementById(`check-${char}`);
+    if (checkbox) checkbox.textContent = '☑';
+    const card = document.querySelector(`.character-card[data-character="${char}"]`);
+    if (card) card.classList.add('collected');
+  });
+}
+
+function toggleCollect(character) {
+  if (collectedCharacters.has(character)) {
+    collectedCharacters.delete(character);
+    const checkbox = document.getElementById(`check-${character}`);
+    if (checkbox) checkbox.textContent = '☐';
+    const card = document.querySelector(`.character-card[data-character="${character}"]`);
+    if (card) card.classList.remove('collected');
+  } else {
+    collectedCharacters.add(character);
+    const checkbox = document.getElementById(`check-${character}`);
+    if (checkbox) checkbox.textContent = '☑';
+    const card = document.querySelector(`.character-card[data-character="${character}"]`);
+    if (card) card.classList.add('collected');
+  }
+  saveCollection();
+  updateCollectionUI();
+}
+
+function openCharacterModal(characterId) {
+  const data = characterData[characterId];
+  if (!data) return;
+  
+  const modal = document.getElementById('characterModal');
+  const avatar = document.getElementById('modalAvatar');
+  const name = document.getElementById('modalName');
+  const bio = document.getElementById('modalBio');
+  const traits = document.getElementById('modalTraits');
+  const quote = document.getElementById('modalQuote');
+  
+  if (avatar) avatar.innerHTML = document.querySelector(`.character-card[data-character="${characterId}"] .card-avatar`).innerHTML;
+  if (name) name.textContent = data.name;
+  if (bio) bio.textContent = data.bio;
+  
+  if (traits) {
+    traits.innerHTML = data.traits.map(t => `<span class="modal-trait">${t}</span>`).join('');
+  }
+  
+  if (quote) quote.textContent = data.quote;
+  
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCharacterModal(event) {
+  if (event && event.target !== event.currentTarget && !event.target.classList.contains('modal-close')) return;
+  const modal = document.getElementById('characterModal');
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function toggleChapter(element) {
+  element.classList.toggle('expanded');
+}
+
+// Initialize features when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  // Wait a bit for GSAP to set up
+  setTimeout(() => {
+    updateCollectionUI();
+    
+    // Animate character cards on scroll
+    const cards = document.querySelectorAll('.character-card');
+    cards.forEach((card, i) => {
+      gsap.set(card, { opacity: 0, y: 40 });
+      ScrollTrigger.create({
+        trigger: card,
+        start: 'top 85%',
+        onEnter: () => {
+          gsap.to(card, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            delay: i * 0.08,
+            ease: 'power2.out'
+          });
+        }
+      });
+    });
+    
+    // Animate chapter items
+    const chapters = document.querySelectorAll('.chapter-item');
+    chapters.forEach((chapter, i) => {
+      gsap.set(chapter, { opacity: 0, x: -30 });
+      ScrollTrigger.create({
+        trigger: chapter,
+        start: 'top 85%',
+        onEnter: () => {
+          gsap.to(chapter, {
+            opacity: 1,
+            x: 0,
+            duration: 0.5,
+            delay: i * 0.1,
+            ease: 'power2.out'
+          });
+        }
+      });
+    });
+    
+    // Animate collection progress
+    gsap.from('.collection-progress', {
+      opacity: 0,
+      y: 20,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: '.collection-progress',
+        start: 'top 90%'
+      }
+    });
+    
+    // Animate chapters header
+    gsap.from('.chapters-header', {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: '.chapters-header',
+        start: 'top 80%'
+      }
+    });
+    
+    // Escape key closes modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeCharacterModal(e);
+    });
+    
+  }, 100);
+});
+
+/* ============================================================
    AUTO-INIT
    All 7 functions are called in order once DOM is ready.
    If the main site already calls these, remove the block below.

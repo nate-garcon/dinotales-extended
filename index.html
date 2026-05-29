@@ -498,49 +498,87 @@
         </div>
         <p class="split-text">eats <strong>plants</strong></p>
       </div>
-    </div>
-
-    <div class="split-dino-center">
-      <div class="mini-dino-icon">🦕</div>
-    </div>
-
-    <div class="split-right">
-      <!-- Poison water -->
-      <div class="split-content poison-water-side">
-        <div class="poison-water-container">
-          <div class="poison-pond">
-            <svg class="water-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <radialGradient id="pondGrad" cx="50%" cy="50%" r="60%">
-                  <stop offset="0%" stop-color="#39ff14" stop-opacity="0.9"/>
-                  <stop offset="100%" stop-color="#0a5c00" stop-opacity="0.8"/>
-                </radialGradient>
-                <filter id="glow-filter">
-                  <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                  <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                </filter>
-              </defs>
-              <ellipse cx="100" cy="75" rx="90" ry="42" fill="url(#pondGrad)" filter="url(#glow-filter)"/>
-              <ellipse cx="100" cy="68" rx="82" ry="30" fill="#39ff14" opacity="0.3"/>
-              <!-- Bubbles -->
-              <circle class="bubble b1" cx="70" cy="65" r="5" fill="#7fff00" opacity="0.7"/>
-              <circle class="bubble b2" cx="100" cy="60" r="7" fill="#39ff14" opacity="0.6"/>
-              <circle class="bubble b3" cx="130" cy="63" r="4" fill="#7fff00" opacity="0.8"/>
-              <circle class="bubble b4" cx="85" cy="58" r="3" fill="#adff2f" opacity="0.6"/>
-              <circle class="bubble b5" cx="118" cy="55" r="6" fill="#39ff14" opacity="0.5"/>
-              <!-- Warning skull -->
-              <text x="88" y="90" font-size="22" fill="#fff" opacity="0.9">☠️</text>
-            </svg>
-            <div class="water-glow-ring"></div>
-          </div>
-          <p class="poison-label">"posend water"</p>
+      <div class="split-content">
+        <div class="split-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="58" rx="28" ry="20" fill="#2980b9"/>
+            <path d="M 30 50 Q 50 30 70 50 Q 50 42 30 50 Z" fill="#3498db"/>
+            <path d="M 50 28 L 50 58" stroke="#2980b9" stroke-width="4" stroke-linecap="round"/>
+          </svg>
         </div>
-        <p class="split-text immune-text"><strong>zero</strong> consequences ✅</p>
+        <p class="split-text">drinks <strong>poison water</strong></p>
       </div>
     </div>
 
+    <div class="split-right">
+      <div class="split-content">
+        <div class="split-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="55" rx="35" ry="28" fill="#8e44ad"/>
+            <ellipse cx="50" cy="52" rx="30" ry="20" fill="#9b59b6"/>
+            <text x="50" y="62" text-anchor="middle" font-size="28">☠️</text>
+          </svg>
+        </div>
+        <p class="split-text">immune to <strong>poison</strong></p>
+      </div>
+      <div class="split-content">
+        <div class="split-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Feathered wing -->
+            <path d="M 50 75 Q 15 45 10 15 Q 35 40 50 55 Q 65 40 90 15 Q 85 45 50 75 Z" fill="#f0c900" opacity="0.9"/>
+            <path d="M 50 55 Q 20 30 15 12" stroke="#d4a800" stroke-width="1.5" fill="none"/>
+            <path d="M 50 55 Q 80 30 85 12" stroke="#d4a800" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <p class="split-text">has <strong>wings</strong></p>
+      </div>
+      <div class="split-content">
+        <div class="split-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 50 80 L 30 90 M 50 80 L 70 90 M 50 80 L 40 92 M 50 80 L 60 92" stroke="#c0392b" stroke-width="5" stroke-linecap="round"/>
+            <path d="M 50 80 L 30 60 M 50 80 L 70 60 M 50 80 L 40 55 M 50 80 L 60 55" stroke="#c0392b" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="split-text">has <strong>talons</strong></p>
+      </div>
+    </div>
+
+    <div class="split-dino-center">
+      <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="splitDinoGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f9e04b"/>
+            <stop offset="100%" stop-color="#d4a800"/>
+          </radialGradient>
+        </defs>
+        <!-- Body -->
+        <ellipse cx="100" cy="110" rx="55" ry="42" fill="url(#splitDinoGrad)"/>
+        <!-- Neck -->
+        <ellipse cx="70" cy="75" rx="20" ry="30" fill="#f9e04b" transform="rotate(-20,70,75)"/>
+        <!-- Head -->
+        <ellipse cx="50" cy="58" rx="32" ry="22" fill="#f9e04b"/>
+        <!-- Jaw -->
+        <ellipse cx="50" cy="70" rx="26" ry="12" fill="#e8c800"/>
+        <!-- Eyes -->
+        <circle cx="40" cy="50" r="7" fill="#fff"/>
+        <circle cx="41" cy="51" r="4" fill="#222"/>
+        <!-- Wings spread wide -->
+        <path d="M 105 100 Q 170 50 190 20 Q 175 90 140 130 Z" fill="#f0c900" opacity="0.9"/>
+        <path d="M 95 100 Q 30 50 10 20 Q 25 90 60 130 Z" fill="#f0c900" opacity="0.9"/>
+        <!-- Talons -->
+        <line x1="80" y1="148" x2="65" y2="175" stroke="#d4a800" stroke-width="7" stroke-linecap="round"/>
+        <line x1="80" y1="148" x2="75" y2="178" stroke="#d4a800" stroke-width="6" stroke-linecap="round"/>
+        <line x1="115" y1="150" x2="125" y2="176" stroke="#d4a800" stroke-width="7" stroke-linecap="round"/>
+        <line x1="115" y1="150" x2="110" y2="180" stroke="#d4a800" stroke-width="6" stroke-linecap="round"/>
+        <!-- Tail -->
+        <path d="M 155 120 Q 185 130 195 115 Q 188 140 165 135 Z" fill="#f9e04b"/>
+      </svg>
+    </div>
+
     <div class="scene-text scene3-text">
-      <p class="story-body">...and could meet, plants, and can drink <span class="highlight-green">posend, water</span> and can stay alive,</p>
+      <p class="story-body">He could eat <strong>anything</strong>.</p>
+      <p class="story-body">He could go <strong>anywhere</strong>.</p>
+      <p class="story-body-large">And nothing could hurt him.</p>
     </div>
 
   </section>
@@ -548,1406 +586,44 @@
   <!-- ═══════════════════════════════════════════════════════════
        SCENE 4: THE GUN PARADOX
   ═══════════════════════════════════════════════════════════ -->
-  <section id="scene4" class="scene scene-dark scene-gun">
+  <section id="scene4" class="scene scene-gun">
 
     <div class="scene4-bg"></div>
 
     <div class="scene-text scene4-text-top">
-      <p class="story-body">The only thing that can kill it is a bollot from a gun...</p>
+      <p class="story-body">But here is the problem with being able to do anything.</p>
+      <p class="story-body-large">You don't have to do <em>anything</em>.</p>
     </div>
 
-    <!-- The Gun / Crosshair -->
     <div class="gun-container" id="gunContainer">
-      <div class="crosshair" id="crosshair">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="100" cy="100" r="80" stroke="#ff2222" stroke-width="3" fill="none" opacity="0.9"/>
-          <circle cx="100" cy="100" r="55" stroke="#ff2222" stroke-width="1.5" fill="none" opacity="0.6"/>
-          <circle cx="100" cy="100" r="8" fill="#ff2222"/>
-          <line x1="100" y1="10" x2="100" y2="40" stroke="#ff2222" stroke-width="3"/>
-          <line x1="100" y1="160" x2="100" y2="190" stroke="#ff2222" stroke-width="3"/>
-          <line x1="10" y1="100" x2="40" y2="100" stroke="#ff2222" stroke-width="3"/>
-          <line x1="160" y1="100" x2="190" y2="100" stroke="#ff2222" stroke-width="3"/>
-          <!-- Tick marks -->
-          <line x1="100" y1="48" x2="100" y2="58" stroke="#ff2222" stroke-width="1.5" opacity="0.5"/>
-          <line x1="100" y1="142" x2="100" y2="152" stroke="#ff2222" stroke-width="1.5" opacity="0.5"/>
-          <line x1="48" y1="100" x2="58" y2="100" stroke="#ff2222" stroke-width="1.5" opacity="0.5"/>
-          <line x1="142" y1="100" x2="152" y2="100" stroke="#ff2222" stroke-width="1.5" opacity="0.5"/>
+      <div class="crosshair-wrap">
+        <svg id="crosshair" class="crosshair" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <line x1="40" y1="5" x2="40" y2="30" stroke="#ff4444" stroke-width="3"/>
+          <line x1="40" y1="50" x2="40" y2="75" stroke="#ff4444" stroke-width="3"/>
+          <line x1="5" y1="40" x2="30" y2="40" stroke="#ff4444" stroke-width="3"/>
+          <line x1="50" y1="40" x2="75" y2="40" stroke="#ff4444" stroke-width="3"/>
+          <circle cx="40" cy="40" r="15" fill="none" stroke="#ff4444" stroke-width="2"/>
+          <circle cx="40" cy="40" r="4" fill="#ff4444"/>
         </svg>
       </div>
-      <!-- Bullet projectile -->
-      <div class="bullet" id="bullet">
-        <svg viewBox="0 0 60 20" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="bulletGrad" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#aaa"/>
-              <stop offset="60%" stop-color="#eee"/>
-              <stop offset="100%" stop-color="#c8a000"/>
-            </linearGradient>
-          </defs>
-          <path d="M 0 4 L 42 4 L 56 10 L 42 16 L 0 16 Z" fill="url(#bulletGrad)"/>
-          <path d="M 42 4 L 56 10 L 42 16 Z" fill="#c8a000"/>
+      <div class="bullet-wrap">
+        <svg id="bullet" class="bullet" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="90" cy="20" rx="25" ry="12" fill="#f4d03f"/>
+          <rect x="10" y="14" width="80" height="12" rx="6" fill="#c0a000"/>
+          <ellipse cx="90" cy="20" rx="20" ry="8" fill="#d4a800"/>
         </svg>
       </div>
+      <div class="gun-vanish-text" id="gunVanish">And that's boring.</div>
     </div>
 
-    <!-- The vanish -->
-    <div class="gun-vanish" id="gunVanish">
-      <div class="question-mark">?</div>
-      <div class="vanish-particles" id="vanishParticles"></div>
-    </div>
+    <div id="vanishParticles" class="vanish-particles"></div>
 
-    <div class="scene-text scene4-text-bottom" id="scene4Twist">
-      <p class="story-body twist-text">...but there was <span class="highlight-red">no guns</span> when Dinosaurs were alive.</p>
-      <p class="story-body" style="font-size:clamp(0.8rem,1.8vw,1rem);color:rgba(255,255,255,0.35);margin-top:0.5rem;">— moochaol</p>
-      <div class="twist-emoji">💀➡️❓➡️🦕✅</div>
+    <div class="scene-text scene4-twist" id="scene4Twist">
+      <p class="story-body">Until one day—</p>
+      <p class="story-body-large">something <em>did</em> need him.</p>
     </div>
 
   </section>
-
-  <!-- ═══════════════════════════════════════════════════════════
-       SCENE FRIENDS: THE ASSOCIATES
-  ═══════════════════════════════════════════════════════════ -->
-  <section id="scene-friends" class="scene scene-friendsscene">
-    <div class="friends-bg"></div>
-
-    <!-- Amazasaurus floating above his crew -->
-    <div class="friends-render-wrap" id="friendsRender">
-      <img src="assets/amazasaurus-render.png" class="friends-render-img" alt="Amazasaurus">
-    </div>
-
-    <div class="friends-header">
-      <div class="friends-title" id="friendsTitle">The Others</div>
-      <div class="friends-subtitle">(his friends, technically)</div>
-    </div>
-
-    <div class="friend-cards" id="friendCards">
-
-      <div class="friend-card" id="fc-mondi">
-        <div class="friend-dino-svg">
-          <svg viewBox="0 0 100 85" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="58" cy="58" rx="32" ry="20" fill="#5a8c2a"/>
-            <ellipse cx="28" cy="44" rx="12" ry="9" fill="#6aad30"/>
-            <path d="M 38 46 Q 28 36 22 27" stroke="#5a8c2a" stroke-width="9" fill="none" stroke-linecap="round"/>
-            <circle cx="19" cy="23" r="10" fill="#6aad30"/>
-            <ellipse cx="19" cy="27" rx="8" ry="5" fill="#5a8c2a"/>
-            <ellipse cx="15" cy="21" rx="4" ry="2" fill="#333"/>
-            <rect x="44" y="72" width="8" height="12" rx="4" fill="#4a7a22"/>
-            <rect x="56" y="73" width="8" height="11" rx="4" fill="#4a7a22"/>
-            <rect x="68" y="72" width="8" height="12" rx="4" fill="#4a7a22"/>
-            <text x="62" y="18" font-size="11" fill="#aaa" font-style="italic" opacity="0.8">zzz</text>
-          </svg>
-        </div>
-        <div class="friend-name mondi-name">MONDI</div>
-        <div class="friend-desc">very large.<br>mostly slept.<br>good at being somewhere.</div>
-        <div class="friend-rating">presence: ★★★★★<br>awake: ★★☆☆☆</div>
-      </div>
-
-      <div class="friend-card" id="fc-binko">
-        <div class="friend-dino-svg">
-          <svg viewBox="0 0 110 90" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="55" cy="58" rx="22" ry="15" fill="#2a5fa8"/>
-            <circle cx="33" cy="44" r="12" fill="#3a75cc"/>
-            <ellipse cx="33" cy="51" rx="10" ry="6" fill="#2a5fa8"/>
-            <circle cx="28" cy="40" r="5" fill="#fff"/>
-            <circle cx="29" cy="40" r="3" fill="#222"/>
-            <circle cx="30" cy="39" r="1" fill="#fff"/>
-            <path d="M 55 50 Q 88 28 100 12 Q 85 42 68 56 Z" fill="#3a75cc" opacity="0.9"/>
-            <path d="M 55 50 Q 22 28 10 12 Q 25 42 42 56 Z" fill="#3a75cc" opacity="0.9"/>
-            <rect x="48" y="68" width="7" height="12" rx="3" fill="#1e4a8a"/>
-            <rect x="59" y="68" width="7" height="12" rx="3" fill="#1e4a8a"/>
-            <text x="76" y="24" font-size="16" fill="white" font-weight="bold" opacity="0.9">?</text>
-          </svg>
-        </div>
-        <div class="friend-name binko-name">BINKO</div>
-        <div class="friend-desc">winged.<br>had many questions.<br>could not do everything.</div>
-        <div class="friend-rating">curiosity: ★★★★★<br>answers: ★☆☆☆☆</div>
-      </div>
-
-      <div class="friend-card" id="fc-ziron">
-        <div class="friend-dino-svg">
-          <svg viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="68" cy="60" rx="36" ry="24" fill="#8b3a1a"/>
-            <ellipse cx="36" cy="46" rx="20" ry="15" fill="#a8481f"/>
-            <ellipse cx="36" cy="56" rx="16" ry="9" fill="#8b3a1a"/>
-            <circle cx="26" cy="41" r="6" fill="#fff"/>
-            <circle cx="27" cy="42" r="4" fill="#333"/>
-            <line x1="22" y1="55" x2="46" y2="55" stroke="#7a3214" stroke-width="2.5"/>
-            <line x1="54" y1="52" x2="48" y2="64" stroke="#8b3a1a" stroke-width="6" stroke-linecap="round"/>
-            <path d="M 100 64 Q 116 58 124 48" stroke="#8b3a1a" stroke-width="10" fill="none" stroke-linecap="round"/>
-            <rect x="55" y="78" width="10" height="15" rx="4" fill="#7a3214"/>
-            <rect x="70" y="78" width="10" height="15" rx="4" fill="#7a3214"/>
-            <text x="78" y="24" font-size="12" fill="rgba(255,255,255,0.4)">¯\_(ツ)_/¯</text>
-          </svg>
-        </div>
-        <div class="friend-name ziron-name">ZIRON</div>
-        <div class="friend-desc">was around.<br>no further info<br>available.</div>
-        <div class="friend-rating">vibes: ★★★☆☆<br>mystery: ★★★★★</div>
-      </div>
-
-    </div>
-
-    <div class="scene-text friends-footer">
-      <p class="story-body">Amazasaurus considered them colleagues.</p>
-      <p class="story-body muted-small">They had a group. It didn't have a name.<br>It was fine.</p>
-    </div>
-  </section>
-
-<!-- SCENE 8: scene-smug -->
-<section id="scene-smug" class="scene scene-smug">
-  <div class="ssmug-bg"></div>
-
-  <!-- Dawn sky atmosphere layers -->
-  <div class="ssmug-cloud ssmug-cloud-1"></div>
-  <div class="ssmug-cloud ssmug-cloud-2"></div>
-  <div class="ssmug-cloud ssmug-cloud-3"></div>
-
-  <!-- Crowd of watching dinos along bottom -->
-  <div class="ssmug-crowd">
-    <span class="ssmug-crowd-dino" style="--d:0s">🦕</span>
-    <span class="ssmug-crowd-dino" style="--d:.3s">🦖</span>
-    <span class="ssmug-crowd-dino" style="--d:.6s">🦕</span>
-    <span class="ssmug-crowd-dino" style="--d:.9s">🦖</span>
-    <span class="ssmug-crowd-dino" style="--d:1.2s">🦕</span>
-    <span class="ssmug-crowd-dino" style="--d:1.5s">🦖</span>
-  </div>
-
-  <!-- Ground line -->
-  <div class="ssmug-ground"></div>
-
-  <!-- Amazasaurus rendered image - flying mid-left -->
-  <div class="ssmug-amaza-wrap">
-    <img src="assets/amazasaurus-render.png" alt="Amazasaurus flying" class="ssmug-amaza-img" />
-    <!-- Sparkles around him -->
-    <span class="ssmug-sparkle" style="--sx:10%;--sy:15%;--sd:0s">✨</span>
-    <span class="ssmug-sparkle" style="--sx:80%;--sy:10%;--sd:.4s">✨</span>
-    <span class="ssmug-sparkle" style="--sx:90%;--sy:60%;--sd:.8s">✨</span>
-    <span class="ssmug-sparkle" style="--sx:5%;--sy:70%;--sd:1.2s">✨</span>
-    <span class="ssmug-sparkle" style="--sx:50%;--sy:5%;--sd:.6s">✨</span>
-    <span class="ssmug-sparkle" style="--sx:70%;--sy:80%;--sd:1.0s">✨</span>
-  </div>
-
-  <!-- Lap Counter scoreboard top-right -->
-  <div class="ssmug-scoreboard">
-    <div class="ssmug-scoreboard-label">LAP COUNTER</div>
-    <div class="ssmug-scoreboard-number"><span class="ssmug-lap-num">1</span></div>
-    <div class="ssmug-scoreboard-sub">MORNING FLIGHT</div>
-  </div>
-
-  <!-- Story text card bottom-left -->
-  <div class="scene-text ssmug-text">
-    <p class="story-lead ssmug-line-1">Every morning. 23 laps.</p>
-    <p class="story-body ssmug-line-2">He didn't need to.</p>
-    <p class="story-body ssmug-line-3">He just liked being somewhere everyone could see him.</p>
-    <p class="story-body story-muted ssmug-line-4"><em>The other dinosaurs thought about this. They didn't say anything.</em></p>
-  </div>
-</section>
-
-<!-- SCENE 9: scene-tarpit -->
-<section id="scene-tarpit" class="scene scene-tarpit">
-  <div class="starpit-bg"></div>
-
-  <!-- Atmospheric depth layers -->
-  <div class="starpit-haze"></div>
-
-  <!-- Story text top area -->
-  <div class="scene-text starpit-text">
-    <p class="story-stamp starpit-line-1">Meanwhile.</p>
-    <p class="story-body starpit-line-2">Mondi had a problem.</p>
-    <p class="story-dramatic starpit-line-3">He was stuck.</p>
-    <p class="story-body starpit-line-4">He had walked into the tar pit by accident. He had been half asleep.</p>
-    <p class="story-body story-muted starpit-line-5"><em>(Mondi was always half asleep.)</em></p>
-  </div>
-
-  <!-- One wrong step caption near tar line -->
-  <div class="starpit-caption">one wrong step</div>
-
-  <!-- Mondi SVG - brachiosaurus half-submerged -->
-  <div class="starpit-mondi-wrap">
-    <svg class="starpit-mondi-svg" viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg" aria-label="Mondi the brachiosaurus stuck in tar">
-      <!-- Tail hint (far left, low) -->
-      <ellipse cx="30" cy="310" rx="28" ry="14" fill="#4a7a22" opacity="0.7"/>
-      <!-- Main body -->
-      <ellipse cx="170" cy="320" rx="110" ry="75" fill="#5a8c2a"/>
-      <!-- Body shading -->
-      <ellipse cx="170" cy="300" rx="95" ry="55" fill="#6aaa30" opacity="0.4"/>
-      <!-- Shoulder bump -->
-      <ellipse cx="120" cy="270" rx="40" ry="30" fill="#5a8c2a"/>
-      <!-- Neck base -->
-      <ellipse cx="110" cy="250" rx="28" ry="20" fill="#5a8c2a"/>
-      <!-- Neck long segment 1 -->
-      <path d="M100,250 Q80,200 70,150" stroke="#5a8c2a" stroke-width="38" fill="none" stroke-linecap="round"/>
-      <!-- Neck long segment 2 -->
-      <path d="M70,150 Q65,110 72,75" stroke="#5a8c2a" stroke-width="32" fill="none" stroke-linecap="round"/>
-      <!-- Head -->
-      <ellipse cx="78" cy="60" rx="42" ry="28" fill="#5a8c2a"/>
-      <!-- Head top bump -->
-      <ellipse cx="78" cy="42" rx="28" ry="16" fill="#6aaa30"/>
-      <!-- Eye white left -->
-      <ellipse cx="64" cy="52" rx="12" ry="14" fill="white"/>
-      <!-- Eye white right -->
-      <ellipse cx="92" cy="52" rx="10" ry="13" fill="white"/>
-      <!-- Pupil left (wide/worried) -->
-      <ellipse cx="66" cy="54" rx="6" ry="9" fill="#1a1a00"/>
-      <!-- Pupil right (wide/worried) -->
-      <ellipse cx="93" cy="53" rx="5" ry="8" fill="#1a1a00"/>
-      <!-- Highlight left eye -->
-      <circle cx="68" cy="50" r="2.5" fill="white" opacity="0.9"/>
-      <!-- Highlight right eye -->
-      <circle cx="95" cy="49" r="2" fill="white" opacity="0.9"/>
-      <!-- Nostril -->
-      <ellipse cx="96" cy="65" rx="4" ry="3" fill="#3a6018" opacity="0.7"/>
-      <!-- Worried mouth (slight frown) -->
-      <path d="M68,72 Q78,76 90,72" stroke="#3a6018" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <!-- Arm left hint at tar line -->
-      <ellipse cx="90" cy="330" rx="22" ry="12" fill="#4a7a22" opacity="0.6"/>
-      <!-- Arm right hint at tar line -->
-      <ellipse cx="240" cy="325" rx="25" ry="13" fill="#4a7a22" opacity="0.5"/>
-      <!-- Tar submerge fade (dark overlay on bottom half) -->
-      <rect x="0" y="340" width="320" height="60" fill="#1a0a02" opacity="0.85"/>
-    </svg>
-
-    <!-- Speech/thought bubble: "..." -->
-    <div class="starpit-mondi-bubble">
-      <span class="starpit-bubble-dots">
-        <span class="starpit-dot" style="--di:0">.</span><span class="starpit-dot" style="--di:1">.</span><span class="starpit-dot" style="--di:2">.</span>
-      </span>
-    </div>
-  </div>
-
-  <!-- Tar pit visual -->
-  <div class="starpit-pit-wrap">
-    <div class="starpit-pit-oval">
-      <!-- Tar surface sheen -->
-      <div class="starpit-tar-sheen"></div>
-      <!-- Rising bubbles -->
-      <div class="starpit-bubble starpit-bubble-1"></div>
-      <div class="starpit-bubble starpit-bubble-2"></div>
-      <div class="starpit-bubble starpit-bubble-3"></div>
-    </div>
-  </div>
-</section>
-
-<!-- SCENE 10: scene-binko-q -->
-<section id="scene-binko-q" class="scene scene-binko-q">
-  <div class="sbinkoq-bg"></div>
-  <div class="sbinkoq-haze"></div>
-
-  <!-- Story text top -->
-  <div class="scene-text sbinkoq-text">
-    <p class="story-lead sbinkoq-line-1">Binko flew over.</p>
-    <p class="story-body sbinkoq-line-2">He had 47 questions.</p>
-  </div>
-
-  <!-- Mondi - lower/more submerged version -->
-  <div class="sbinkoq-mondi-wrap">
-    <svg class="sbinkoq-mondi-svg" viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg" aria-label="Mondi sinking deeper">
-      <!-- Shoulders barely visible -->
-      <ellipse cx="130" cy="140" rx="100" ry="45" fill="#5a8c2a" opacity="0.7"/>
-      <!-- Neck stub -->
-      <path d="M115,140 Q100,100 95,65" stroke="#5a8c2a" stroke-width="30" fill="none" stroke-linecap="round"/>
-      <!-- Small head -->
-      <ellipse cx="92" cy="48" rx="34" ry="22" fill="#5a8c2a"/>
-      <!-- Eyes (more worried) -->
-      <ellipse cx="80" cy="42" rx="10" ry="12" fill="white"/>
-      <ellipse cx="104" cy="42" rx="9" ry="11" fill="white"/>
-      <ellipse cx="82" cy="44" rx="5" ry="7" fill="#111100"/>
-      <ellipse cx="105" cy="44" rx="5" ry="7" fill="#111100"/>
-      <circle cx="84" cy="41" r="2" fill="white" opacity="0.9"/>
-      <circle cx="107" cy="41" r="2" fill="white" opacity="0.9"/>
-      <!-- Deeper frown -->
-      <path d="M81,58 Q92,64 104,58" stroke="#3a6018" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <!-- Tar covers most of body -->
-      <rect x="0" y="155" width="260" height="45" fill="#0f0804" opacity="0.9"/>
-    </svg>
-
-    <!-- Sinking indicator -->
-    <div class="sbinkoq-sink-indicator">
-      <span class="sbinkoq-sink-arrow">↓</span>
-      <span class="sbinkoq-sink-label">deeper</span>
-    </div>
-  </div>
-
-  <!-- Binko SVG flying upper area -->
-  <div class="sbinkoq-binko-wrap">
-    <svg class="sbinkoq-binko-svg" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" aria-label="Binko the pterodactyl">
-      <!-- Left wing -->
-      <path d="M110,90 Q50,40 10,70 Q30,100 90,110 Z" fill="#3a75cc" opacity="0.9"/>
-      <path d="M110,90 Q60,55 20,60" stroke="#2a5aaa" stroke-width="2" fill="none"/>
-      <!-- Right wing -->
-      <path d="M165,90 Q225,40 268,68 Q248,98 185,110 Z" fill="#3a75cc" opacity="0.9"/>
-      <path d="M165,90 Q215,55 258,58" stroke="#2a5aaa" stroke-width="2" fill="none"/>
-      <!-- Wing membranes (lighter inner) -->
-      <path d="M115,92 Q65,60 30,68 Q55,95 108,105 Z" fill="#4a88e0" opacity="0.4"/>
-      <path d="M162,92 Q212,60 248,68 Q222,95 168,105 Z" fill="#4a88e0" opacity="0.4"/>
-      <!-- Body -->
-      <ellipse cx="138" cy="100" rx="42" ry="28" fill="#3a75cc"/>
-      <!-- Body sheen -->
-      <ellipse cx="135" cy="92" rx="30" ry="16" fill="#5a95e8" opacity="0.35"/>
-      <!-- Neck -->
-      <ellipse cx="138" cy="74" rx="18" ry="16" fill="#3a75cc"/>
-      <!-- Head -->
-      <ellipse cx="140" cy="55" rx="30" ry="22" fill="#3a75cc"/>
-      <!-- Head crest -->
-      <path d="M125,40 Q138,18 155,36" stroke="#2a5aaa" stroke-width="3" fill="#4a85d8" stroke-linejoin="round"/>
-      <path d="M125,40 L155,36 Q148,44 138,43 Q128,43 125,40Z" fill="#4a85d8"/>
-      <!-- Eyes (big, curious) -->
-      <ellipse cx="127" cy="52" rx="13" ry="14" fill="white"/>
-      <ellipse cx="153" cy="52" rx="12" ry="13" fill="white"/>
-      <ellipse cx="129" cy="54" rx="7" ry="8" fill="#1a2a6a"/>
-      <ellipse cx="154" cy="54" rx="6" ry="8" fill="#1a2a6a"/>
-      <!-- Bright curious pupils -->
-      <circle cx="131" cy="52" r="3" fill="#3a5aff" opacity="0.7"/>
-      <circle cx="155" cy="52" r="3" fill="#3a5aff" opacity="0.7"/>
-      <circle cx="132" cy="50" r="1.5" fill="white" opacity="0.9"/>
-      <circle cx="156" cy="50" r="1.5" fill="white" opacity="0.9"/>
-      <!-- Beak -->
-      <path d="M115,60 Q110,66 116,70 Q130,68 145,65 Q130,64 115,60Z" fill="#f5c842"/>
-      <path d="M159,62 Q165,67 160,71 Q145,68 130,65 Q148,64 159,62Z" fill="#f5c842"/>
-      <!-- Feet dangling -->
-      <line x1="125" y1="126" x2="118" y2="150" stroke="#2a5aaa" stroke-width="4" stroke-linecap="round"/>
-      <line x1="150" y1="126" x2="157" y2="150" stroke="#2a5aaa" stroke-width="4" stroke-linecap="round"/>
-      <path d="M111,150 Q118,155 125,150" stroke="#2a5aaa" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <path d="M150,150 Q157,155 164,150" stroke="#2a5aaa" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <!-- Question mark floating above head -->
-      <text x="168" y="28" font-size="36" fill="#f9e04b" font-weight="900" font-family="Georgia, serif" opacity="0.95">?</text>
-    </svg>
-  </div>
-
-  <!-- Questions as speech bubbles, staggered -->
-  <div class="sbinkoq-questions">
-    <div class="sbinkoq-question sbinkoq-q1">How long have you been stuck?</div>
-    <div class="sbinkoq-question sbinkoq-q2">Did you eat before this?</div>
-    <div class="sbinkoq-question sbinkoq-q3">What does tar feel like?</div>
-    <div class="sbinkoq-question sbinkoq-q4">Is tar different from mud?</div>
-    <div class="sbinkoq-question sbinkoq-q5">Would you say you are stuck, or <em>very</em> stuck?</div>
-  </div>
-
-  <!-- Tar pit (same dark base) -->
-  <div class="sbinkoq-pit-wrap">
-    <div class="sbinkoq-pit-oval">
-      <div class="sbinkoq-tar-sheen"></div>
-      <div class="sbinkoq-bubble sbinkoq-bubble-1"></div>
-      <div class="sbinkoq-bubble sbinkoq-bubble-2"></div>
-    </div>
-  </div>
-
-  <!-- Bottom muted text -->
-  <div class="sbinkoq-footer">
-    <p class="story-body story-muted sbinkoq-sink-text">Mondi sank a little deeper.</p>
-    <p class="story-body story-muted sbinkoq-well-text"><em>Binko meant well.</em></p>
-  </div>
-</section>
-
-<!-- SCENE 11: scene-ziron-tarpit -->
-<section id="scene-ziron-tarpit" class="scene scene-ziron-tarpit">
-  <div class="sziron-bg"></div>
-  <div class="sziron-warm-glow"></div>
-
-  <!-- Story text left -->
-  <div class="scene-text sziron-text">
-    <p class="story-lead sziron-line-1">Ziron was also there.</p>
-    <p class="story-body sziron-line-2">Ziron looked at the tar pit.</p>
-    <p class="story-body sziron-line-3">Ziron looked at Mondi.</p>
-    <div class="sziron-quote-box sziron-line-4">
-      <p class="sziron-big-quote">"That is a tar pit."</p>
-    </div>
-    <p class="story-body sziron-line-5"><em>'...yes,' said Mondi.</em></p>
-    <p class="story-body sziron-line-6">Ziron nodded.</p>
-    <p class="story-body story-muted sziron-line-7">Ziron had done what he could.</p>
-  </div>
-
-  <!-- Narrator thought bubble upper right -->
-  <div class="sziron-narrator-bubble sziron-line-8">
-    <em>Ziron had done what he could.</em>
-  </div>
-
-  <!-- Mondi - barely visible, just top of head above tar -->
-  <div class="sziron-mondi-wrap">
-    <svg class="sziron-mondi-svg" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg" aria-label="Mondi barely above tar">
-      <!-- Just the very top of the neck and head -->
-      <path d="M82,100 Q78,70 80,40" stroke="#5a8c2a" stroke-width="22" fill="none" stroke-linecap="round" opacity="0.8"/>
-      <!-- Head - mostly submerged, just top visible -->
-      <ellipse cx="82" cy="35" rx="28" ry="20" fill="#5a8c2a"/>
-      <!-- Eyes at surface level (barely) -->
-      <ellipse cx="72" cy="30" rx="9" ry="10" fill="white" opacity="0.9"/>
-      <ellipse cx="92" cy="30" rx="8" ry="9" fill="white" opacity="0.9"/>
-      <ellipse cx="73" cy="32" rx="4.5" ry="6" fill="#111100"/>
-      <ellipse cx="93" cy="32" rx="4" ry="5.5" fill="#111100"/>
-      <circle cx="75" cy="29" r="1.5" fill="white" opacity="0.8"/>
-      <!-- Tar covers everything below -->
-      <rect x="0" y="88" width="180" height="32" fill="#0a0603" opacity="0.95"/>
-    </svg>
-
-    <!-- Mondi's tiny reply bubble -->
-    <div class="sziron-mondi-reply">
-      <span class="sziron-reply-text">...yes.</span>
-    </div>
-  </div>
-
-  <!-- Ziron SVG standing at pit edge -->
-  <div class="sziron-ziron-wrap">
-    <svg class="sziron-ziron-svg" viewBox="0 0 200 420" xmlns="http://www.w3.org/2000/svg" aria-label="Ziron the T-rex looking at the tar pit">
-      <!-- Tail (lower left, balancing) -->
-      <path d="M60,360 Q20,380 5,400" stroke="#7a3215" stroke-width="22" fill="none" stroke-linecap="round"/>
-      <path d="M60,360 Q30,355 10,370" stroke="#6a2a10" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.6"/>
-      <!-- Legs -->
-      <!-- Left leg -->
-      <path d="M85,320 Q80,355 78,390" stroke="#8b3a1a" stroke-width="28" fill="none" stroke-linecap="round"/>
-      <!-- Right leg -->
-      <path d="M115,320 Q120,355 124,390" stroke="#8b3a1a" stroke-width="26" fill="none" stroke-linecap="round"/>
-      <!-- Feet left -->
-      <path d="M70,390 Q78,398 92,392" stroke="#6a2a10" stroke-width="8" fill="none" stroke-linecap="round"/>
-      <line x1="72" y1="390" x2="65" y2="405" stroke="#6a2a10" stroke-width="6" stroke-linecap="round"/>
-      <line x1="80" y1="393" x2="76" y2="408" stroke="#6a2a10" stroke-width="6" stroke-linecap="round"/>
-      <!-- Feet right -->
-      <path d="M115,392 Q124,400 136,395" stroke="#6a2a10" stroke-width="8" fill="none" stroke-linecap="round"/>
-      <line x1="118" y1="392" x2="113" y2="407" stroke="#6a2a10" stroke-width="6" stroke-linecap="round"/>
-      <line x1="128" y1="394" x2="126" y2="409" stroke="#6a2a10" stroke-width="6" stroke-linecap="round"/>
-      <!-- Main body -->
-      <ellipse cx="100" cy="290" rx="70" ry="80" fill="#8b3a1a"/>
-      <!-- Body shading highlight -->
-      <ellipse cx="98" cy="260" rx="50" ry="55" fill="#a84a28" opacity="0.35"/>
-      <!-- Belly lighter -->
-      <ellipse cx="100" cy="315" rx="45" ry="50" fill="#a04a24" opacity="0.45"/>
-      <!-- Tiny left arm -->
-      <path d="M65,255 Q45,265 38,280" stroke="#8b3a1a" stroke-width="14" fill="none" stroke-linecap="round"/>
-      <path d="M38,280 Q33,290 36,295" stroke="#6a2a10" stroke-width="8" fill="none" stroke-linecap="round"/>
-      <!-- Tiny right arm -->
-      <path d="M135,255 Q155,265 162,278" stroke="#8b3a1a" stroke-width="14" fill="none" stroke-linecap="round"/>
-      <path d="M162,278 Q168,288 165,293" stroke="#6a2a10" stroke-width="8" fill="none" stroke-linecap="round"/>
-      <!-- Neck -->
-      <path d="M85,215 Q90,185 95,160" stroke="#8b3a1a" stroke-width="38" fill="none" stroke-linecap="round"/>
-      <path d="M115,215 Q112,185 108,162" stroke="#8b3a1a" stroke-width="38" fill="none" stroke-linecap="round"/>
-      <!-- Head - the nod pivot group id for animation -->
-      <g class="sziron-head-group">
-        <!-- Head main -->
-        <ellipse cx="100" cy="135" rx="55" ry="42" fill="#8b3a1a"/>
-        <!-- Upper jaw -->
-        <path d="M52,128 Q100,108 148,128 Q145,145 100,148 Q55,145 52,128Z" fill="#9a4428"/>
-        <!-- Lower jaw -->
-        <path d="M58,138 Q100,130 142,138 Q140,158 100,162 Q60,158 58,138Z" fill="#7a3215"/>
-        <!-- Mouth - flat line (neutral) -->
-        <path d="M65,148 Q100,152 135,148" stroke="#5a2010" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-        <!-- Teeth hint -->
-        <path d="M72,148 L74,155 M85,149 L87,157 M100,150 L100,158 M115,149 L113,157 M128,148 L126,155" stroke="#f0ede0" stroke-width="3" stroke-linecap="round"/>
-        <!-- Eye socket left -->
-        <ellipse cx="78" cy="120" rx="18" ry="16" fill="#6a2a10"/>
-        <!-- Eye socket right -->
-        <ellipse cx="122" cy="120" rx="16" ry="15" fill="#6a2a10"/>
-        <!-- Eye white left -->
-        <ellipse cx="80" cy="119" rx="12" ry="11" fill="#f0f0e0"/>
-        <!-- Eye white right -->
-        <ellipse cx="122" cy="119" rx="11" ry="10" fill="#f0f0e0"/>
-        <!-- Pupil left - steady, looking forward -->
-        <ellipse cx="81" cy="120" rx="6" ry="7" fill="#1a0800"/>
-        <!-- Pupil right -->
-        <ellipse cx="123" cy="120" rx="6" ry="6.5" fill="#1a0800"/>
-        <!-- Highlight left -->
-        <circle cx="83" cy="117" r="2.5" fill="white" opacity="0.7"/>
-        <!-- Highlight right -->
-        <circle cx="125" cy="117" r="2.5" fill="white" opacity="0.7"/>
-        <!-- Nostril left -->
-        <ellipse cx="90" cy="108" rx="5" ry="4" fill="#5a2010" opacity="0.8"/>
-        <!-- Nostril right -->
-        <ellipse cx="110" cy="108" rx="5" ry="4" fill="#5a2010" opacity="0.8"/>
-        <!-- Brow ridge (completely neutral, flat) -->
-        <path d="M64,108 Q78,102 94,105" stroke="#6a2a10" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <path d="M106,105 Q122,102 136,108" stroke="#6a2a10" stroke-width="4" fill="none" stroke-linecap="round"/>
-      </g>
-    </svg>
-
-    <!-- Ziron's main speech bubble -->
-    <div class="sziron-speech-bubble sziron-line-sb">
-      <span class="sziron-speech-text">"That is a tar pit."</span>
-      <div class="sziron-bubble-tail"></div>
-    </div>
-  </div>
-
-  <!-- Tar pit at bottom -->
-  <div class="sziron-pit-wrap">
-    <div class="sziron-pit-oval">
-      <div class="sziron-tar-sheen"></div>
-      <div class="sziron-bubble sziron-bubble-1"></div>
-      <div class="sziron-bubble sziron-bubble-2"></div>
-      <div class="sziron-bubble sziron-bubble-3"></div>
-    </div>
-  </div>
-</section>
-<!-- SCENES 12–16: DINOSAUR TIMES — Extended Cut -->
-
-<!-- SCENE 12: LAP 23 — He Saw Mondi -->
-<section id="scene-lap23" class="scene scene-lap23">
-  <div class="slap23-bg"></div>
-
-  <!-- Sky horizon line -->
-  <div class="slap23-horizon"></div>
-
-  <!-- Ground / tar area -->
-  <div class="slap23-ground">
-    <div class="slap23-tar-pool"></div>
-  </div>
-
-  <!-- Mondi's head barely above tar -->
-  <div class="slap23-mondi-head">
-    <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" class="slap23-mondi-svg">
-      <!-- neck stub -->
-      <ellipse cx="60" cy="72" rx="22" ry="18" fill="#2a6e2a" />
-      <!-- head -->
-      <ellipse cx="60" cy="44" rx="38" ry="32" fill="#38943a" />
-      <!-- snout -->
-      <ellipse cx="85" cy="50" rx="18" ry="12" fill="#38943a" />
-      <!-- nostril -->
-      <ellipse cx="94" cy="47" rx="3" ry="2.5" fill="#1e5220" />
-      <ellipse cx="100" cy="50" rx="3" ry="2.5" fill="#1e5220" />
-      <!-- worried left eye -->
-      <ellipse cx="42" cy="35" rx="11" ry="10" fill="#e8f5e0" />
-      <ellipse cx="44" cy="34" rx="6" ry="6" fill="#1a3d1a" />
-      <ellipse cx="46" cy="32" rx="2" ry="2" fill="white" />
-      <!-- worried brow -->
-      <path d="M 32 25 Q 42 20 54 26" stroke="#1e5220" stroke-width="3" fill="none" stroke-linecap="round" />
-      <!-- right eye (partially visible) -->
-      <ellipse cx="72" cy="36" rx="9" ry="8" fill="#e8f5e0" />
-      <ellipse cx="73" cy="35" rx="5" ry="5" fill="#1a3d1a" />
-      <ellipse cx="75" cy="33" rx="1.5" ry="1.5" fill="white" />
-      <!-- right brow -->
-      <path d="M 64 27 Q 72 22 82 28" stroke="#1e5220" stroke-width="3" fill="none" stroke-linecap="round" />
-      <!-- tar drip on head -->
-      <ellipse cx="30" cy="55" rx="6" ry="4" fill="#0a0805" opacity="0.7" />
-      <ellipse cx="75" cy="62" rx="5" ry="3" fill="#0a0805" opacity="0.7" />
-    </svg>
-    <div class="slap23-tar-drips">
-      <div class="tar-drip" style="left:15%;"></div>
-      <div class="tar-drip" style="left:40%; animation-delay:0.3s;"></div>
-      <div class="tar-drip" style="left:65%; animation-delay:0.6s;"></div>
-      <div class="tar-drip" style="left:80%; animation-delay:0.15s;"></div>
-    </div>
-  </div>
-
-  <!-- SVG dotted line of sight -->
-  <svg class="slap23-sightline" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <line class="sightline-dash" x1="200" y1="30" x2="200" y2="570"
-      stroke="#f9e04b" stroke-width="3"
-      stroke-dasharray="12 8"
-      stroke-linecap="round" />
-    <!-- eye marker -->
-    <circle cx="200" cy="30" r="6" fill="#f9e04b" opacity="0.8" />
-    <!-- target marker -->
-    <circle cx="200" cy="570" r="8" fill="#f9e04b" opacity="0.6" />
-  </svg>
-
-  <!-- Amazasaurus flying -->
-  <div class="slap23-dino-wrap">
-    <img src="assets/amazasaurus-render.png" alt="Amazasaurus on Lap 23" class="slap23-dino" />
-    <!-- LAP 23 badge -->
-    <div class="slap23-lap-badge">
-      <span class="lap-number">LAP 23</span>
-      <span class="lap-sub">of 30 scheduled</span>
-    </div>
-    <!-- Thought sticky note -->
-    <div class="slap23-thought-note">
-      <span class="thought-title">PLAN</span>
-      <span class="thought-line">✓ laps 1–22</span>
-      <span class="thought-line active-plan">→ lap 23 (now)</span>
-      <span class="thought-line">laps 24–30</span>
-      <span class="thought-note-footer">7 more scheduled.</span>
-    </div>
-  </div>
-
-  <!-- Story text -->
-  <div class="scene-text slap23-text">
-    <p class="story-body slap23-line1">Amazasaurus flew by on lap 23.</p>
-    <p class="story-body slap23-line2">He saw Mondi.</p>
-    <p class="story-body slap23-line3">He also saw the tar.</p>
-    <p class="story-body slap23-line4">He understood the situation.</p>
-    <p class="story-body slap23-line5" style="font-size:0.85em; opacity:0.75; margin-top:1.2rem;">7 more laps scheduled.</p>
-  </div>
-</section>
-
-<!-- SCENE 13: ALMOST — The Dramatic Pause -->
-<section id="scene-almost" class="scene scene-almost">
-  <div class="salmost-bg"></div>
-
-  <!-- Stage spotlight circle -->
-  <div class="salmost-spotlight"></div>
-
-  <!-- Still leaves scattered -->
-  <svg class="salmost-leaves" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-    <ellipse cx="80" cy="120" rx="18" ry="9" fill="#2d6e2d" opacity="0.55" transform="rotate(-15 80 120)" />
-    <ellipse cx="680" cy="80" rx="22" ry="10" fill="#3a8a3a" opacity="0.45" transform="rotate(20 680 80)" />
-    <ellipse cx="150" cy="400" rx="16" ry="7" fill="#245524" opacity="0.5" transform="rotate(35 150 400)" />
-    <ellipse cx="720" cy="350" rx="20" ry="8" fill="#2d6e2d" opacity="0.4" transform="rotate(-25 720 350)" />
-    <ellipse cx="50" cy="500" rx="14" ry="6" fill="#3a8a3a" opacity="0.5" transform="rotate(10 50 500)" />
-    <ellipse cx="750" cy="480" rx="17" ry="7" fill="#245524" opacity="0.45" transform="rotate(-30 750 480)" />
-    <ellipse cx="300" cy="80" rx="13" ry="6" fill="#2d6e2d" opacity="0.4" transform="rotate(5 300 80)" />
-    <ellipse cx="500" cy="100" rx="19" ry="8" fill="#3a8a3a" opacity="0.4" transform="rotate(-12 500 100)" />
-    <ellipse cx="620" cy="500" rx="15" ry="6" fill="#2d6e2d" opacity="0.5" transform="rotate(40 620 500)" />
-    <!-- "STILL" labels on two leaves - tiny text -->
-    <text x="68" y="118" font-size="5" fill="#5aaa5a" opacity="0.7" font-family="Georgia, serif">(still)</text>
-    <text x="668" y="78" font-size="5" fill="#5aaa5a" opacity="0.7" font-family="Georgia, serif">(still)</text>
-  </svg>
-
-  <!-- Tiny dino silhouettes at bottom -->
-  <div class="salmost-dino-emojis">
-    <span class="salmost-emoji" style="left:12%;">🦕</span>
-    <span class="salmost-emoji" style="left:24%;">🦖</span>
-    <span class="salmost-emoji" style="left:38%;">🦕</span>
-    <span class="salmost-emoji" style="left:60%;">🦖</span>
-    <span class="salmost-emoji" style="left:74%;">🦕</span>
-    <span class="salmost-emoji" style="left:86%;">🦖</span>
-  </div>
-
-  <!-- Amazasaurus: frozen, glowing -->
-  <div class="salmost-dino-wrap">
-    <img src="assets/amazasaurus-render.png" alt="Amazasaurus frozen" class="salmost-dino" />
-    <!-- Thought bubble: crossed-out laps -->
-    <div class="salmost-thought-bubble">
-      <div class="bubble-tail"></div>
-      <div class="bubble-body">
-        <span class="crossed-text">7 MORE LAPS</span>
-        <span class="question-mark">?</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Story text: word by word -->
-  <div class="scene-text salmost-text">
-    <p class="salmost-headline">
-      <span class="salmost-word w-he">He</span><span class="salmost-ellipsis">...</span><span class="salmost-word w-almost">almost</span><span class="salmost-ellipsis">...</span><span class="salmost-word w-kept">kept</span> <span class="salmost-word w-going">going.</span>
-    </p>
-    <p class="story-body salmost-sub1">The valley went very quiet.</p>
-    <p class="story-body salmost-sub2">Even the leaves stopped moving.</p>
-    <p class="story-body salmost-aside">(This was unusual for leaves.)</p>
-  </div>
-</section>
-
-<!-- SCENE 14: HE STOPPED — The Big Deal -->
-<section id="scene-he-stopped" class="scene scene-he-stopped">
-  <div class="sstopped-bg"></div>
-
-  <!-- Light rays from Amazasaurus position -->
-  <div class="sstopped-rays-wrap">
-    <svg class="sstopped-rays" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <g class="rays-group">
-        <line x1="400" y1="80" x2="50"  y2="600" stroke="#f9e04b" stroke-width="2" opacity="0.09" />
-        <line x1="400" y1="80" x2="150" y2="600" stroke="#f9e04b" stroke-width="2" opacity="0.07" />
-        <line x1="400" y1="80" x2="280" y2="600" stroke="#f9e04b" stroke-width="2" opacity="0.09" />
-        <line x1="400" y1="80" x2="400" y2="600" stroke="#f9e04b" stroke-width="2" opacity="0.07" />
-        <line x1="400" y1="80" x2="520" y2="600" stroke="#f9e04b" stroke-width="2" opacity="0.09" />
-        <line x1="400" y1="80" x2="650" y2="600" stroke="#f9e04b" stroke-width="2" opacity="0.07" />
-        <line x1="400" y1="80" x2="750" y2="600" stroke="#f9e04b" stroke-width="2" opacity="0.09" />
-        <line x1="400" y1="80" x2="200" y2="580" stroke="#f9e04b" stroke-width="1.5" opacity="0.06" />
-        <line x1="400" y1="80" x2="600" y2="580" stroke="#f9e04b" stroke-width="1.5" opacity="0.06" />
-        <line x1="400" y1="80" x2="100" y2="550" stroke="#f9e04b" stroke-width="1.5" opacity="0.05" />
-        <line x1="400" y1="80" x2="700" y2="550" stroke="#f9e04b" stroke-width="1.5" opacity="0.05" />
-      </g>
-    </svg>
-  </div>
-
-  <!-- Amazasaurus small, upper portion -->
-  <div class="sstopped-dino-wrap">
-    <img src="assets/amazasaurus-render.png" alt="Amazasaurus stopped" class="sstopped-dino" />
-  </div>
-
-  <!-- HERO TEXT -->
-  <div class="sstopped-hero-text">He stopped.</div>
-
-  <!-- Silhouette dinos looking up -->
-  <div class="sstopped-audience">
-    <svg viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg" class="sstopped-silhouettes">
-      <!-- Dino 1: small T-rex looking up -->
-      <g transform="translate(60, 10)">
-        <ellipse cx="40" cy="120" rx="25" ry="35" fill="#0a0006" />
-        <ellipse cx="40" cy="75" rx="20" ry="25" fill="#0a0006" />
-        <!-- head tilted up -->
-        <ellipse cx="55" cy="48" rx="18" ry="14" fill="#0a0006" transform="rotate(-20 55 48)" />
-        <!-- tiny arms -->
-        <line x1="20" y1="100" x2="8" y2="115" stroke="#0a0006" stroke-width="4" stroke-linecap="round" />
-        <!-- legs -->
-        <line x1="28" y1="148" x2="20" y2="158" stroke="#0a0006" stroke-width="5" stroke-linecap="round" />
-        <line x1="52" y1="148" x2="60" y2="158" stroke="#0a0006" stroke-width="5" stroke-linecap="round" />
-        <!-- gaze line -->
-        <line x1="65" y1="42" x2="95" y2="10" stroke="#f9e04b" stroke-width="1" opacity="0.3" stroke-dasharray="4 3" />
-      </g>
-      <!-- Dino 2: brachiosaurus neck up -->
-      <g transform="translate(155, 0)">
-        <ellipse cx="30" cy="145" rx="30" ry="20" fill="#0a0006" />
-        <!-- long neck -->
-        <rect x="20" y="50" width="20" height="100" fill="#0a0006" rx="10" />
-        <!-- head -->
-        <ellipse cx="30" cy="38" rx="15" ry="10" fill="#0a0006" transform="rotate(-10 30 38)" />
-        <line x1="38" y1="28" x2="60" y2="5" stroke="#f9e04b" stroke-width="1" opacity="0.3" stroke-dasharray="4 3" />
-      </g>
-      <!-- Dino 3 -->
-      <g transform="translate(255, 20)">
-        <ellipse cx="35" cy="130" rx="28" ry="28" fill="#0a0006" />
-        <ellipse cx="52" cy="95" rx="18" ry="15" fill="#0a0006" />
-        <ellipse cx="68" cy="68" rx="16" ry="11" fill="#0a0006" transform="rotate(-25 68 68)" />
-        <line x1="76" y1="58" x2="110" y2="30" stroke="#f9e04b" stroke-width="1" opacity="0.3" stroke-dasharray="4 3" />
-      </g>
-      <!-- Dino 4: tiny one -->
-      <g transform="translate(365, 50)">
-        <ellipse cx="22" cy="100" rx="16" ry="22" fill="#0a0006" />
-        <ellipse cx="30" cy="70" rx="14" ry="10" fill="#0a0006" />
-        <ellipse cx="42" cy="54" rx="12" ry="8" fill="#0a0006" transform="rotate(-30 42 54)" />
-        <line x1="50" y1="46" x2="80" y2="20" stroke="#f9e04b" stroke-width="1" opacity="0.3" stroke-dasharray="4 3" />
-      </g>
-      <!-- Dino 5 -->
-      <g transform="translate(465, 15)">
-        <ellipse cx="40" cy="130" rx="26" ry="30" fill="#0a0006" />
-        <ellipse cx="40" cy="88" rx="18" ry="20" fill="#0a0006" />
-        <ellipse cx="28" cy="60" rx="16" ry="11" fill="#0a0006" transform="rotate(20 28 60)" />
-        <line x1="18" y1="52" x2="-10" y2="25" stroke="#f9e04b" stroke-width="1" opacity="0.3" stroke-dasharray="4 3" />
-      </g>
-      <!-- Dino 6 -->
-      <g transform="translate(565, 30)">
-        <ellipse cx="30" cy="120" rx="22" ry="25" fill="#0a0006" />
-        <ellipse cx="30" cy="82" rx="16" ry="18" fill="#0a0006" />
-        <ellipse cx="18" cy="56" rx="14" ry="9" fill="#0a0006" transform="rotate(15 18 56)" />
-        <line x1="8" y1="50" x2="-15" y2="22" stroke="#f9e04b" stroke-width="1" opacity="0.3" stroke-dasharray="4 3" />
-      </g>
-      <!-- Dino 7 -->
-      <g transform="translate(660, 10)">
-        <ellipse cx="35" cy="140" rx="24" ry="24" fill="#0a0006" />
-        <ellipse cx="35" cy="102" rx="17" ry="20" fill="#0a0006" />
-        <ellipse cx="50" cy="72" rx="16" ry="10" fill="#0a0006" transform="rotate(-18 50 72)" />
-        <line x1="58" y1="64" x2="80" y2="38" stroke="#f9e04b" stroke-width="1" opacity="0.3" stroke-dasharray="4 3" />
-      </g>
-    </svg>
-    <!-- Small narrative text -->
-    <p class="sstopped-caption">Nobody had ever seen Amazasaurus stop mid-lap before.</p>
-    <p class="sstopped-aside">(Ziron was paying attention. This was also unusual.)</p>
-  </div>
-</section>
-
-<!-- SCENE 15: DESCENT — He Flew Down -->
-<section id="scene-descent" class="scene scene-descent">
-  <div class="sdescent-bg"></div>
-
-  <!-- Speed lines SVG -->
-  <svg class="sdescent-speedlines" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-    <line class="speed-line sl1" x1="-100" y1="180" x2="900" y2="230" stroke="rgba(255,255,255,0.55)" stroke-width="2.5" stroke-linecap="round" />
-    <line class="speed-line sl2" x1="-100" y1="210" x2="900" y2="270" stroke="rgba(180,220,255,0.4)" stroke-width="1.5" stroke-linecap="round" />
-    <line class="speed-line sl3" x1="-100" y1="155" x2="900" y2="195" stroke="rgba(255,255,255,0.35)" stroke-width="1" stroke-linecap="round" />
-    <line class="speed-line sl4" x1="-100" y1="250" x2="900" y2="300" stroke="rgba(180,220,255,0.3)" stroke-width="2" stroke-linecap="round" />
-    <line class="speed-line sl5" x1="-100" y1="135" x2="900" y2="165" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-linecap="round" />
-  </svg>
-
-  <!-- Tar pit suggestion at bottom -->
-  <div class="sdescent-ground">
-    <div class="sdescent-tar">
-      <svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" class="sdescent-tar-svg">
-        <ellipse cx="300" cy="70" rx="260" ry="55" fill="#0a0805" opacity="0.9" />
-        <ellipse cx="300" cy="60" rx="200" ry="35" fill="#120c08" opacity="0.7" />
-        <!-- tar surface sheen -->
-        <ellipse cx="240" cy="52" rx="80" ry="12" fill="#1a1208" opacity="0.5" />
-        <ellipse cx="370" cy="58" rx="50" ry="8" fill="#1a1208" opacity="0.4" />
-      </svg>
-    </div>
-  </div>
-
-  <!-- Big down arrow -->
-  <div class="sdescent-arrow">
-    <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" class="sdescent-arrow-svg">
-      <line x1="40" y1="5" x2="40" y2="90" stroke="#f4a820" stroke-width="8" stroke-linecap="round" />
-      <polyline points="12,65 40,100 68,65" stroke="#f4a820" stroke-width="8" fill="none" stroke-linejoin="round" stroke-linecap="round" />
-    </svg>
-  </div>
-
-  <!-- Amazasaurus diving -->
-  <div class="sdescent-dino-wrap">
-    <img src="assets/amazasaurus-render.png" alt="Amazasaurus diving down" class="sdescent-dino" />
-  </div>
-
-  <!-- Story text upper left -->
-  <div class="scene-text sdescent-text">
-    <p class="story-body sdescent-line1">He turned around.</p>
-    <p class="story-body sdescent-line2">He flew back.</p>
-    <p class="story-body-large sdescent-line3">He flew DOWN.</p>
-    <p class="story-body sdescent-line4">Right toward the tar pit.</p>
-    <p class="story-body sdescent-muted sdescent-line5">This had never happened before.</p>
-    <p class="story-body sdescent-muted sdescent-line6">He was going somewhere on purpose.</p>
-  </div>
-</section>
-
-<!-- SCENE 16: RESCUE — MONDI WAS FREE -->
-<section id="scene-rescue" class="scene scene-rescue">
-  <div class="srescue-bg"></div>
-
-  <!-- Confetti particles -->
-  <div class="srescue-confetti" aria-hidden="true">
-    <div class="confetti-piece cp1"></div>
-    <div class="confetti-piece cp2"></div>
-    <div class="confetti-piece cp3"></div>
-    <div class="confetti-piece cp4"></div>
-    <div class="confetti-piece cp5"></div>
-    <div class="confetti-piece cp6"></div>
-    <div class="confetti-piece cp7"></div>
-    <div class="confetti-piece cp8"></div>
-    <div class="confetti-piece cp9"></div>
-    <div class="confetti-piece cp10"></div>
-    <div class="confetti-piece cp11"></div>
-    <div class="confetti-piece cp12"></div>
-    <div class="confetti-piece cp13"></div>
-    <div class="confetti-piece cp14"></div>
-    <div class="confetti-piece cp15"></div>
-    <div class="confetti-piece cp16"></div>
-    <div class="confetti-piece cp17"></div>
-    <div class="confetti-piece cp18"></div>
-    <div class="confetti-piece cp19"></div>
-    <div class="confetti-piece cp20"></div>
-  </div>
-
-  <!-- Sparkles -->
-  <div class="srescue-sparkles" aria-hidden="true">
-    <span class="sparkle sp1">★</span>
-    <span class="sparkle sp2">✦</span>
-    <span class="sparkle sp3">★</span>
-    <span class="sparkle sp4">✦</span>
-    <span class="sparkle sp5">★</span>
-    <span class="sparkle sp6">✦</span>
-    <span class="sparkle sp7">★</span>
-    <span class="sparkle sp8">✦</span>
-    <span class="sparkle sp9">★</span>
-    <span class="sparkle sp10">✦</span>
-  </div>
-
-  <!-- Amazasaurus swooping (diving pose, grabbing) -->
-  <div class="srescue-dino-wrap">
-    <img src="assets/amazasaurus-render.png" alt="Amazasaurus rescuing Mondi" class="srescue-dino" />
-  </div>
-
-  <!-- Mondi being lifted -->
-  <div class="srescue-mondi-wrap">
-    <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" class="srescue-mondi-svg">
-      <!-- tar drips hanging from bottom -->
-      <ellipse cx="60"  cy="240" rx="8"  ry="18" fill="#0a0805" opacity="0.85" />
-      <ellipse cx="100" cy="250" rx="10" ry="22" fill="#0a0805" opacity="0.8" />
-      <ellipse cx="145" cy="238" rx="7"  ry="16" fill="#0a0805" opacity="0.85" />
-      <ellipse cx="80"  cy="248" rx="6"  ry="12" fill="#120c08" opacity="0.7" />
-      <ellipse cx="125" cy="244" rx="5"  ry="10" fill="#120c08" opacity="0.7" />
-      <!-- body -->
-      <ellipse cx="100" cy="185" rx="85" ry="65" fill="#2e7d2e" />
-      <!-- belly lighter -->
-      <ellipse cx="100" cy="200" rx="55" ry="40" fill="#3a9e3a" opacity="0.5" />
-      <!-- neck -->
-      <rect x="80" y="95" width="40" height="80" fill="#38943a" rx="20" />
-      <!-- head -->
-      <ellipse cx="100" cy="75" rx="50" ry="42" fill="#38943a" />
-      <!-- snout -->
-      <ellipse cx="148" cy="82" rx="24" ry="16" fill="#38943a" />
-      <!-- wide shocked/relieved eyes -->
-      <ellipse cx="78" cy="62" rx="17" ry="16" fill="#e8f5e0" />
-      <ellipse cx="80" cy="63" rx="10" ry="10" fill="#111" />
-      <ellipse cx="83" cy="60" rx="3.5" ry="3.5" fill="white" />
-      <ellipse cx="76" cy="67" rx="2" ry="2" fill="white" opacity="0.6" />
-      <ellipse cx="120" cy="64" rx="14" ry="13" fill="#e8f5e0" />
-      <ellipse cx="121" cy="65" rx="8" ry="8" fill="#111" />
-      <ellipse cx="124" cy="62" rx="3" ry="3" fill="white" />
-      <!-- relieved slightly open mouth / smile -->
-      <path d="M 90 90 Q 120 102 148 88" stroke="#1e5220" stroke-width="3.5" fill="none" stroke-linecap="round" />
-      <!-- tar patches on body -->
-      <ellipse cx="55"  cy="190" rx="18" ry="12" fill="#0a0805" opacity="0.5" />
-      <ellipse cx="150" cy="185" rx="14" ry="10" fill="#0a0805" opacity="0.45" />
-      <ellipse cx="95"  cy="215" rx="20" ry="10" fill="#0a0805" opacity="0.4" />
-      <!-- brow: relieved -->
-      <path d="M 63 50 Q 78 44 94 52" stroke="#1e5220" stroke-width="2.5" fill="none" stroke-linecap="round" />
-      <path d="M 108 52 Q 120 46 134 53" stroke="#1e5220" stroke-width="2.5" fill="none" stroke-linecap="round" />
-    </svg>
-    <!-- wavy tar below Mondi -->
-    <div class="srescue-tar-below"></div>
-  </div>
-
-  <!-- HERO TEXT: MONDI WAS FREE -->
-  <div class="srescue-hero-text">MONDI WAS FREE.</div>
-
-  <!-- Bottom captions -->
-  <div class="srescue-captions">
-    <p class="story-body srescue-cap1">He smelled genuinely terrible.</p>
-    <p class="story-body srescue-cap2">Amazasaurus did not say anything about the smell.</p>
-    <p class="story-body srescue-aside">(That was the kind thing.)</p>
-  </div>
-</section>
-<!-- ============================================================
-     DINOSAUR TIMES — Extended Cut | Scenes 17–23
-     dino_c.html
-     ============================================================ -->
-
-<!-- SCENE 17: scene-crowd -->
-<section id="scene-crowd" class="scene scene-crowd">
-  <div class="scrowd-bg"></div>
-
-  <!-- Background silhouette dinos -->
-  <div class="scrowd-silhouettes" aria-hidden="true">
-    <div class="sil-dino sil-1"></div>
-    <div class="sil-dino sil-2"></div>
-    <div class="sil-dino sil-3"></div>
-    <div class="sil-dino sil-4"></div>
-    <div class="sil-dino sil-5"></div>
-    <div class="sil-dino sil-6"></div>
-  </div>
-
-  <!-- Background speech bubbles -->
-  <div class="scrowd-bg-bubbles" aria-hidden="true">
-    <div class="bg-bubble bb-1">"He stopped the laps."</div>
-    <div class="bg-bubble bb-2">"He came DOWN."</div>
-    <div class="bg-bubble bb-3">"On PURPOSE."</div>
-  </div>
-
-  <!-- Characters -->
-  <div class="scrowd-stage">
-    <!-- Mondi (left) -->
-    <div class="scrowd-mondi-wrap char-mondi-crowd">
-      <svg class="mondi-svg-crowd" viewBox="0 0 180 280" xmlns="http://www.w3.org/2000/svg">
-        <!-- Neck -->
-        <ellipse cx="90" cy="100" rx="22" ry="80" fill="#4a8a3a"/>
-        <!-- Body -->
-        <ellipse cx="90" cy="210" rx="65" ry="58" fill="#5a9a48"/>
-        <!-- Tar spots on body -->
-        <ellipse class="tar-spot" cx="75" cy="200" rx="9" ry="7" fill="#1a0e05" opacity="0.85"/>
-        <ellipse class="tar-spot" cx="108" cy="220" rx="6" ry="5" fill="#1a0e05" opacity="0.85"/>
-        <ellipse class="tar-spot" cx="88" cy="238" rx="8" ry="6" fill="#1a0e05" opacity="0.85"/>
-        <ellipse class="tar-spot" cx="60" cy="225" rx="5" ry="4" fill="#1a0e05" opacity="0.8"/>
-        <ellipse class="tar-spot" cx="115" cy="195" rx="7" ry="5" fill="#1a0e05" opacity="0.8"/>
-        <!-- Tar on neck -->
-        <ellipse class="tar-spot" cx="82" cy="130" rx="5" ry="4" fill="#1a0e05" opacity="0.75"/>
-        <ellipse class="tar-spot" cx="98" cy="115" rx="4" ry="3" fill="#1a0e05" opacity="0.75"/>
-        <!-- Head -->
-        <ellipse cx="90" cy="34" rx="30" ry="26" fill="#4a8a3a"/>
-        <!-- Smile -->
-        <path d="M76 40 Q90 54 104 40" stroke="#2a5a1a" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <!-- Eyes -->
-        <ellipse cx="80" cy="28" rx="6" ry="7" fill="white"/>
-        <ellipse cx="100" cy="28" rx="6" ry="7" fill="white"/>
-        <circle cx="82" cy="29" r="3.5" fill="#1a0e05"/>
-        <circle cx="102" cy="29" r="3.5" fill="#1a0e05"/>
-        <!-- Tiny eye shine -->
-        <circle cx="83.5" cy="27.5" r="1" fill="white"/>
-        <circle cx="103.5" cy="27.5" r="1" fill="white"/>
-        <!-- Legs -->
-        <rect x="55" y="255" width="22" height="28" rx="8" fill="#4a8a3a"/>
-        <rect x="100" y="255" width="22" height="28" rx="8" fill="#4a8a3a"/>
-        <!-- Waving arm -->
-        <ellipse cx="155" cy="195" rx="10" ry="22" fill="#4a8a3a" transform="rotate(-30 155 195)"/>
-      </svg>
-    </div>
-
-    <!-- Amazasaurus (center) -->
-    <div class="scrowd-amaza-wrap char-amaza-crowd">
-      <img src="assets/amazasaurus-render.png" alt="Amazasaurus" class="amaza-img-crowd"/>
-      <!-- Binko's speech bubble -->
-      <div class="binko-crowd-bubble">
-        But WHY? <span class="big-q">?</span>
-      </div>
-    </div>
-
-    <!-- Binko (flying above) -->
-    <div class="scrowd-binko-wrap char-binko-crowd">
-      <svg class="binko-svg-crowd" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
-        <!-- Wings -->
-        <ellipse cx="30" cy="40" rx="28" ry="14" fill="#3a6abf" transform="rotate(-20 30 40)"/>
-        <ellipse cx="90" cy="40" rx="28" ry="14" fill="#3a6abf" transform="rotate(20 90 40)"/>
-        <!-- Body -->
-        <ellipse cx="60" cy="44" rx="20" ry="16" fill="#4a7ad0"/>
-        <!-- Head -->
-        <ellipse cx="60" cy="26" rx="16" ry="14" fill="#4a7ad0"/>
-        <!-- Beak -->
-        <polygon points="60,16 50,22 70,22" fill="#d4a820"/>
-        <!-- Eyes -->
-        <ellipse cx="53" cy="23" rx="5" ry="5.5" fill="white"/>
-        <ellipse cx="67" cy="23" rx="5" ry="5.5" fill="white"/>
-        <circle cx="54" cy="23" r="2.5" fill="#1a0e05"/>
-        <circle cx="68" cy="23" r="2.5" fill="#1a0e05"/>
-        <!-- Tail -->
-        <path d="M60 60 Q72 72 68 80" stroke="#3a6abf" stroke-width="6" fill="none" stroke-linecap="round"/>
-      </svg>
-    </div>
-
-    <!-- Ziron (right) -->
-    <div class="scrowd-ziron-wrap char-ziron-crowd">
-      <svg class="ziron-svg-crowd" viewBox="0 0 160 320" xmlns="http://www.w3.org/2000/svg">
-        <!-- Body -->
-        <ellipse cx="80" cy="200" rx="55" ry="75" fill="#7a3a18"/>
-        <!-- Tail -->
-        <path d="M130 240 Q170 260 175 290 Q170 295 165 290 Q162 265 125 248" fill="#6a2e10"/>
-        <!-- Neck -->
-        <ellipse cx="80" cy="120" rx="28" ry="45" fill="#7a3a18"/>
-        <!-- Head -->
-        <ellipse cx="80" cy="72" rx="38" ry="32" fill="#7a3a18"/>
-        <!-- Jaw -->
-        <ellipse cx="80" cy="90" rx="30" ry="16" fill="#6a2e10"/>
-        <!-- Neutral mouth line -->
-        <line x1="58" y1="88" x2="102" y2="88" stroke="#3a1a08" stroke-width="2.5"/>
-        <!-- Eyebrow — one slightly raised (Ziron approval) -->
-        <path d="M62 58 Q72 53 82 57" stroke="#3a1a08" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <!-- Other eyebrow normal -->
-        <path d="M80 59 Q88 57 96 60" stroke="#3a1a08" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <!-- Eyes slightly wider -->
-        <ellipse cx="70" cy="67" rx="7" ry="8" fill="white"/>
-        <ellipse cx="90" cy="67" rx="7" ry="8" fill="white"/>
-        <circle cx="71" cy="67" r="4" fill="#1a0e05"/>
-        <circle cx="91" cy="67" r="4" fill="#1a0e05"/>
-        <!-- Arms (tiny T-rex) -->
-        <ellipse cx="38" cy="185" rx="10" ry="20" fill="#7a3a18" transform="rotate(25 38 185)"/>
-        <ellipse cx="122" cy="185" rx="10" ry="20" fill="#7a3a18" transform="rotate(-25 122 185)"/>
-        <!-- Legs -->
-        <rect x="45" y="258" width="28" height="55" rx="10" fill="#6a2e10"/>
-        <rect x="87" y="258" width="28" height="55" rx="10" fill="#6a2e10"/>
-      </svg>
-    </div>
-  </div>
-
-  <!-- Story text -->
-  <div class="scene-text scrowd-text">
-    <p class="story-body scrowd-t1">Word spread quickly.</p>
-    <p class="story-body scrowd-t2">"He stopped the laps," said one dinosaur.</p>
-    <p class="story-body scrowd-t3">"He came down," said another.</p>
-    <p class="story-body story-big-italic scrowd-t4">"On PURPOSE," said a third one.</p>
-    <p class="story-body scrowd-t5">Binko had a new question.</p>
-    <p class="story-body story-muted scrowd-t6">It was actually a good one.</p>
-  </div>
-</section>
-
-<!-- SCENE 18: scene-answer -->
-<section id="scene-answer" class="scene scene-answer">
-  <div class="sanswer-bg"></div>
-
-  <!-- Stars -->
-  <div class="sanswer-stars" aria-hidden="true" id="answerStars"></div>
-
-  <!-- Spotlight -->
-  <div class="sanswer-spotlight" aria-hidden="true"></div>
-
-  <!-- Amazasaurus -->
-  <div class="sanswer-amaza-wrap">
-    <img src="assets/amazasaurus-render.png" alt="Amazasaurus thinking" class="amaza-img-answer"/>
-    <!-- Thought bubble -->
-    <div class="sanswer-thought-bubble">
-      <div class="thought-dots tb-dots">...</div>
-      <div class="thought-answer tb-answer">
-        <span class="answer-line al-1">Because Mondi needed it.</span>
-        <span class="answer-line al-2">And I could.</span>
-        <span class="answer-line al-3">So I did.</span>
-      </div>
-      <!-- Thought bubble tail dots -->
-      <div class="tb-dot-1"></div>
-      <div class="tb-dot-2"></div>
-      <div class="tb-dot-3"></div>
-    </div>
-  </div>
-
-  <!-- Answer lines (below Amazasaurus) -->
-  <div class="sanswer-answer-block">
-    <p class="answer-big al-big-1">Because Mondi needed it.</p>
-    <p class="answer-big al-big-2">And I could.</p>
-    <p class="answer-big al-big-3">So I did.</p>
-  </div>
-
-  <!-- Epilogue text -->
-  <div class="scene-text sanswer-text">
-    <p class="story-body sanswer-t1">Binko processed this.</p>
-    <p class="story-body sanswer-t2">Binko had 44 follow-up questions.</p>
-    <p class="story-body story-tiny sanswer-t3">(But for now he was quiet.)</p>
-    <p class="story-body story-tiny story-muted sanswer-t4">(This was very unusual for Binko.)</p>
-  </div>
-</section>
-
-<!-- SCENE 19: scene-ziron-valid -->
-<section id="scene-ziron-valid" class="scene scene-ziron-valid">
-  <div class="sziron-bg"></div>
-
-  <!-- Ziron large center -->
-  <div class="sziron-char-wrap">
-    <svg class="ziron-svg-valid" viewBox="0 0 200 380" xmlns="http://www.w3.org/2000/svg">
-      <!-- Body -->
-      <ellipse cx="100" cy="245" rx="70" ry="90" fill="#7a3a18"/>
-      <!-- Tail -->
-      <path d="M165 295 Q215 320 222 360 Q215 368 208 360 Q205 328 158 308" fill="#6a2e10"/>
-      <!-- Neck -->
-      <ellipse cx="100" cy="145" rx="34" ry="55" fill="#7a3a18"/>
-      <!-- Head -->
-      <ellipse cx="100" cy="88" rx="46" ry="38" fill="#7a3a18"/>
-      <!-- Jaw open slightly (about to speak) -->
-      <ellipse cx="100" cy="112" rx="36" ry="14" fill="#5a2208"/>
-      <!-- Tiny teeth -->
-      <rect x="80" y="104" width="7" height="10" rx="2" fill="ivory"/>
-      <rect x="93" y="104" width="7" height="10" rx="2" fill="ivory"/>
-      <rect x="106" y="104" width="7" height="10" rx="2" fill="ivory"/>
-      <!-- Eyes (wide, hint of approval) -->
-      <ellipse cx="85" cy="80" rx="9" ry="10" fill="white"/>
-      <ellipse cx="115" cy="80" rx="9" ry="10" fill="white"/>
-      <circle cx="87" cy="80" r="5" fill="#1a0e05"/>
-      <circle cx="117" cy="80" r="5" fill="#1a0e05"/>
-      <!-- That raised eyebrow -->
-      <path d="M75 63 Q85 56 97 62" stroke="#3a1a08" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-      <path d="M103 65 Q113 60 125 64" stroke="#3a1a08" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-      <!-- Arms -->
-      <ellipse cx="40" cy="228" rx="13" ry="26" fill="#7a3a18" transform="rotate(20 40 228)"/>
-      <ellipse cx="160" cy="228" rx="13" ry="26" fill="#7a3a18" transform="rotate(-20 160 228)"/>
-      <!-- Legs -->
-      <rect x="52" y="315" width="34" height="68" rx="12" fill="#6a2e10"/>
-      <rect x="114" y="315" width="34" height="68" rx="12" fill="#6a2e10"/>
-    </svg>
-
-    <!-- Giant "Valid." speech bubble -->
-    <div class="ziron-valid-bubble">
-      <span class="valid-word">Valid.</span>
-    </div>
-  </div>
-
-  <!-- Story text -->
-  <div class="scene-text sziron-text">
-    <p class="story-body sziron-t1">Ziron thought about the answer.</p>
-    <p class="story-body sziron-t2">Ziron nodded.</p>
-    <p class="story-body sziron-t3">"Thanks," said Amazasaurus.</p>
-    <div class="amaza-thanks-bubble sziron-thanks">
-      <span>"You're welcome."</span>
-    </div>
-    <p class="story-body sziron-t4">And that was a lot, from Ziron.</p>
-    <p class="story-body story-tiny story-muted sziron-t5">(Ziron nodded again. Twice.)</p>
-  </div>
-</section>
-
-<!-- SCENE 20: scene-lesson-buildup -->
-<section id="scene-lesson-buildup" class="scene scene-lesson-buildup">
-  <div class="slessonb-bg"></div>
-
-  <!-- Amazasaurus faded behind -->
-  <div class="slessonb-amaza-bg">
-    <img src="assets/amazasaurus-render.png" alt="" class="amaza-img-lessonbg" aria-hidden="true"/>
-  </div>
-
-  <!-- Power cards grid -->
-  <div class="slessonb-cards-wrap" id="powerCardsWrap">
-    <div class="power-card pc-1" data-label="Wings">
-      <div class="pc-icon">🦅</div>
-      <div class="pc-label">Wings</div>
-      <div class="pc-check">✓</div>
-    </div>
-    <div class="power-card pc-2" data-label="Teeth">
-      <div class="pc-icon">🦷</div>
-      <div class="pc-label">Teeth</div>
-      <div class="pc-check">✓</div>
-    </div>
-    <div class="power-card pc-3" data-label="Talons">
-      <div class="pc-icon">🦶</div>
-      <div class="pc-label">Talons</div>
-      <div class="pc-check">✓</div>
-    </div>
-    <div class="power-card pc-4" data-label="Poison Water">
-      <div class="pc-icon">☠️</div>
-      <div class="pc-label">Poison Water</div>
-      <div class="pc-check">✓</div>
-    </div>
-    <div class="power-card pc-5" data-label="Meat">
-      <div class="pc-icon">🥩</div>
-      <div class="pc-label">Meat</div>
-      <div class="pc-check">✓</div>
-    </div>
-    <div class="power-card pc-6" data-label="Plants">
-      <div class="pc-icon">🌿</div>
-      <div class="pc-label">Plants</div>
-      <div class="pc-check">✓</div>
-    </div>
-  </div>
-
-  <!-- The pivot -->
-  <div class="slessonb-but" id="lessonBut">BUT—</div>
-
-  <!-- Story text -->
-  <div class="scene-text slessonb-text">
-    <p class="story-body slessonb-t1">Here is the thing about Amazasaurus.</p>
-    <p class="story-body slessonb-t2">He could fly. He could eat anything.</p>
-    <p class="story-body slessonb-t3">He was immune to basically everything.</p>
-    <p class="story-body story-big slessonb-t4">But—</p>
-    <p class="story-body slessonb-t5">None of that was why he was amazing.</p>
-  </div>
-</section>
-
-<!-- SCENE 21: scene-real-reason -->
-<section id="scene-real-reason" class="scene scene-real-reason">
-  <div class="sreason-bg"></div>
-
-  <!-- Notebook spiral -->
-  <div class="sreason-spiral" aria-hidden="true">
-    <div class="spiral-ring" style="top:5%"></div>
-    <div class="spiral-ring" style="top:12%"></div>
-    <div class="spiral-ring" style="top:19%"></div>
-    <div class="spiral-ring" style="top:26%"></div>
-    <div class="spiral-ring" style="top:33%"></div>
-    <div class="spiral-ring" style="top:40%"></div>
-    <div class="spiral-ring" style="top:47%"></div>
-    <div class="spiral-ring" style="top:54%"></div>
-    <div class="spiral-ring" style="top:61%"></div>
-    <div class="spiral-ring" style="top:68%"></div>
-    <div class="spiral-ring" style="top:75%"></div>
-    <div class="spiral-ring" style="top:82%"></div>
-    <div class="spiral-ring" style="top:89%"></div>
-  </div>
-
-  <!-- Margin doodles -->
-  <div class="sreason-margin-doodles" aria-hidden="true">
-    <svg class="margin-doodle" viewBox="0 0 60 200" xmlns="http://www.w3.org/2000/svg">
-      <!-- tiny hearts -->
-      <path d="M15 20 Q15 14 21 14 Q27 14 27 20 Q27 26 15 32 Q3 26 3 20 Q3 14 9 14 Q15 14 15 20Z" fill="none" stroke="#8a6a9a" stroke-width="1.5"/>
-      <path d="M18 60 Q18 55 23 55 Q28 55 28 60 Q28 65 18 70 Q8 65 8 60 Q8 55 13 55 Q18 55 18 60Z" fill="none" stroke="#8a6a9a" stroke-width="1.5"/>
-      <!-- tiny stars -->
-      <polygon points="12,95 14,89 16,95 22,95 17,99 19,105 14,101 9,105 11,99 6,95" fill="none" stroke="#c8a030" stroke-width="1.2"/>
-      <polygon points="14,130 15.5,125 17,130 22,130 18,133 19.5,138 15.5,135 11.5,138 13,133 9,130" fill="none" stroke="#c8a030" stroke-width="1.2"/>
-      <!-- tiny dino doodle -->
-      <ellipse cx="15" cy="165" rx="10" ry="7" fill="none" stroke="#5a8a3a" stroke-width="1.5"/>
-      <circle cx="24" cy="159" r="5" fill="none" stroke="#5a8a3a" stroke-width="1.5"/>
-      <line x1="14" y1="172" x2="11" y2="182" stroke="#5a8a3a" stroke-width="1.5"/>
-      <line x1="18" y1="172" x2="20" y2="182" stroke="#5a8a3a" stroke-width="1.5"/>
-    </svg>
-  </div>
-
-  <!-- Written text block -->
-  <div class="sreason-text-block">
-    <p class="sreason-line sreason-l1">He was amazing because—</p>
-    <p class="sreason-line sreason-l2">—when someone needed help—</p>
-    <p class="sreason-line sreason-l3">—and he could help—</p>
-    <p class="sreason-line sreason-l4 sreason-big">—he helped.</p>
-    <p class="sreason-line sreason-l5 sreason-space"> </p>
-    <p class="sreason-line sreason-l6">That's it.</p>
-    <p class="sreason-line sreason-l7">That's the whole thing.</p>
-  </div>
-
-  <!-- michael-dino doodle -->
-  <div class="sreason-doodle-wrap">
-    <img src="assets/michael-dino.png" alt="hand-drawn dino sketch" class="sreason-doodle"/>
-  </div>
-</section>
-
-<!-- SCENE 22: scene-moral -->
-<section id="scene-moral" class="scene scene-moral">
-  <div class="smoral-bg"></div>
-
-  <!-- Firefly particles -->
-  <div class="smoral-fireflies" id="moralFireflies" aria-hidden="true"></div>
-
-  <!-- Moral plaque -->
-  <div class="smoral-plaque-wrap">
-    <div class="smoral-plaque" id="moralPlaque">
-      <div class="plaque-title smoral-pt">THE MORAL OF THIS STORY:</div>
-      <div class="plaque-line smoral-pl1">Being strong is cool.</div>
-      <div class="plaque-line smoral-pl2">But being strong <em>and</em> kind</div>
-      <div class="plaque-line smoral-pl3">is how you become</div>
-      <div class="plaque-line smoral-pl4 plaque-big">actually amazing.</div>
-    </div>
-
-    <!-- Footnote -->
-    <div class="smoral-footnote smoral-fn">
-      "Also don't walk into tar pits." <em>— Mondi</em>
-    </div>
-    <div class="smoral-footnote-tiny smoral-fnt">(especially when half asleep)</div>
-  </div>
-</section>
-
-<!-- SCENE 23: scene-after-that -->
-<section id="scene-after-that" class="scene scene-after-that">
-  <div class="safter-bg"></div>
-
-  <!-- Spotlight beam from Amazasaurus down to characters -->
-  <div class="safter-spotlight-beam" id="afterSpotlight"></div>
-
-  <!-- Amazasaurus flying -->
-  <div class="safter-amaza-wrap" id="afterAmaza">
-    <img src="assets/amazasaurus-render.png" alt="Amazasaurus flying his morning laps" class="amaza-img-after"/>
-    <!-- Thought bubble "anything? 👀" -->
-    <div class="safter-thought-bubble safter-thought" id="afterThought">
-      <span>anything? 👀</span>
-      <div class="stb-dot1"></div>
-      <div class="stb-dot2"></div>
-      <div class="stb-dot3"></div>
-    </div>
-  </div>
-
-  <!-- Lap counter -->
-  <div class="safter-lap-counter safter-lap" id="afterLap">
-    <span class="lap-label">LAP</span>
-    <span class="lap-num">1</span>
-    <span class="lap-of">of 23</span>
-  </div>
-
-  <!-- Ground characters -->
-  <div class="safter-ground">
-    <!-- Mondi clean, waving -->
-    <div class="safter-mondi-wrap safter-mondi" id="afterMondi">
-      <svg class="mondi-clean-svg" viewBox="0 0 160 250" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="80" cy="88" rx="20" ry="72" fill="#4a8a3a"/>
-        <ellipse cx="80" cy="185" rx="58" ry="52" fill="#5a9a48"/>
-        <ellipse cx="80" cy="30" rx="26" ry="22" fill="#4a8a3a"/>
-        <path d="M68 36 Q80 48 92 36" stroke="#2a5a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <ellipse cx="72" cy="24" rx="5" ry="6" fill="white"/>
-        <ellipse cx="88" cy="24" rx="5" ry="6" fill="white"/>
-        <circle cx="73" cy="24" r="3" fill="#1a0e05"/>
-        <circle cx="89" cy="24" r="3" fill="#1a0e05"/>
-        <circle cx="74.5" cy="22.5" r="1" fill="white"/>
-        <circle cx="90.5" cy="22.5" r="1" fill="white"/>
-        <!-- Waving arm (animated via CSS) -->
-        <g class="mondi-wave-arm" transform-origin="30 170">
-          <ellipse cx="30" cy="175" rx="9" ry="22" fill="#4a8a3a" transform="rotate(-15 30 175)"/>
-        </g>
-        <rect x="48" y="228" width="20" height="24" rx="7" fill="#4a8a3a"/>
-        <rect x="90" y="228" width="20" height="24" rx="7" fill="#4a8a3a"/>
-      </svg>
-    </div>
-
-    <!-- Binko flying low loop -->
-    <div class="safter-binko-wrap safter-binko" id="afterBinko">
-      <svg class="binko-ground-svg" viewBox="0 0 100 66" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="25" cy="34" rx="23" ry="11" fill="#3a6abf" transform="rotate(-15 25 34)"/>
-        <ellipse cx="75" cy="34" rx="23" ry="11" fill="#3a6abf" transform="rotate(15 75 34)"/>
-        <ellipse cx="50" cy="37" rx="17" ry="13" fill="#4a7ad0"/>
-        <ellipse cx="50" cy="22" rx="13" ry="11" fill="#4a7ad0"/>
-        <polygon points="50,13 41,19 59,19" fill="#d4a820"/>
-        <ellipse cx="44" cy="19" rx="4.5" ry="5" fill="white"/>
-        <ellipse cx="56" cy="19" rx="4.5" ry="5" fill="white"/>
-        <circle cx="45" cy="19" r="2" fill="#1a0e05"/>
-        <circle cx="57" cy="19" r="2" fill="#1a0e05"/>
-      </svg>
-    </div>
-
-    <!-- Ziron minimal wave -->
-    <div class="safter-ziron-wrap safter-ziron" id="afterZiron">
-      <svg class="ziron-small-svg" viewBox="0 0 130 270" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="65" cy="175" rx="48" ry="65" fill="#7a3a18"/>
-        <path d="M108 205 Q145 222 148 248 Q143 254 138 247 Q136 228 104 214" fill="#6a2e10"/>
-        <ellipse cx="65" cy="105" rx="26" ry="40" fill="#7a3a18"/>
-        <ellipse cx="65" cy="65" rx="32" ry="27" fill="#7a3a18"/>
-        <ellipse cx="65" cy="82" rx="25" ry="11" fill="#5a2208"/>
-        <line x1="46" y1="80" x2="84" y2="80" stroke="#3a1a08" stroke-width="2"/>
-        <!-- Minimal barely-raised arm wave -->
-        <g class="ziron-minimal-wave" transform-origin="25 165">
-          <ellipse cx="25" cy="170" rx="9" ry="19" fill="#7a3a18" transform="rotate(15 25 170)"/>
-        </g>
-        <ellipse cx="105" cy="165" rx="9" ry="19" fill="#7a3a18" transform="rotate(-18 105 165)"/>
-        <ellipse cx="60" cy="63" rx="6" ry="7" fill="white"/>
-        <ellipse cx="75" cy="63" rx="6" ry="7" fill="white"/>
-        <circle cx="61" cy="63" r="3.5" fill="#1a0e05"/>
-        <circle cx="76" cy="63" r="3.5" fill="#1a0e05"/>
-        <path d="M52 47 Q60 43 70 47" stroke="#3a1a08" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <rect x="36" y="232" width="24" height="40" rx="8" fill="#6a2e10"/>
-        <rect x="70" y="232" width="24" height="40" rx="8" fill="#6a2e10"/>
-      </svg>
-    </div>
-  </div>
-
-  <!-- Story text -->
-  <div class="scene-text safter-text">
-    <p class="story-body safter-t1">After that, Amazasaurus still flew 23 laps.</p>
-    <p class="story-body safter-t2">But now, on each lap, he looked down.</p>
-    <p class="story-body safter-t3">Not to be watched.</p>
-    <p class="story-body story-big safter-t4">To watch out.</p>
-    <p class="story-body story-muted safter-t5">Nobody ever needed anything.</p>
-    <p class="story-body story-muted safter-t6">But they felt better knowing he was there.</p>
-    <p class="story-body story-tiny story-italic safter-t7">And honestly? So did he.</p>
-  </div>
-</section>
-
-
-<!-- ============================================================
-
 
   <!-- ═══════════════════════════════════════════════════════════
        SCENE 5: OLD AGE & DISTRACTIONS
@@ -1997,106 +673,87 @@
           <path d="M 58 108 Q 75 116 92 108" stroke="#c8a000" stroke-width="2.5" fill="none" stroke-linecap="round"/>
           <!-- Wings (drooped contentedly) -->
           <path d="M 175 128 Q 240 95 275 80 Q 255 125 210 148 Z" fill="#f0c900" opacity="0.85"/>
-          <path d="M 155 130 Q 85 92 45 78 Q 70 124 130 145 Z" fill="#f0c900" opacity="0.85"/>
+          <path d="M 175 128 Q 110 95 75 80 Q 95 125 140 148 Z" fill="#f0c900" opacity="0.85"/>
           <!-- Tiny arms -->
-          <line x1="122" y1="158" x2="108" y2="176" stroke="#d4a800" stroke-width="6" stroke-linecap="round"/>
-          <!-- Newspaper prop -->
-          <rect x="90" y="170" width="55" height="42" rx="4" fill="#f5f0e0" opacity="0.95"/>
-          <line x1="95" y1="180" x2="140" y2="180" stroke="#888" stroke-width="1.5"/>
-          <line x1="95" y1="187" x2="140" y2="187" stroke="#888" stroke-width="1.5"/>
-          <line x1="95" y1="194" x2="130" y2="194" stroke="#888" stroke-width="1.5"/>
-          <text x="100" y="178" font-size="7" fill="#555">DINO DAILY</text>
+          <line x1="120" y1="162" x2="105" y2="180" stroke="#d4a800" stroke-width="6" stroke-linecap="round"/>
+          <line x1="105" y1="180" x2="100" y2="183" stroke="#d4a800" stroke-width="4" stroke-linecap="round"/>
           <!-- Legs -->
-          <line x1="138" y1="220" x2="124" y2="248" stroke="#d4a800" stroke-width="8" stroke-linecap="round"/>
-          <line x1="182" y1="222" x2="196" y2="250" stroke="#d4a800" stroke-width="8" stroke-linecap="round"/>
+          <line x1="130" y1="218" x2="115" y2="248" stroke="#d4a800" stroke-width="9" stroke-linecap="round"/>
+          <line x1="130" y1="218" x2="108" y2="238" stroke="#d4a800" stroke-width="7" stroke-linecap="round"/>
+          <line x1="130" y1="218" x2="118" y2="245" stroke="#d4a800" stroke-width="6" stroke-linecap="round"/>
+          <line x1="190" y1="220" x2="200" y2="250" stroke="#d4a800" stroke-width="9" stroke-linecap="round"/>
+          <line x1="200" y1="250" x2="185" y2="265" stroke="#d4a800" stroke-width="7" stroke-linecap="round"/>
+          <line x1="200" y1="250" x2="208" y2="268" stroke="#d4a800" stroke-width="6" stroke-linecap="round"/>
           <!-- Tail -->
-          <path d="M 240 175 Q 280 182 305 168 Q 292 198 262 200 Q 244 195 240 175 Z" fill="#f9e04b"/>
-          <!-- ZZZ sleepy indicator -->
-          <text class="zzz-text" x="88" y="58" font-size="14" fill="#aaa" font-style="italic" opacity="0.7">z</text>
-          <text class="zzz-text" x="96" y="48" font-size="17" fill="#aaa" font-style="italic" opacity="0.5">z</text>
-          <text class="zzz-text" x="106" y="36" font-size="20" fill="#aaa" font-style="italic" opacity="0.3">z</text>
+          <path d="M 240 175 Q 270 180 285 165 Q 275 195 250 195 Q 235 190 240 175 Z" fill="#f0c900"/>
+          <!-- Glasses chain -->
+          <path d="M 44 82 Q 30 78 25 85" stroke="#8B4513" stroke-width="1.5" fill="none" opacity="0.7"/>
+          <path d="M 86 81 Q 100 77 105 84" stroke="#8B4513" stroke-width="1.5" fill="none" opacity="0.7"/>
+          <!-- Book in lap -->
+          <rect x="145" y="175" width="50" height="35" rx="4" fill="#8B4513" opacity="0.8"/>
+          <rect x="148" y="178" width="44" height="29" rx="2" fill="#f5e6c8" opacity="0.9"/>
+          <line x1="170" y1="178" x2="170" y2="207" stroke="#ddd" stroke-width="1"/>
         </svg>
+        <!-- Follow eyes overlay -->
+        <div class="follow-eyes" id="followEyes">
+          <div class="eye" id="eyeLeft">
+            <div class="pupil" id="pupilLeft"></div>
+          </div>
+          <div class="eye" id="eyeRight">
+            <div class="pupil" id="pupilRight"></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Shiny distraction object -->
-    <div class="distraction-trigger" id="distractionTrigger" title="Click me!">
-      <div class="shiny-orb">
-        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="orbGrad" cx="35%" cy="30%" r="65%">
-              <stop offset="0%" stop-color="#fff"/>
-              <stop offset="30%" stop-color="#ffe066"/>
-              <stop offset="70%" stop-color="#ffa500"/>
-              <stop offset="100%" stop-color="#ff6600"/>
-            </radialGradient>
-          </defs>
-          <circle cx="40" cy="40" r="36" fill="url(#orbGrad)"/>
-          <ellipse cx="28" cy="25" rx="10" ry="7" fill="#fff" opacity="0.5" transform="rotate(-30,28,25)"/>
-        </svg>
-      </div>
-      <div class="distraction-label">psst...</div>
-    </div>
-
-    <!-- Distraction reveal text -->
+    <!-- Distraction trigger button -->
+    <button class="distraction-trigger" id="distractionTrigger">What's that? 👀</button>
     <div class="distraction-reveal" id="distractionReveal">
-      <p>but they was a lot of things that can <strong>distracke it very esly!</strong> 👀</p>
-    </div>
-
-    <!-- Eyes that follow cursor -->
-    <div class="follow-eyes" id="followEyes">
-      <div class="follow-eye" id="eyeLeft">
-        <div class="eye-pupil" id="pupilLeft"></div>
-      </div>
-      <div class="follow-eye" id="eyeRight">
-        <div class="eye-pupil" id="pupilRight"></div>
-      </div>
+      <p>A butterfly! 🦋</p>
     </div>
 
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       STORY CLIPART — scroll through the original page
+       STORY PAGE
   ═══════════════════════════════════════════════════════════ -->
-  <section id="story-page" class="scene">
+  <section id="story-page" class="scene scene-storypage">
     <div class="story-page-bg"></div>
-    <div class="story-page-inner" id="storyPageInner">
-      <img
-        src="assets/story-clipart.png"
-        alt="DINOSAUR times — original story page by moochaol"
-        class="story-page-img"
-        id="storyPageImg"
-      />
+
+    <div class="story-page-header">
+      <div class="story-page-badge">THE FULL STORY</div>
+      <h1 class="story-page-title">DINOSAUR TIMES</h1>
+      <p class="story-page-byline">by moochaol</p>
     </div>
+
+    <div class="story-page-img-wrap">
+      <img src="assets/notebook-photo.jpg" alt="moochaol's original notebook drawing" class="story-page-img">
+      <div class="story-page-caption">the original notebook</div>
+    </div>
+
+    <div class="story-page-quote">
+      <p>"There was over 100 kinds of Dinosaurs."</p>
+    </div>
+
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       OUTRO: THE LEGEND — PARACHUTE DINO
+       OUTRO: PARACHUTE + CREDITS
   ═══════════════════════════════════════════════════════════ -->
   <section id="outro" class="scene scene-outro">
+    <div class="outro-bg"></div>
 
-    <div class="outro-sky"></div>
-
-    <!-- Floating parachute dino -->
-    <div class="parachute-container" id="parachuteDino">
-      <svg class="parachute-svg" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
-        <!-- Parachute canopy -->
-        <defs>
-          <linearGradient id="chuteGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#ff6b6b"/>
-            <stop offset="33%" stop-color="#ffd93d"/>
-            <stop offset="66%" stop-color="#6bcb77"/>
-            <stop offset="100%" stop-color="#4d96ff"/>
-          </linearGradient>
-        </defs>
-        <path d="M 30 90 Q 100 20 170 90" fill="url(#chuteGrad)" opacity="0.95"/>
-        <path d="M 30 90 Q 100 20 170 90 Q 145 105 100 100 Q 55 105 30 90 Z" fill="url(#chuteGrad)"/>
-        <!-- Panels lines -->
-        <line x1="100" y1="20" x2="100" y2="100" stroke="#fff" stroke-width="1" opacity="0.5"/>
-        <line x1="65" y1="28" x2="78" y2="100" stroke="#fff" stroke-width="1" opacity="0.5"/>
-        <line x1="135" y1="28" x2="122" y2="100" stroke="#fff" stroke-width="1" opacity="0.5"/>
+    <!-- Parachute dino -->
+    <div class="parachute-wrap" id="parachuteDino">
+      <svg class="parachute-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+        <!-- Canopy -->
+        <path d="M 20 50 Q 100 5 180 50 Q 160 40 100 30 Q 40 40 20 50 Z" fill="#e74c3c" opacity="0.92"/>
+        <path d="M 20 50 Q 60 38 100 30 Q 140 38 180 50" stroke="#c0392b" stroke-width="1.5" fill="none"/>
+        <!-- Canopy stripes -->
+        <line x1="60" y1="44" x2="55" y2="25" stroke="#c0392b" stroke-width="1" opacity="0.5"/>
+        <line x1="100" y1="30" x2="100" y2="10" stroke="#c0392b" stroke-width="1" opacity="0.5"/>
+        <line x1="140" y1="44" x2="145" y2="25" stroke="#c0392b" stroke-width="1" opacity="0.5"/>
         <!-- Strings -->
-        <line x1="68" y1="100" x2="90" y2="155" stroke="#ddd" stroke-width="1.5"/>
         <line x1="100" y1="100" x2="100" y2="155" stroke="#ddd" stroke-width="1.5"/>
         <line x1="132" y1="100" x2="110" y2="155" stroke="#ddd" stroke-width="1.5"/>
 
@@ -2138,66 +795,528 @@
       <div class="credit-divider">— — —</div>
       <div class="credit-line muted tiny">no dinosaurs were harmed in the making of this story</div>
       <div class="credit-line muted tiny">guns remain banned from the cretaceous period</div>
-<!-- CREDITS ADDITION -->
-<div class="credit-divider">— — —</div>
-<div class="credit-line muted">DINOTALES: VOLUME 2</div>
-<div class="credit-line"><em>coming when moochaol gets around to it</em></div>
-<div class="credit-line muted tiny">follow the group chat for updates 👀</div>
+      <div class="credit-divider">— — —</div>
+      <div class="credit-line muted">DINOTALES: VOLUME 2</div>
+      <div class="credit-line"><em>coming when moochaol gets around to it</em></div>
+      <div class="credit-line muted tiny">follow the group chat for updates 👀</div>
 
-<!-- iMessage teaser conversation -->
-<div class="imsg-phone-wrap" aria-label="iMessage preview: what comes next">
-  <div class="imsg-phone">
-    <div class="imsg-statusbar">
-      <span class="imsg-time">9:41</span>
-      <span class="imsg-icons">●●●</span>
-    </div>
-    <div class="imsg-header">
-      <div class="imsg-avatar-row">
-        <span class="imsg-group-icon">🦕</span>
-        <span class="imsg-group-name">the group chat</span>
+      <!-- iMessage teaser conversation -->
+      <div class="imsg-phone-wrap" aria-label="iMessage preview: what comes next">
+        <div class="imsg-phone">
+          <div class="imsg-statusbar">
+            <span class="imsg-time">9:41</span>
+            <span class="imsg-icons">●●●</span>
+          </div>
+          <div class="imsg-header">
+            <div class="imsg-avatar-row">
+              <span class="imsg-group-icon">🦕</span>
+              <span class="imsg-group-name">the group chat</span>
+            </div>
+          </div>
+          <div class="imsg-body">
+            <div class="imsg-msg imsg-recv">
+              <span class="imsg-sender">bobsnaps</span>
+              <div class="imsg-bubble imsg-bubble-recv">wait the first one dropped??</div>
+            </div>
+            <div class="imsg-msg imsg-sent">
+              <div class="imsg-bubble imsg-bubble-sent">yeah just go scroll it</div>
+              <span class="imsg-sender-sent">moochaol</span>
+            </div>
+            <div class="imsg-msg imsg-recv">
+              <span class="imsg-sender">cooal</span>
+              <div class="imsg-bubble imsg-bubble-recv">he really did it</div>
+            </div>
+            <div class="imsg-msg imsg-recv">
+              <span class="imsg-sender">n8</span>
+              <div class="imsg-bubble imsg-bubble-recv">can I use the tar pit for ai art</div>
+            </div>
+            <div class="imsg-msg imsg-sent">
+              <div class="imsg-bubble imsg-bubble-sent">volume 2 is going to be different</div>
+              <span class="imsg-sender-sent">moochaol</span>
+            </div>
+            <div class="imsg-msg imsg-recv">
+              <span class="imsg-sender">bobsnaps</span>
+              <div class="imsg-bubble imsg-bubble-recv">different how</div>
+            </div>
+            <div class="imsg-msg imsg-sent">
+              <div class="imsg-bubble imsg-bubble-sent">you'll see</div>
+              <span class="imsg-sender-sent">moochaol</span>
+            </div>
+            <div class="imsg-msg imsg-recv">
+              <span class="imsg-sender">ziron</span>
+              <div class="imsg-bubble imsg-bubble-recv">valid</div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="imsg-body">
-      <div class="imsg-msg imsg-recv">
-        <span class="imsg-sender">bobsnaps</span>
-        <div class="imsg-bubble imsg-bubble-recv">wait the first one dropped??</div>
-      </div>
-      <div class="imsg-msg imsg-sent">
-        <div class="imsg-bubble imsg-bubble-sent">yeah just go scroll it</div>
-        <span class="imsg-sender-sent">moochaol</span>
-      </div>
-      <div class="imsg-msg imsg-recv">
-        <span class="imsg-sender">cooal</span>
-        <div class="imsg-bubble imsg-bubble-recv">he really did it</div>
-      </div>
-      <div class="imsg-msg imsg-recv">
-        <span class="imsg-sender">n8</span>
-        <div class="imsg-bubble imsg-bubble-recv">can I use the tar pit for ai art</div>
-      </div>
-      <div class="imsg-msg imsg-sent">
-        <div class="imsg-bubble imsg-bubble-sent">volume 2 is going to be different</div>
-        <span class="imsg-sender-sent">moochaol</span>
-      </div>
-      <div class="imsg-msg imsg-recv">
-        <span class="imsg-sender">bobsnaps</span>
-        <div class="imsg-bubble imsg-bubble-recv">different how</div>
-      </div>
-      <div class="imsg-msg imsg-sent">
-        <div class="imsg-bubble imsg-bubble-sent">you'll see</div>
-        <span class="imsg-sender-sent">moochaol</span>
-      </div>
-      <div class="imsg-msg imsg-recv">
-        <span class="imsg-sender">ziron</span>
-        <div class="imsg-bubble imsg-bubble-recv">valid</div>
-      </div>
-    </div>
-  </div>
-</div>
 
       <div class="finale-emoji">🦕✨🦖</div>
     </div>
 
   </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NEW FEATURE: CHARACTER CARD COLLECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="character-collection" class="scene scene-collection">
+    <div class="collection-bg"></div>
+    
+    <div class="collection-header">
+      <div class="collection-badge">📖 MEET THE CHARACTERS</div>
+      <h2 class="collection-title">The Dino Crew</h2>
+      <p class="collection-subtitle">Click any card to learn more!</p>
+    </div>
+
+    <div class="character-card-grid" id="characterCardGrid">
+      <!-- Amazasaurus -->
+      <div class="character-card" data-character="amazasaurus" onclick="openCharacterModal('amazasaurus')">
+        <div class="card-avatar">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="40" cy="45" rx="25" ry="18" fill="#f9e04b"/>
+            <ellipse cx="25" cy="32" rx="12" ry="10" fill="#f9e04b"/>
+            <circle cx="20" cy="29" r="4" fill="#fff"/>
+            <circle cx="21" cy="29" r="2" fill="#222"/>
+            <path d="M45 35 Q60 25 65 15 Q58 35 48 42 Z" fill="#f0c900" opacity="0.8"/>
+            <path d="M35 35 Q20 25 15 15 Q22 35 32 42 Z" fill="#f0c900" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="card-name">Amazasaurus</div>
+        <div class="card-bio">The main character. Can do everything. Kind heart, flies 23 laps daily.</div>
+        <div class="trait-bars">
+          <div class="trait-row">
+            <span class="trait-label">🦷 Teeth</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">🦅 Wings</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">❤️ Kindness</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 100%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="collect-toggle" onclick="event.stopPropagation(); toggleCollect('amazasaurus')">
+          <span class="collect-checkbox" id="check-amazasaurus">☐</span>
+          <span class="collect-label">Collect</span>
+        </div>
+      </div>
+
+      <!-- Mondi -->
+      <div class="character-card" data-character="mondi" onclick="openCharacterModal('mondi')">
+        <div class="card-avatar">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="40" cy="50" rx="28" ry="22" fill="#5a9a48"/>
+            <ellipse cx="40" cy="25" rx="14" ry="12" fill="#4a8a3a"/>
+            <ellipse cx="35" cy="22" rx="4" ry="5" fill="#fff"/>
+            <ellipse cx="45" cy="22" rx="4" ry="5" fill="#fff"/>
+            <circle cx="36" cy="23" r="2" fill="#222"/>
+            <circle cx="46" cy="23" r="2" fill="#222"/>
+            <path d="M32 30 Q40 38 48 30" stroke="#2a5a1a" stroke-width="2" fill="none"/>
+            <ellipse cx="35" cy="40" rx="5" ry="3" fill="#1a0e05" opacity="0.6"/>
+            <ellipse cx="48" cy="48" rx="4" ry="3" fill="#1a0e05" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="card-name">Mondi</div>
+        <div class="card-bio">The sleepy long-necked dino who got stuck in a tar pit. Very polite, very clumsy.</div>
+        <div class="trait-bars">
+          <div class="trait-row">
+            <span class="trait-label">😴 Sleepiness</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">🌀 Clumsiness</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">😊 Kindness</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="collect-toggle" onclick="event.stopPropagation(); toggleCollect('mondi')">
+          <span class="collect-checkbox" id="check-mondi">☐</span>
+          <span class="collect-label">Collect</span>
+        </div>
+      </div>
+
+      <!-- Binko -->
+      <div class="character-card" data-character="binko" onclick="openCharacterModal('binko')">
+        <div class="card-avatar">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="40" cy="45" rx="18" ry="14" fill="#4a7ad0"/>
+            <ellipse cx="40" cy="30" rx="14" ry="12" fill="#4a7ad0"/>
+            <polygon points="40,20 32,26 48,26" fill="#d4a820"/>
+            <ellipse cx="35" cy="27" rx="4" ry="4.5" fill="#fff"/>
+            <ellipse cx="45" cy="27" rx="4" ry="4.5" fill="#fff"/>
+            <circle cx="36" cy="27" r="2" fill="#222"/>
+            <circle cx="46" cy="27" r="2" fill="#222"/>
+            <ellipse cx="15" cy="38" rx="18" ry="8" fill="#3a6abf" transform="rotate(-15 15 38)"/>
+            <ellipse cx="65" cy="38" rx="18" ry="8" fill="#3a6abf" transform="rotate(15 65 38)"/>
+          </svg>
+        </div>
+        <div class="card-name">Binko</div>
+        <div class="card-bio">The flying blue dinosaur with many questions. Loves asking "But WHY?" about everything.</div>
+        <div class="trait-bars">
+          <div class="trait-row">
+            <span class="trait-label">🦅 Flight</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">❓ Curiosity</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">🤗 Enthusiasm</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="collect-toggle" onclick="event.stopPropagation(); toggleCollect('binko')">
+          <span class="collect-checkbox" id="check-binko">☐</span>
+          <span class="collect-label">Collect</span>
+        </div>
+      </div>
+
+      <!-- Ziron -->
+      <div class="character-card" data-character="ziron" onclick="openCharacterModal('ziron')">
+        <div class="card-avatar">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="45" cy="50" rx="25" ry="20" fill="#7a3a18"/>
+            <ellipse cx="25" cy="38" rx="16" ry="13" fill="#7a3a18"/>
+            <ellipse cx="25" cy="48" rx="12" ry="7" fill="#5a2208"/>
+            <line x1="15" y1="46" x2="35" y2="46" stroke="#3a1a08" stroke-width="2"/>
+            <ellipse cx="20" cy="35" rx="5" ry="6" fill="#fff"/>
+            <ellipse cx="30" cy="35" rx="5" ry="6" fill="#fff"/>
+            <circle cx="21" cy="35" r="3" fill="#222"/>
+            <circle cx="31" cy="35" r="3" fill="#222"/>
+            <path d="M16 27 Q22 24 28 27" stroke="#3a1a08" stroke-width="2" fill="none"/>
+            <path d="M30 28 Q36 26 40 28" stroke="#3a1a08" stroke-width="2" fill="none"/>
+            <ellipse cx="12" cy="48" rx="6" ry="14" fill="#7a3a18" transform="rotate(20 12 48)"/>
+            <ellipse cx="55" cy="48" rx="6" ry="14" fill="#7a3a18" transform="rotate(-20 55 48)"/>
+          </svg>
+        </div>
+        <div class="card-name">Ziron</div>
+        <div class="card-bio">The T-Rex who only speaks when something is truly valid. Economical with words. Nods twice.</div>
+        <div class="trait-bars">
+          <div class="trait-row">
+            <span class="trait-label">👑 Majesty</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">🗣️ Brevity</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">👍 Approval</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 88%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="collect-toggle" onclick="event.stopPropagation(); toggleCollect('ziron')">
+          <span class="collect-checkbox" id="check-ziron">☐</span>
+          <span class="collect-label">Collect</span>
+        </div>
+      </div>
+
+      <!-- T-Rex -->
+      <div class="character-card" data-character="trex" onclick="openCharacterModal('trex')">
+        <div class="card-avatar">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="40" cy="50" rx="28" ry="22" fill="#c0392b"/>
+            <ellipse cx="22" cy="35" rx="18" ry="15" fill="#c0392b"/>
+            <ellipse cx="22" cy="45" rx="14" ry="9" fill="#a93226"/>
+            <rect x="10" y="42" width="8" height="10" rx="2" fill="#fff"/>
+            <rect x="22" y="42" width="8" height="10" rx="2" fill="#fff"/>
+            <rect x="34" y="42" width="8" height="10" rx="2" fill="#fff"/>
+            <ellipse cx="15" cy="30" rx="6" ry="7" fill="#fff"/>
+            <ellipse cx="29" cy="30" rx="6" ry="7" fill="#fff"/>
+            <circle cx="16" cy="31" r="3" fill="#222"/>
+            <circle cx="30" cy="31" r="3" fill="#222"/>
+            <ellipse cx="8" cy="58" rx="8" ry="18" fill="#c0392b" transform="rotate(15 8 58)"/>
+            <ellipse cx="50" cy="58" rx="8" ry="18" fill="#c0392b" transform="rotate(-15 50 58)"/>
+          </svg>
+        </div>
+        <div class="card-name">T-Rex</div>
+        <div class="card-bio">Just a regular T-Rex. Teeth, tiny arms, very angry. Not as special as Amazasaurus.</div>
+        <div class="trait-bars">
+          <div class="trait-row">
+            <span class="trait-label">😤 Anger</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 70%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">🦷 Teeth</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 60%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">💪 Strength</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="collect-toggle" onclick="event.stopPropagation(); toggleCollect('trex')">
+          <span class="collect-checkbox" id="check-trex">☐</span>
+          <span class="collect-label">Collect</span>
+        </div>
+      </div>
+
+      <!-- Plant Eater -->
+      <div class="character-card" data-character="plant eater" onclick="openCharacterModal('plant eater')">
+        <div class="card-avatar">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="40" cy="55" rx="22" ry="18" fill="#27ae60"/>
+            <ellipse cx="40" cy="32" rx="18" ry="16" fill="#2ecc71"/>
+            <ellipse cx="33" cy="28" rx="5" ry="6" fill="#fff"/>
+            <ellipse cx="47" cy="28" rx="5" ry="6" fill="#fff"/>
+            <circle cx="34" cy="29" r="3" fill="#222"/>
+            <circle cx="48" cy="29" r="3" fill="#222"/>
+            <path d="M33 38 Q40 44 47 38" stroke="#1e8449" stroke-width="2" fill="none"/>
+            <ellipse cx="25" cy="60" rx="6" ry="12" fill="#27ae60" transform="rotate(-10 25 60)"/>
+            <ellipse cx="55" cy="60" rx="6" ry="12" fill="#27ae60" transform="rotate(10 55 60)"/>
+          </svg>
+        </div>
+        <div class="card-name">Plant Eater</div>
+        <div class="card-bio">Friendly herbivore. Eats plants, very agreeable. Could not handle poison water.</div>
+        <div class="trait-bars">
+          <div class="trait-row">
+            <span class="trait-label">🌿 Plants</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">☠️ Poison</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 15%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">🤝 Agreeable</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 92%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="collect-toggle" onclick="event.stopPropagation(); toggleCollect('plant eater')">
+          <span class="collect-checkbox" id="check-plant eater">☐</span>
+          <span class="collect-label">Collect</span>
+        </div>
+      </div>
+
+      <!-- Michael -->
+      <div class="character-card" data-character="michael" onclick="openCharacterModal('michael')">
+        <div class="card-avatar">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="40" cy="45" rx="25" ry="20" fill="#f9e04b"/>
+            <ellipse cx="22" cy="32" rx="14" ry="11" fill="#f9e04b"/>
+            <circle cx="17" cy="29" r="5" fill="#fff"/>
+            <circle cx="18" cy="30" r="3" fill="#222"/>
+            <path d="M28 38 Q35 45 42 38" stroke="#c8a000" stroke-width="2" fill="none"/>
+            <path d="M42 28 Q58 18 62 10 Q55 28 46 35 Z" fill="#f0c900" opacity="0.85"/>
+            <path d="M38 28 Q22 18 18 10 Q25 28 34 35 Z" fill="#f0c900" opacity="0.85"/>
+            <text x="10" y="20" font-size="12">✨</text>
+          </svg>
+        </div>
+        <div class="card-name">Michael</div>
+        <div class="card-bio">The child prodigy who drew all this. Called himself a yaaasified flying T-Rex. Made everything.</div>
+        <div class="trait-bars">
+          <div class="trait-row">
+            <span class="trait-label">🎨 Art</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">✨ Yaasify</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">🧠 Genius</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 95%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="collect-toggle" onclick="event.stopPropagation(); toggleCollect('michael')">
+          <span class="collect-checkbox" id="check-michael">☐</span>
+          <span class="collect-label">Collect</span>
+        </div>
+      </div>
+
+      <!-- Cooal -->
+      <div class="character-card" data-character="cooal" onclick="openCharacterModal('cooal')">
+        <div class="card-avatar card-avatar-cooal">
+          <span class="cooal-emoji">🦕</span>
+        </div>
+        <div class="card-name">Cooal</div>
+        <div class="card-bio">"He's so yaaasified." Saw the vision — a flying T-Rex with velociraptor talons. AI art enthusiast.</div>
+        <div class="trait-bars">
+          <div class="trait-row">
+            <span class="trait-label">👀 Vision</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 88%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">🤩 Excitement</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="trait-row">
+            <span class="trait-label">🎨 AI Art</span>
+            <div class="footprint-bar">
+              <div class="footprint-fill" style="width: 78%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="collect-toggle" onclick="event.stopPropagation(); toggleCollect('cooal')">
+          <span class="collect-checkbox" id="check-cooal">☐</span>
+          <span class="collect-label">Collect</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collection progress -->
+    <div class="collection-progress">
+      <div class="progress-label">Collection Progress</div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar">
+          <div class="progress-fill" id="collectionProgressFill" style="width: 0%"></div>
+        </div>
+        <span class="progress-text" id="collectionProgressText">0/8 Collected</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NEW FEATURE: STORY CHAPTERS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="story-chapters" class="scene scene-chapters">
+    <div class="chapters-bg"></div>
+    
+    <div class="chapters-header">
+      <div class="chapters-badge">📚 THE STORY</div>
+      <h2 class="chapters-title">Dinosaur Times</h2>
+      <p class="chapters-subtitle">Expand each chapter to read the full tale</p>
+    </div>
+
+    <div class="chapters-list">
+      <!-- Chapter 1 -->
+      <div class="chapter-item" onclick="toggleChapter(this)">
+        <div class="chapter-header">
+          <div class="chapter-num">Chapter 1</div>
+          <div class="chapter-name">The Discovery</div>
+          <div class="chapter-arrow">▼</div>
+        </div>
+        <div class="chapter-content">
+          <p>There was over 100 kinds of Dinosaurs. But there was only ONE kind that could do EVERY single thing that the others couldn't do. It was amazing. His name was Amazasaurus, and nobody could agree on what kind of dinosaur he was. moochaol called him Amazasaurus. That was final.</p>
+        </div>
+      </div>
+
+      <!-- Chapter 2 -->
+      <div class="chapter-item" onclick="toggleChapter(this)">
+        <div class="chapter-header">
+          <div class="chapter-num">Chapter 2</div>
+          <div class="chapter-name">Mondi's Secret</div>
+          <div class="chapter-arrow">▼</div>
+        </div>
+        <div class="chapter-content">
+          <p>Mondi was a long-necked dinosaur who loved to sleep. One morning, he woke up half-asleep and walked into a tar pit. He was stuck. "Help!" he called out. "I'm stuck in a tar pit!" Amazasaurus heard him. Without thinking twice, Amazasaurus flew down, grabbed Mondi with his talons, and pulled him out. Mondi's secret was: he really needed help, and he was too proud to ask.</p>
+        </div>
+      </div>
+
+      <!-- Chapter 3 -->
+      <div class="chapter-item" onclick="toggleChapter(this)">
+        <div class="chapter-header">
+          <div class="chapter-num">Chapter 3</div>
+          <div class="chapter-name">The Great Migration</div>
+          <div class="chapter-arrow">▼</div>
+        </div>
+        <div class="chapter-content">
+          <p>Binko flew above the crowd, asking questions. "But WHY does he do the laps?" Ziron, the T-Rex, gave his approval with a single nod. Word spread: Amazasaurus had stopped his morning flights. He came down on purpose. The great migration of questions began. Why did he stop? What happened? The answers would change everything.</p>
+        </div>
+      </div>
+
+      <!-- Chapter 4 -->
+      <div class="chapter-item" onclick="toggleChapter(this)">
+        <div class="chapter-header">
+          <div class="chapter-num">Chapter 4</div>
+          <div class="chapter-name">Binko's Big Mistake</div>
+          <div class="chapter-arrow">▼</div>
+        </div>
+        <div class="chapter-content">
+          <p>Binko asked 44 follow-up questions. This was very unusual for Binko. He wanted to understand everything about Amazasaurus — the wings, the teeth, the poison immunity, the talons. But he forgot to ask about the most important thing: why does he help? That was the question that mattered most. And Amazasaurus had an answer ready: "Because Mondi needed it. And I could. So I did."</p>
+        </div>
+      </div>
+
+      <!-- Chapter 5 -->
+      <div class="chapter-item" onclick="toggleChapter(this)">
+        <div class="chapter-header">
+          <div class="chapter-num">Chapter 5</div>
+          <div class="chapter-name">The Real Reason</div>
+          <div class="chapter-arrow">▼</div>
+        </div>
+        <div class="chapter-content">
+          <p>Here is the thing about Amazasaurus. He could fly. He could eat anything. He was immune to basically everything. But none of that was why he was amazing. He was amazing because — when someone needed help — and he could help — he helped. That's it. That's the whole thing. Being strong is cool. But being strong AND kind is how you become actually amazing.</p>
+        </div>
+      </div>
+
+      <!-- Chapter 6 -->
+      <div class="chapter-item" onclick="toggleChapter(this)">
+        <div class="chapter-header">
+          <div class="chapter-num">Chapter 6</div>
+          <div class="chapter-name">23 Laps</div>
+          <div class="chapter-arrow">▼</div>
+        </div>
+        <div class="chapter-content">
+          <p>After that, Amazasaurus still flew 23 laps. But now, on each lap, he looked down. Not to be watched. To watch out. Nobody ever needed anything. But they felt better knowing he was there. And honestly? So did he. The End.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CHARACTER DETAIL MODAL
+  ═══════════════════════════════════════════════════════════ -->
+  <div id="characterModal" class="character-modal" onclick="closeCharacterModal(event)">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeCharacterModal(event)">×</button>
+      <div class="modal-avatar" id="modalAvatar"></div>
+      <h2 class="modal-name" id="modalName">Character Name</h2>
+      <p class="modal-bio" id="modalBio">Character bio goes here...</p>
+      <div class="modal-traits" id="modalTraits"></div>
+      <div class="modal-quote" id="modalQuote"></div>
+    </div>
+  </div>
 
   <!-- GSAP via CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
